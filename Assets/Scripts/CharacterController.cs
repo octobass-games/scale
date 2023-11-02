@@ -12,22 +12,40 @@ public class CharacterController : MonoBehaviour
 
     private float horizontalAlter;
     private float verticalAlter;
+    private bool Jumping;
+    private float verticalSpeed;
+    private bool IsGrounded;
 
     void Update()
     {
         HorizontalDirection = Input.GetAxisRaw("Horizontal");
         HorizontalDelta = HorizontalDirection * HorizontalSpeed;
+        Jumping = Input.GetAxisRaw("Vertical") != 0;
     }
 
     void FixedUpdate()
     {
         Vector2 displacement = GetDisplacement();
 
-        float gravityImpact = -1 * Time.fixedDeltaTime;
-        GetHorizontalCollisions();
-        GetVerticalCollisions();
+        float gravityImpact;
 
-        Rb2d.MovePosition(Rb2d.position + displacement + new Vector2(horizontalAlter, gravityImpact + verticalAlter));
+        if (Jumping && IsGrounded)
+        {
+            Jumping = false;
+
+            verticalSpeed = 0.25f - 1 * Time.fixedDeltaTime;
+        }
+        else
+        {
+            verticalSpeed = verticalSpeed - 1 * Time.fixedDeltaTime;
+        }
+
+        GetHorizontalCollisions();
+        GetVerticalCollisions(verticalSpeed);
+
+        Debug.Log(verticalSpeed + verticalAlter);
+
+        Rb2d.MovePosition(Rb2d.position + displacement + new Vector2(horizontalAlter, verticalSpeed + verticalAlter));
 
         HorizontalDelta = 0;
         horizontalAlter = 0;
@@ -68,17 +86,19 @@ public class CharacterController : MonoBehaviour
         }
     }
 
-    private void GetVerticalCollisions()
+    private void GetVerticalCollisions(float verticalTravel)
     {
         var collider = GetComponent<BoxCollider2D>();
         var size = collider.size;
 
-        var hit = Physics2D.Raycast(transform.position, new Vector2(0, -1), size.y / 2 + 0.5f, LayerMask);
+        var hit = Physics2D.Raycast(transform.position, new Vector2(0, Mathf.Sign(verticalTravel)), size.y / 2 + Mathf.Abs(verticalTravel) + 0.5f, LayerMask);
 
         if (hit.collider != null)
         {
             var a = (size.y / 2 + 0.5f) - hit.distance;
             verticalAlter = a;
+            verticalSpeed = 0;
+            IsGrounded = true;
         }
     }
 }
