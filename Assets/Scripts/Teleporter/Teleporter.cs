@@ -13,7 +13,9 @@ public class Teleporter : MonoBehaviour
 
         var rb2d = collider2D.GetComponent<Rigidbody2D>();
 
-        rb2d.MovePosition(exit.ExitPoint.position);
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            rb2d.MovePosition(exit.ExitPoint.position);
+        }
     }
 
     private TeleporterEntrance GetExit(TeleporterEntrance teleporterEntrance)
