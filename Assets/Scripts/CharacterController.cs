@@ -10,7 +10,8 @@ public class CharacterController : MonoBehaviour
     private float HorizontalDelta;
     private Vector3 PositionOverride = Vector2.zero;
 
-    private float alter;
+    private float horizontalAlter;
+    private float verticalAlter;
 
     void Update()
     {
@@ -22,12 +23,14 @@ public class CharacterController : MonoBehaviour
     {
         Vector2 displacement = GetDisplacement();
 
-        GetCollisions();
+        float gravityImpact = -1 * Time.fixedDeltaTime;
+        GetHorizontalCollisions();
+        GetVerticalCollisions();
 
-        Rb2d.MovePosition(Rb2d.position + displacement + new Vector2(alter, 0));
+        Rb2d.MovePosition(Rb2d.position + displacement + new Vector2(horizontalAlter, gravityImpact + verticalAlter));
 
         HorizontalDelta = 0;
-        alter = 0;
+        horizontalAlter = 0;
     }
 
     public void ForcePosition(Vector3 position)
@@ -51,18 +54,31 @@ public class CharacterController : MonoBehaviour
         }
     }
 
-    private void GetCollisions()
+    private void GetHorizontalCollisions()
     {
         var collider = GetComponent<BoxCollider2D>();
         var size = collider.size;
 
         var hit = Physics2D.Raycast(transform.position, new Vector2(HorizontalDirection, 0), size.x / 2 + 0.5f, LayerMask);
-        Debug.DrawRay(transform.position, new Vector2(HorizontalDirection, 0));
 
         if (hit.collider != null)
         {
             var a = (size.x / 2 + 0.5f) - hit.distance;
-            alter = HorizontalDirection == -1 ? a : -a;
+            horizontalAlter = HorizontalDirection == -1 ? a : -a;
+        }
+    }
+
+    private void GetVerticalCollisions()
+    {
+        var collider = GetComponent<BoxCollider2D>();
+        var size = collider.size;
+
+        var hit = Physics2D.Raycast(transform.position, new Vector2(0, -1), size.y / 2 + 0.5f, LayerMask);
+
+        if (hit.collider != null)
+        {
+            var a = (size.y / 2 + 0.5f) - hit.distance;
+            verticalAlter = a;
         }
     }
 }
