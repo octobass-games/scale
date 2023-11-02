@@ -14,16 +14,10 @@ public class CharacterController : MonoBehaviour
     }
 
     void FixedUpdate()
-    { 
-        if (PositionOverride != Vector3.zero)
-        {
-            Rb2d.MovePosition(Rb2d.position + new Vector2(PositionOverride.x, PositionOverride.y));
-            PositionOverride = Vector2.zero;
-        }
-        else
-        {
-            Rb2d.MovePosition(Rb2d.position + new Vector2(HorizontalDelta * Time.fixedDeltaTime, 0));
-        }
+    {
+        Vector2 displacement = GetDisplacement();
+
+        Rb2d.MovePosition(Rb2d.position + displacement);
 
         HorizontalDelta = 0;
     }
@@ -31,5 +25,21 @@ public class CharacterController : MonoBehaviour
     public void ForcePosition(Vector3 position)
     {
         PositionOverride = position;
+    }
+
+    private Vector2 GetDisplacement()
+    {
+        if (PositionOverride == Vector3.zero)
+        {
+            return new Vector2(HorizontalDelta * Time.fixedDeltaTime, 0);
+        }
+        else
+        {
+            var displacement = PositionOverride;
+
+            PositionOverride = Vector2.zero;
+            
+            return displacement;
+        }
     }
 }
