@@ -135,6 +135,8 @@ GameObject:
   - component: {fileID: 341609860}
   - component: {fileID: 341609862}
   - component: {fileID: 341609863}
+  - component: {fileID: 341609864}
+  - component: {fileID: 341609865}
   m_Layer: 0
   m_Name: Subject
   m_TagString: Untagged
@@ -203,7 +205,7 @@ Transform:
   m_GameObject: {fileID: 341609859}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.24, y: 2.24, z: 0.00060619554}
+  m_LocalPosition: {x: -1.54, y: 0.62, z: 0.00060619554}
   m_LocalScale: {x: 6.2702255, y: 6.254296, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -217,7 +219,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 341609859}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -233,8 +235,8 @@ Rigidbody2D:
     serializedVersion: 2
     m_Bits: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &341609863
 BoxCollider2D:
@@ -281,6 +283,32 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
+--- !u!114 &341609864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341609859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12e56a137a3766d49810934aeb7c69fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rb2d: {fileID: 341609862}
+  HorizontalSpeed: 10
+--- !u!114 &341609865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341609859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 024cba356a1548242a561137986d0554, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &637168723
 GameObject:
   m_ObjectHideFlags: 0
@@ -797,10 +825,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.44
       objectReference: {fileID: 0}
-    - target: {fileID: 5744585170598550823, guid: c60af5b93221e644e82084bdbc4936ae, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6996325343504014198, guid: c60af5b93221e644e82084bdbc4936ae, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.99
@@ -851,7 +875,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9047512658209251467, guid: c60af5b93221e644e82084bdbc4936ae, type: 3}
       propertyPath: m_Name
-      value: Teleporter
+      value: Tunnel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
