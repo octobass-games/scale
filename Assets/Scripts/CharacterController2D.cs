@@ -8,6 +8,7 @@ public class CharacterController2D : MonoBehaviour
     public float CoyoteTime;
     public float JumpSpeed = 5.0f;
     public Animator Animator;
+    public SpriteRenderer SpriteRenderer;
 
     private float HorizontalMovement;
     private bool Jumping;
@@ -75,8 +76,12 @@ public class CharacterController2D : MonoBehaviour
     private void UpdateAnimations()
     {
         Animator.SetBool("moving", Velocity.x != 0);
-        Animator.SetBool("left", Velocity.x < 0);
         Animator.SetBool("isGrounded", IsGrounded);
+
+        if (Velocity.x != 0)
+        {
+            SpriteRenderer.flipX = Velocity.x < 0;
+        }
     }
 
     private void UpdatePosition()
