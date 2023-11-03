@@ -9,7 +9,6 @@ public class Interactable : MonoBehaviour
     {
         if (OnInteract != null)
         {
-            Debug.Log("Here");
             OnInteract.Invoke();
         }
     }
