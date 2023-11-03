@@ -77,6 +77,7 @@ public class CharacterController2D : MonoBehaviour
     {
         Animator.SetBool("moving", Velocity.x != 0);
         Animator.SetBool("left", Velocity.x < 0);
+        Animator.SetBool("isGrounded", IsGrounded);
     }
 
     private void UpdatePosition()
@@ -100,7 +101,6 @@ public class CharacterController2D : MonoBehaviour
                     IsGrounded = true;
                     CoyoteTimer = CoyoteTime;
                     Velocity.y = 0;
-                    Animator.SetTrigger("land");
                 }
             }
 
