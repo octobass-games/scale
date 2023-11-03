@@ -101,7 +101,6 @@ public class CharacterController2D : MonoBehaviour
                     CoyoteTimer = CoyoteTime;
                     Velocity.y = 0;
                     Animator.SetTrigger("land");
-                    Debug.Log("On ground");
                 }
             }
 
