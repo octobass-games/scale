@@ -61,6 +61,7 @@ public class CharacterController2D : MonoBehaviour
                 IsGrounded = false;
                 Velocity.y = JumpSpeed;
                 CoyoteTimer = -1;
+                Animator.SetTrigger("jump");
             }
         }
 
@@ -99,6 +100,8 @@ public class CharacterController2D : MonoBehaviour
                     IsGrounded = true;
                     CoyoteTimer = CoyoteTime;
                     Velocity.y = 0;
+                    Animator.SetTrigger("land");
+                    Debug.Log("On ground");
                 }
             }
 
