@@ -1502,7 +1502,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 989901072}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -4718,7 +4718,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1588187650}
   - component: {fileID: 1588187649}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5953,10 +5953,42 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 334243742}
+    - target: {fileID: 332063906344861515, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 16.609814
+      objectReference: {fileID: 0}
+    - target: {fileID: 332063906344861515, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -25.982195
+      objectReference: {fileID: 0}
+    - target: {fileID: 4348075526452845086, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4348075526452845086, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
       propertyPath: m_BoundingShape2D
       value: 
       objectReference: {fileID: 989901075}
+    - target: {fileID: 4827923677449453362, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
+      propertyPath: orthographic size
+      value: 77.14286
+      objectReference: {fileID: 0}
+    - target: {fileID: 4827923677449453362, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
+      propertyPath: m_NormalizedViewPortRect.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4827923677449453362, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
+      propertyPath: m_NormalizedViewPortRect.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4827923677449453362, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
+      propertyPath: m_NormalizedViewPortRect.width
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4827923677449453362, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
+      propertyPath: m_NormalizedViewPortRect.height
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7228991048986225550, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -16.596268

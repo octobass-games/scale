@@ -30,6 +30,7 @@ public class CharacterController2D : MonoBehaviour
     void Awake()
     {
         ContactFilter.layerMask = LayerMask;
+        ContactFilter.useLayerMask = true;
         CoyoteTimer = CoyoteTime;
 
         Gravity = 2 * JumpHeight / (Mathf.Pow(TimeToReachJumpApex, 2));
