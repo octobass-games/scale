@@ -6,7 +6,8 @@ public class CharacterController2D : MonoBehaviour
     public float HorizontalSpeed = 1.0f;
     public LayerMask LayerMask;
     public float CoyoteTime;
-    public float JumpSpeed = 5.0f;
+    public float TimeToReachJumpApex = 0.25f;
+    public float JumpHeight = 100;
     public Animator Animator;
     public SpriteRenderer SpriteRenderer;
 
@@ -18,6 +19,8 @@ public class CharacterController2D : MonoBehaviour
     private ContactFilter2D ContactFilter = new ContactFilter2D();
     private Vector3 PositionOverride = Vector2.zero;
     private float CoyoteTimer;
+    private float Gravity;
+    private float JumpSpeed;
 
     public void ForcePosition(Vector3 position)
     {
@@ -28,6 +31,9 @@ public class CharacterController2D : MonoBehaviour
     {
         ContactFilter.layerMask = LayerMask;
         CoyoteTimer = CoyoteTime;
+
+        Gravity = 2 * JumpHeight / (Mathf.Pow(TimeToReachJumpApex, 2));
+        JumpSpeed = Gravity * TimeToReachJumpApex;
     }
 
     void Update()
@@ -65,12 +71,7 @@ public class CharacterController2D : MonoBehaviour
             }
         }
 
-        if (Velocity.y < 0)
-        {
-            Velocity *= new Vector2(1, 1.05f);
-        }
-
-        Velocity += Physics2D.gravity * Time.fixedDeltaTime;
+        Velocity -= new Vector2(0, Gravity) * Time.fixedDeltaTime;
     }
 
     private void UpdateAnimations()
