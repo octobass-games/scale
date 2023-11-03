@@ -10,6 +10,7 @@ public class CharacterController2D : MonoBehaviour
     public float JumpHeight = 100;
     public Animator Animator;
     public SpriteRenderer SpriteRenderer;
+    public bool CanJump;
 
     private float HorizontalMovement;
     private bool Jumping;
@@ -40,7 +41,7 @@ public class CharacterController2D : MonoBehaviour
     void Update()
     {
         HorizontalMovement = Input.GetAxisRaw("Horizontal");
-        Jumping = Input.GetAxisRaw("Vertical") != 0 || Input.GetAxisRaw("Jump") != 0;
+        Jumping = CanJump && (Input.GetAxisRaw("Vertical") != 0 || Input.GetAxisRaw("Jump") != 0);
     }
 
     void FixedUpdate()
@@ -77,12 +78,14 @@ public class CharacterController2D : MonoBehaviour
 
     private void UpdateAnimations()
     {
-        Animator.SetBool("moving", Velocity.x != 0);
-        Animator.SetBool("isGrounded", IsGrounded);
+        if (Animator != null && SpriteRenderer != null) { 
+            Animator.SetBool("moving", Velocity.x != 0);
+            Animator.SetBool("isGrounded", IsGrounded);
 
-        if (Velocity.x != 0)
-        {
-            SpriteRenderer.flipX = Velocity.x < 0;
+            if (Velocity.x != 0 && SpriteRenderer != null)
+            {
+                SpriteRenderer.flipX = Velocity.x < 0;
+            }
         }
     }
 
