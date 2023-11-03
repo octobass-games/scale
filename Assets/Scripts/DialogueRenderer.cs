@@ -15,17 +15,23 @@ public class DialogueRenderer : MonoBehaviour
         canvas.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void ShowDialogue(List<string> text, string speaker)
+    public void ShowDialogue(string text, string speaker)
     {
         Name.text = speaker;
-        Text.text = text[0];
+        Text.text = text;
+        Time.timeScale = 0;
+    
         canvas.SetActive(true);
+    }
 
+    public void closeDialogue()
+    {
+        canvas.SetActive(false);
+        Time.timeScale = 1;
+    }
+
+    public bool IsOpen()
+    {
+        return canvas.activeSelf;
     }
 }
