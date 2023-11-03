@@ -5,6 +5,7 @@ public class CharacterController : MonoBehaviour
     public Rigidbody2D Rb2d;
     public float HorizontalSpeed = 1.0f;
     public LayerMask LayerMask;
+    public float CoyoteTime;
 
     private float HorizontalMovement;
     private bool Jumping;
@@ -13,6 +14,7 @@ public class CharacterController : MonoBehaviour
     private RaycastHit2D[] RaycastResults = new RaycastHit2D[10];
     private ContactFilter2D ContactFilter = new ContactFilter2D();
     private Vector3 PositionOverride = Vector2.zero;
+    private float CoyoteTimer;
 
     public void ForcePosition(Vector3 position)
     {
@@ -22,6 +24,7 @@ public class CharacterController : MonoBehaviour
     void Awake()
     {
         ContactFilter.layerMask = LayerMask;
+        CoyoteTimer = CoyoteTime;
     }
 
     void Update()
@@ -32,20 +35,31 @@ public class CharacterController : MonoBehaviour
 
     void FixedUpdate()
     {
+        DecrementCoyoteTimer();
         UpdateVelocity();
         UpdatePosition();
         ResetVelocity();
+    }
+
+    private void DecrementCoyoteTimer()
+    {
+        CoyoteTimer -= Time.fixedDeltaTime;
     }
 
     private void UpdateVelocity()
     {
         Velocity.x = HorizontalMovement * HorizontalSpeed;
 
-        if (Jumping && IsGrounded)
+        if (Jumping)
         {
-            Jumping = false;
-            IsGrounded = false;
-            Velocity.y = 5f;
+            if (IsGrounded || CoyoteTimer >= 0)
+            {
+                Debug.Log(IsGrounded);
+                Jumping = false;
+                IsGrounded = false;
+                Velocity.y = 5f;
+                CoyoteTimer = -1;
+            }
         }
 
         if (Velocity.y < 0)
@@ -75,8 +89,14 @@ public class CharacterController : MonoBehaviour
                 if (Mathf.Approximately(RaycastResults[i].normal.y, 1))
                 {
                     IsGrounded = true;
+                    CoyoteTimer = CoyoteTime;
                     Velocity.y = 0;
                 }
+            }
+
+            if (RaycastResultCount == 0)
+            {
+                IsGrounded = false;
             }
         }
     }
