@@ -6,7 +6,7 @@ public class Interacter : MonoBehaviour
     
     void Update()
     {
-        if (Interactable != null && Input.GetKeyDown(KeyCode.E))
+        if (Interactable != null && (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return)))
         {
             Interactable.Interact();
         }
