@@ -11,7 +11,7 @@ public class CharacterController2D : MonoBehaviour
 
     private float HorizontalMovement;
     private bool Jumping;
-    private bool IsGrounded;
+    private bool IsGrounded = true;
     private Vector2 Velocity;
     private RaycastHit2D[] RaycastResults = new RaycastHit2D[10];
     private ContactFilter2D ContactFilter = new ContactFilter2D();
@@ -61,7 +61,6 @@ public class CharacterController2D : MonoBehaviour
                 IsGrounded = false;
                 Velocity.y = JumpSpeed;
                 CoyoteTimer = -1;
-                Animator.SetTrigger("jump");
             }
         }
 
