@@ -54,7 +54,6 @@ public class CharacterController : MonoBehaviour
         {
             if (IsGrounded || CoyoteTimer >= 0)
             {
-                Debug.Log(IsGrounded);
                 Jumping = false;
                 IsGrounded = false;
                 Velocity.y = 5f;
