@@ -5,17 +5,28 @@ public class CharacterController : MonoBehaviour
     public Rigidbody2D Rb2d;
     public float HorizontalSpeed = 1.0f;
     public LayerMask LayerMask;
+    public float CoyoteTime;
+    public float JumpSpeed = 5.0f;
 
     private float HorizontalMovement;
-    private float HorizontalDelta;
-    private Vector3 PositionOverride = Vector2.zero;
-
-    private float horizontalAlter;
-    private float verticalAlter;
     private bool Jumping;
-    private float verticalSpeed;
     private bool IsGrounded;
     private Vector2 Velocity;
+    private RaycastHit2D[] RaycastResults = new RaycastHit2D[10];
+    private ContactFilter2D ContactFilter = new ContactFilter2D();
+    private Vector3 PositionOverride = Vector2.zero;
+    private float CoyoteTimer;
+
+    public void ForcePosition(Vector3 position)
+    {
+        PositionOverride = position;
+    }
+
+    void Awake()
+    {
+        ContactFilter.layerMask = LayerMask;
+        CoyoteTimer = CoyoteTime;
+    }
 
     void Update()
     {
@@ -25,13 +36,30 @@ public class CharacterController : MonoBehaviour
 
     void FixedUpdate()
     {
+        DecrementCoyoteTimer();
+        UpdateVelocity();
+        UpdatePosition();
+        ResetVelocity();
+    }
+
+    private void DecrementCoyoteTimer()
+    {
+        CoyoteTimer -= Time.fixedDeltaTime;
+    }
+
+    private void UpdateVelocity()
+    {
         Velocity.x = HorizontalMovement * HorizontalSpeed;
 
-        if (Jumping && IsGrounded)
+        if (Jumping)
         {
-            Jumping = false;
-            IsGrounded = false;
-            Velocity.y = 5f;
+            if (IsGrounded || CoyoteTimer >= 0)
+            {
+                Jumping = false;
+                IsGrounded = false;
+                Velocity.y = JumpSpeed;
+                CoyoteTimer = -1;
+            }
         }
 
         if (Velocity.y < 0)
@@ -40,75 +68,41 @@ public class CharacterController : MonoBehaviour
         }
 
         Velocity += Physics2D.gravity * Time.fixedDeltaTime;
-
-        var displacement = Velocity * Time.fixedDeltaTime;
-        RaycastHit2D[] RaycastResults = new RaycastHit2D[15];
-        var contactFilter = new ContactFilter2D();
-        contactFilter.layerMask = LayerMask;
-        Rb2d.SafeMove(Vector2.right * displacement.x, displacement.x, RaycastResults, contactFilter);
-        int RaycastResultCount = Rb2d.SafeMove(Vector2.up * displacement.y, displacement.y, RaycastResults, contactFilter);
-
-        for ( int i = 0; i < RaycastResultCount; i++ )
-        {
-            if (Mathf.Approximately(RaycastResults[i].normal.y, 1))
-            {
-                IsGrounded = true;
-                Velocity.y = 0;
-            }
-        }
-
-        HorizontalDelta = 0;
-        horizontalAlter = 0;
     }
 
-    public void ForcePosition(Vector3 position)
+    private void UpdatePosition()
     {
-        PositionOverride = position;
-    }
-
-    private Vector2 GetDisplacement()
-    {
-        if (PositionOverride == Vector3.zero)
+        if (PositionOverride != Vector3.zero)
         {
-            return new Vector2(HorizontalDelta * Time.fixedDeltaTime, 0);
+            Rb2d.position = PositionOverride;
+            PositionOverride = Vector3.zero;
         }
         else
         {
-            var displacement = PositionOverride;
+            var displacement = Velocity * Time.fixedDeltaTime;
+            
+            Rb2d.SafeMove(Vector2.right * displacement.x, displacement.x, RaycastResults, ContactFilter);
+            int RaycastResultCount = Rb2d.SafeMove(Vector2.up * displacement.y, displacement.y, RaycastResults, ContactFilter);
 
-            PositionOverride = Vector2.zero;
+            for (int i = 0; i < RaycastResultCount; i++)
+            {
+                if (Mathf.Approximately(RaycastResults[i].normal.y, 1))
+                {
+                    IsGrounded = true;
+                    CoyoteTimer = CoyoteTime;
+                    Velocity.y = 0;
+                }
+            }
 
-            return displacement;
+            if (RaycastResultCount == 0)
+            {
+                IsGrounded = false;
+            }
         }
     }
 
-    private void GetHorizontalCollisions()
+    private void ResetVelocity()
     {
-        var collider = GetComponent<BoxCollider2D>();
-        var size = collider.size;
-
-        var hit = Physics2D.Raycast(transform.position, new Vector2(HorizontalMovement, 0), size.x / 2 + 0.5f, LayerMask);
-
-        if (hit.collider != null)
-        {
-            var a = (size.x / 2 + 0.5f) - hit.distance;
-            horizontalAlter = HorizontalMovement == -1 ? a : -a;
-        }
-    }
-
-    private void GetVerticalCollisions(float verticalTravel)
-    {
-        var collider = GetComponent<BoxCollider2D>();
-        var size = collider.size;
-
-        var hit = Physics2D.Raycast(transform.position, new Vector2(0, Mathf.Sign(verticalTravel)), size.y / 2 + Mathf.Abs(verticalTravel) + 0.5f, LayerMask);
-
-        if (hit.collider != null)
-        {
-            var a = (size.y / 2 + 0.5f) - hit.distance;
-            verticalAlter = a;
-            verticalSpeed = 0;
-            IsGrounded = true;
-        }
+        Velocity.x = 0;
     }
 }
