@@ -40,7 +40,7 @@ public class CharacterController2D : MonoBehaviour
     void Update()
     {
         HorizontalMovement = Input.GetAxisRaw("Horizontal");
-        Jumping = Input.GetAxisRaw("Vertical") != 0;
+        Jumping = Input.GetAxisRaw("Vertical") != 0 || Input.GetAxisRaw("Jump") != 0;
     }
 
     void FixedUpdate()
