@@ -6,6 +6,7 @@ public class CharacterController : MonoBehaviour
     public float HorizontalSpeed = 1.0f;
     public LayerMask LayerMask;
     public float CoyoteTime;
+    public float JumpSpeed = 5.0f;
 
     private float HorizontalMovement;
     private bool Jumping;
@@ -56,7 +57,7 @@ public class CharacterController : MonoBehaviour
             {
                 Jumping = false;
                 IsGrounded = false;
-                Velocity.y = 5f;
+                Velocity.y = JumpSpeed;
                 CoyoteTimer = -1;
             }
         }
