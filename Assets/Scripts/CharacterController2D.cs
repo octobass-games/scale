@@ -7,6 +7,7 @@ public class CharacterController2D : MonoBehaviour
     public LayerMask LayerMask;
     public float CoyoteTime;
     public float JumpSpeed = 5.0f;
+    public Animator Animator;
 
     private float HorizontalMovement;
     private bool Jumping;
@@ -38,6 +39,7 @@ public class CharacterController2D : MonoBehaviour
     {
         DecrementCoyoteTimer();
         UpdateVelocity();
+        UpdateAnimations();
         UpdatePosition();
         ResetVelocity();
     }
@@ -68,6 +70,12 @@ public class CharacterController2D : MonoBehaviour
         }
 
         Velocity += Physics2D.gravity * Time.fixedDeltaTime;
+    }
+
+    private void UpdateAnimations()
+    {
+        Animator.SetBool("moving", Velocity.x != 0);
+        Animator.SetBool("left", Velocity.x < 0);
     }
 
     private void UpdatePosition()
