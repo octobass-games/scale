@@ -32,6 +32,13 @@ public class GameManager : MonoBehaviour
     {
         if (ChangeLevelInfo != null)
         {
+            var player = GameObject.FindGameObjectWithTag("Player");
+
+            if (player != null)
+            {
+                player.GetComponent<CharacterController2D>().ForcePosition(ChangeLevelInfo.PositionToSpawn);
+            }
+
             ChangeLevelInfo = null;
         }
     }
