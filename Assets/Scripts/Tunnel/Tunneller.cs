@@ -8,7 +8,7 @@ public class Tunneller : MonoBehaviour
     {
         if (TunnelExit != null && Input.GetKeyDown(KeyCode.Space))
         {
-            GetComponent<CharacterController>().ForcePosition(TunnelExit.position);
+            GetComponent<CharacterController2D>().ForcePosition(TunnelExit.position);
         }
     }
 

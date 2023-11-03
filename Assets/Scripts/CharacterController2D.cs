@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CharacterController : MonoBehaviour
+public class CharacterController2D : MonoBehaviour
 {
     public Rigidbody2D Rb2d;
     public float HorizontalSpeed = 1.0f;
