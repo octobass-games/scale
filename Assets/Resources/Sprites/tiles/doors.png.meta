@@ -181,7 +181,7 @@ TextureImporter:
         width: 11
         height: 119
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -189,6 +189,27 @@ TextureImporter:
       bones: []
       spriteID: b0a6a101400255646b09127e12e8e122
       internalID: 816388292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gate
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 0
+        width: 45
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3ddcc6e2f0897747a51941c69e2747e
+      internalID: -502675980
       vertices: []
       indices: 
       edges: []
@@ -207,6 +228,7 @@ TextureImporter:
       doors_0: 1383833198
       doors_1: 1552562355
       doors_2: -1950336468
+      gate: -502675980
       gate-1: 816388292
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0

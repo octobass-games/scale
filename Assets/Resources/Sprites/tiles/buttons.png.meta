@@ -782,12 +782,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: buttons_32
+      name: big-lever-left
       rect:
         serializedVersion: 2
         x: 0
         y: 24
-        width: 24
+        width: 48
         height: 24
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -803,33 +803,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: buttons_33
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 24
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 92425403cb482ad42b4d6221f97d0cce
-      internalID: -896977436
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: buttons_34
+      name: big-lever-right
       rect:
         serializedVersion: 2
         x: 48
         y: 24
-        width: 24
+        width: 48
         height: 24
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -840,27 +819,6 @@ TextureImporter:
       bones: []
       spriteID: 455a95e3dd32bd14c8720686ada7248f
       internalID: 1628488559
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: buttons_35
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 24
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: db4514e962fb756449931bbfc4b93495
-      internalID: 1742999863
       vertices: []
       indices: 
       edges: []
@@ -1086,6 +1044,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      big-lever-left: 263592732
+      big-lever-right: 1628488559
       buttons_0: -1069342729
       buttons_1: -829883280
       buttons_10: 621938464
@@ -1112,9 +1072,7 @@ TextureImporter:
       buttons_3: -397988488
       buttons_30: -1984643845
       buttons_31: -2082787261
-      buttons_32: 263592732
       buttons_33: -896977436
-      buttons_34: 1628488559
       buttons_35: 1742999863
       buttons_36: 395621429
       buttons_37: -630062481
