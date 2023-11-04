@@ -40,7 +40,6 @@ public class CharacterSwitcher : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            Debug.Log("Hello");
             SwitchCharacter();
         }
     }
