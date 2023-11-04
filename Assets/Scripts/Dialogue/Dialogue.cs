@@ -1,11 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Dialogue : MonoBehaviour
 {
     public List<DialogueItem> texts;
     private bool interactable = false;
     private int pos = 0;
+    public UnityEvent OnEnd;
 
 
     private DialogueRenderer dialogueRenderer;
@@ -32,6 +34,10 @@ public class Dialogue : MonoBehaviour
             {
                 dialogueRenderer.closeDialogue();
                 pos = 0;
+                if (OnEnd != null)
+                {
+                    OnEnd.Invoke();
+                }
             }
             else
             {

@@ -48,19 +48,29 @@ public class CharacterSwitcher : MonoBehaviour
     {
         if (GiantCharacterController.IsFrozen())
         {
-            GnomeCharacterController.Thaw();
-            GiantCharacterController.Freeze();
-            CinemachineVirtualCamera.Follow = Gnome.transform;
-            GnomeImage.color = Color.white.WithAlpha(1f);
-            GiantImage.color = Color.white.WithAlpha(0.5f);
+            SelectGnome();
         }
         else
         {
-            GnomeCharacterController.Freeze();
-            GiantCharacterController.Thaw();
-            CinemachineVirtualCamera.Follow = Giant.transform;
-            GnomeImage.color = Color.white.WithAlpha(0.5f);
-            GiantImage.color = Color.white.WithAlpha(1f);
+            SelectGiant();
         }
+    }
+
+    public void SelectGnome()
+    {
+        GnomeCharacterController.Thaw();
+        GiantCharacterController.Freeze();
+        CinemachineVirtualCamera.Follow = Gnome.transform;
+        GnomeImage.color = Color.white.WithAlpha(1f);
+        GiantImage.color = Color.white.WithAlpha(0.5f);
+    }
+
+    public void SelectGiant()
+    {
+        GnomeCharacterController.Freeze();
+        GiantCharacterController.Thaw();
+        CinemachineVirtualCamera.Follow = Giant.transform;
+        GnomeImage.color = Color.white.WithAlpha(0.5f);
+        GiantImage.color = Color.white.WithAlpha(1f);
     }
 }
