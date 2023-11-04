@@ -22,13 +22,15 @@ public class CharacterSwitcher : MonoBehaviour
 
         if (FirstActiveCharacter == Giant)
         {
-            GnomeCharacterController.enabled = false;
+            GnomeCharacterController.Freeze();
+            GiantCharacterController.Thaw();
             GnomeImage.color = Color.white.WithAlpha(0.5f);
             GiantImage.color = Color.white.WithAlpha(1f);
         }
         else
         {
-            GiantCharacterController.enabled = false;
+            GnomeCharacterController.Thaw();
+            GiantCharacterController.Freeze();
             GnomeImage.color = Color.white.WithAlpha(1f);
             GiantImage.color = Color.white.WithAlpha(0.5f);
         }
@@ -44,18 +46,18 @@ public class CharacterSwitcher : MonoBehaviour
 
     public void SwitchCharacter()
     {
-        if (GiantCharacterController.enabled)
+        if (GiantCharacterController.IsFrozen())
         {
-            GnomeCharacterController.enabled = true;
-            GiantCharacterController.enabled = false;
+            GnomeCharacterController.Thaw();
+            GiantCharacterController.Freeze();
             CinemachineVirtualCamera.Follow = Gnome.transform;
             GnomeImage.color = Color.white.WithAlpha(1f);
             GiantImage.color = Color.white.WithAlpha(0.5f);
         }
         else
         {
-            GnomeCharacterController.enabled = false;
-            GiantCharacterController.enabled = true;
+            GnomeCharacterController.Freeze();
+            GiantCharacterController.Thaw();
             CinemachineVirtualCamera.Follow = Giant.transform;
             GnomeImage.color = Color.white.WithAlpha(0.5f);
             GiantImage.color = Color.white.WithAlpha(1f);

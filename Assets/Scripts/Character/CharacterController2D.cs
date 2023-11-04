@@ -13,6 +13,7 @@ public class CharacterController2D : MonoBehaviour
     public bool CanJump;
 
     private float HorizontalMovement;
+    private bool ProcessInputs;
     private bool Jumping;
     private bool IsGrounded = true;
     private Vector2 Velocity;
@@ -28,6 +29,23 @@ public class CharacterController2D : MonoBehaviour
         PositionOverride = position;
     }
 
+    public void Freeze()
+    {
+        ProcessInputs = false;
+        HorizontalMovement = 0;
+        Jumping = false;
+    }
+
+    public void Thaw()
+    {
+        ProcessInputs = true;
+    }
+
+    public bool IsFrozen()
+    {
+        return ProcessInputs;
+    }
+
     void Awake()
     {
         ContactFilter.layerMask = LayerMask;
@@ -40,8 +58,11 @@ public class CharacterController2D : MonoBehaviour
 
     void Update()
     {
-        HorizontalMovement = Input.GetAxisRaw("Horizontal");
-        Jumping = CanJump && (Input.GetAxisRaw("Vertical") != 0 || Input.GetAxisRaw("Jump") != 0);
+        if (ProcessInputs)
+        {
+            HorizontalMovement = Input.GetAxisRaw("Horizontal");
+            Jumping = CanJump && (Input.GetAxisRaw("Vertical") != 0 || Input.GetAxisRaw("Jump") != 0);
+        }
     }
 
     void FixedUpdate()

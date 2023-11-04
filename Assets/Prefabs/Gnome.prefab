@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7247004948739742953}
   - component: {fileID: 2300249598417442213}
   - component: {fileID: 6939635167091054494}
+  - component: {fileID: 4636623087679941627}
   m_Layer: 0
   m_Name: Gnome
   m_TagString: Player
@@ -131,6 +132,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4636623087679941627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872179014486394609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 024cba356a1548242a561137986d0554, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4595131967294342126
 GameObject:
   m_ObjectHideFlags: 0
