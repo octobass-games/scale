@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class Dialogue : MonoBehaviour
 {
-    public List<string> texts;
-    public string CharacterName;
+    public List<DialogueItem> texts;
     private bool interactable = false;
+    private int pos = 0;
 
 
     private DialogueRenderer dialogueRenderer;
@@ -27,17 +27,22 @@ public class Dialogue : MonoBehaviour
 
     void Update()
     {
-        if ((Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return)) && interactable)
-        {
-            if (dialogueRenderer.IsOpen())
+        if ((Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return)) && interactable) {
+            if (dialogueRenderer.IsOpen() && texts.Count == pos)
             {
                 dialogueRenderer.closeDialogue();
+                pos = 0;
             }
             else
             {
-                dialogueRenderer.ShowDialogue(texts.PickRandom(), CharacterName);
+                var a = texts[pos];
+                dialogueRenderer.ShowDialogue(a.Text, a.Name);
+                pos++;
+
             }
+
         }
+
 
     }
 }
