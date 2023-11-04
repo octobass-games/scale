@@ -11,6 +11,7 @@ public class CharacterController2D : MonoBehaviour
     public Animator Animator;
     public SpriteRenderer SpriteRenderer;
     public bool CanJump;
+    public float GravityModifier = 1.0f;
 
     private float HorizontalMovement;
     private bool ProcessInputs;
@@ -94,7 +95,7 @@ public class CharacterController2D : MonoBehaviour
             }
         }
 
-        Velocity -= new Vector2(0, Gravity) * Time.fixedDeltaTime;
+        Velocity -= new Vector2(0, GravityModifier) * new Vector2(0, Gravity) * Time.fixedDeltaTime;
     }
 
     private void UpdateAnimations()
