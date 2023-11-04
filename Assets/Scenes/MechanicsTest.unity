@@ -133,11 +133,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1708196136427906466, guid: 7da31ab733c4d6f4fb56b4c5be442ea6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 60.6
       objectReference: {fileID: 0}
     - target: {fileID: 1708196136427906466, guid: 7da31ab733c4d6f4fb56b4c5be442ea6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 149.35
       objectReference: {fileID: 0}
     - target: {fileID: 1708196136427906466, guid: 7da31ab733c4d6f4fb56b4c5be442ea6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -870,7 +870,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 11
-      m_TileSpriteIndex: 11
+      m_TileSpriteIndex: 13
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1479,12 +1479,12 @@ Tilemap:
     m_Data: {fileID: -1423982872, guid: 9a425d2afc9c6944eabbea0ca8ef7506, type: 3}
   - m_RefCount: 6
     m_Data: {fileID: -1520844842, guid: 5d8e188c720aa5148aacdc30aa648d44, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 22034058, guid: 5d8e188c720aa5148aacdc30aa648d44, type: 3}
-  - m_RefCount: 2
-    m_Data: {fileID: 1219087011, guid: 5d8e188c720aa5148aacdc30aa648d44, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 2
+    m_Data: {fileID: 1219087011, guid: 5d8e188c720aa5148aacdc30aa648d44, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 22034058, guid: 5d8e188c720aa5148aacdc30aa648d44, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: -1380548084, guid: 5d8e188c720aa5148aacdc30aa648d44, type: 3}
   - m_RefCount: 1
@@ -1843,11 +1843,19 @@ PrefabInstance:
       objectReference: {fileID: 35877476}
     - target: {fileID: 332063906344861515, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.026166411
+      value: 60.6
       objectReference: {fileID: 0}
     - target: {fileID: 332063906344861515, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 61.97744
+      value: 149.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635362812217682771, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 60.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635362812217682771, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 149.35
       objectReference: {fileID: 0}
     - target: {fileID: 4348075526452845086, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
       propertyPath: m_BoundingShape2D
@@ -5450,6 +5458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ZiplineEnd: {fileID: 1027959400}
+  ZiplineSpeed: 2.5
 --- !u!4 &1408127595
 Transform:
   m_ObjectHideFlags: 0
