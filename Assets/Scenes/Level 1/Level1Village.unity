@@ -156,9 +156,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   texts:
   - Name: Giant
-    Text: 
+    Text: CAT_NAME... hes gone!!
   - Name: Gnome
-    Text: bbb
+    Text: Slow down, whose gone?
+  - Name: Giant
+    Text: My cat... he got taken by that dragon
+  - Name: Gnome
+    Text: Looks like we're in a simillar predicament
+  - Name: Gnome
+    Text: Perhaps we can work together
+  - Name: Giant
+    Text: Sure
   OnEnd:
     m_PersistentCalls:
       m_Calls:
@@ -185,6 +193,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: panic-done
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 24403465}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: panic-done
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!4 &24403467
 Transform:
@@ -11974,6 +11994,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 24403465}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &857590333
 MonoBehaviour:
@@ -29216,11 +29248,11 @@ PrefabInstance:
       objectReference: {fileID: 334243742}
     - target: {fileID: 332063906344861515, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 119.91629
+      value: 75.5007
       objectReference: {fileID: 0}
     - target: {fileID: 332063906344861515, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 62.93517
+      value: 37.9296
       objectReference: {fileID: 0}
     - target: {fileID: 3635362812217682771, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
       propertyPath: m_LocalPosition.x
