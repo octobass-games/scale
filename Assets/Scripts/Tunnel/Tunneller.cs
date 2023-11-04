@@ -6,7 +6,7 @@ public class Tunneller : MonoBehaviour
 
     void Update()
     {
-        if (TunnelExit != null && Input.GetKeyDown(KeyCode.Space))
+        if (TunnelExit != null && Input.GetKeyDown(KeyCode.E))
         {
             GetComponent<CharacterController2D>().ForcePosition(TunnelExit.position);
         }
