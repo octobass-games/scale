@@ -3,6 +3,7 @@ using UnityEngine;
 public class Zipline : MonoBehaviour
 {
     public Transform ZiplineEnd;
+    public float ZiplineSpeed = 5f;
 
     private Zipliner Zipliner;
     private bool Riding;
@@ -23,7 +24,7 @@ public class Zipline : MonoBehaviour
             }
             else if (!Zipliner.transform.position.Approximately(ZiplineEnd.position))
             {
-                var newPosition = Vector3.MoveTowards(Zipliner.transform.position, ZiplineEnd.position, 5f);
+                var newPosition = Vector3.MoveTowards(Zipliner.transform.position, ZiplineEnd.position, ZiplineSpeed);
                 Zipliner.Move(newPosition);
             }
             else
