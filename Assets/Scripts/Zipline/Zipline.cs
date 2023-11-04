@@ -21,7 +21,7 @@ public class Zipline : MonoBehaviour
                 Riding = true;
                 Zipliner.LockIntoZipline();
             }
-            else if (!Mathf.Approximately(Zipliner.transform.position.x, ZiplineEnd.position.x) && !Mathf.Approximately(Zipliner.transform.position.y, ZiplineEnd.position.y))
+            else if (!Zipliner.transform.position.Approximately(ZiplineEnd.position))
             {
                 var newPosition = Vector3.MoveTowards(Zipliner.transform.position, ZiplineEnd.position, 5f);
                 Zipliner.Move(newPosition);
