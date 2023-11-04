@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -424,6 +424,90 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: giant_15
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 0
+        width: 67
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7336b512cc266a438153665e58f03a4
+      internalID: 843968053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: giant_16
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 0
+        width: 67
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4d06a3cfb23b224195ee57bbf69f4f6
+      internalID: -73065352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: giant_17
+      rect:
+        serializedVersion: 2
+        x: 1139
+        y: 0
+        width: 67
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3f81fd6a0198e84eaf95ce6c49f7846
+      internalID: -1440782094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: giant_18
+      rect:
+        serializedVersion: 2
+        x: 1206
+        y: 0
+        width: 67
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4b5c04918c3a9f4d9a7a7f1bb02c81d
+      internalID: 2118711914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -442,6 +526,10 @@ TextureImporter:
       giant_12: 745988253
       giant_13: 1740475828
       giant_14: 1018256050
+      giant_15: 843968053
+      giant_16: -73065352
+      giant_17: -1440782094
+      giant_18: 2118711914
       giant_2: 772474039
       giant_3: 943122670
       giant_4: 412088021
