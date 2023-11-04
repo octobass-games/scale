@@ -2292,7 +2292,6 @@ GameObject:
   m_Component:
   - component: {fileID: 844874228}
   - component: {fileID: 844874227}
-  - component: {fileID: 844874226}
   - component: {fileID: 844874225}
   m_Layer: 8
   m_Name: PressurePlate (1)
@@ -2346,31 +2345,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 48, y: 11.795189}
   m_EdgeRadius: 0
---- !u!114 &844874226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 844874224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 812d179ce6e0bfc4cab6b747b29e8bde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnInteract:
-    m_PersistentCalls:
-      m_Calls:
-      - {m_Target: {fileID: 844874227}, m_TargetAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine, m_MethodName: set_sprite, m_Mode: 2, m_Arguments: {m_ObjectArgument: {fileID: 1374224640, guid: cafa8b77b6c19ae4ea06605ffae37957, type: 3}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-      - {m_Target: {fileID: 203909171}, m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine, m_MethodName: SetActive, m_Mode: 6, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-    m_CallsDirty: 1
-  OnUninteract:
-    m_PersistentCalls:
-      m_Calls:
-      - {m_Target: {fileID: 844874227}, m_TargetAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine, m_MethodName: set_sprite, m_Mode: 2, m_Arguments: {m_ObjectArgument: {fileID: 1499682296, guid: cafa8b77b6c19ae4ea06605ffae37957, type: 3}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-      - {m_Target: {fileID: 203909171}, m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine, m_MethodName: SetActive, m_Mode: 6, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 1}, m_CallState: 2}
-    m_CallsDirty: 1
-  Interactable: 1
 --- !u!212 &844874227
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2572,7 +2546,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1023087077}
   - component: {fileID: 1023087076}
-  - component: {fileID: 1023087075}
   - component: {fileID: 1023087074}
   m_Layer: 8
   m_Name: PressurePlate
@@ -2626,31 +2599,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 48, y: 11.795189}
   m_EdgeRadius: 0
---- !u!114 &1023087075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1023087073}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 812d179ce6e0bfc4cab6b747b29e8bde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnInteract:
-    m_PersistentCalls:
-      m_Calls:
-      - {m_Target: {fileID: 1023087076}, m_TargetAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine, m_MethodName: set_sprite, m_Mode: 2, m_Arguments: {m_ObjectArgument: {fileID: 1374224640, guid: cafa8b77b6c19ae4ea06605ffae37957, type: 3}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-      - {m_Target: {fileID: 203909171}, m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine, m_MethodName: SetActive, m_Mode: 6, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-    m_CallsDirty: 1
-  OnUninteract:
-    m_PersistentCalls:
-      m_Calls:
-      - {m_Target: {fileID: 1023087076}, m_TargetAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine, m_MethodName: set_sprite, m_Mode: 2, m_Arguments: {m_ObjectArgument: {fileID: 1499682296, guid: cafa8b77b6c19ae4ea06605ffae37957, type: 3}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-      - {m_Target: {fileID: 203909171}, m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine, m_MethodName: SetActive, m_Mode: 6, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 1}, m_CallState: 2}
-    m_CallsDirty: 1
-  Interactable: 1
 --- !u!212 &1023087076
 SpriteRenderer:
   m_ObjectHideFlags: 0
