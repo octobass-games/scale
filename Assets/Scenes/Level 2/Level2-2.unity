@@ -266,17 +266,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5581c8485dbba5b439a83f439450e266, type: 3}
---- !u!114 &717998075 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 947257412626457305, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
-  m_PrefabInstance: {fileID: 8742651764357682688}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 579f6382b59561b409827a82642d8188, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &768068224
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2139,8 +2128,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1726004181}
   - component: {fileID: 1726004180}
-  - component: {fileID: 1726004179}
   - component: {fileID: 1726004178}
+  - component: {fileID: 1726004183}
+  - component: {fileID: 1726004182}
   m_Layer: 7
   m_Name: lever
   m_TagString: Untagged
@@ -2193,69 +2183,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 24, y: 24}
   m_EdgeRadius: 0
---- !u!114 &1726004179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1726004177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e16363a8b6a21ba47b2a6f7456d3ea0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnInteract:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 717998075}
-        m_TargetAssemblyTypeName: PressurePlate, Assembly-CSharp
-        m_MethodName: BreakPressurePlate
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2064992855}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1726004180}
-        m_TargetAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
-        m_MethodName: set_sprite
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 299086662, guid: cafa8b77b6c19ae4ea06605ffae37957, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1726004178}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 299086662, guid: cafa8b77b6c19ae4ea06605ffae37957, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!212 &1726004180
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2323,6 +2250,66 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1726004182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726004177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ac3d8efc1fcb394b9fea2a5270527a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Switch: {fileID: 1726004183}
+--- !u!114 &1726004183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726004177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3365ae00776869b4b9fccc2a64eac0ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SwitchSpriteRenderer: {fileID: 1726004180}
+  FirstSwitchStateSprite: {fileID: 251451741, guid: cafa8b77b6c19ae4ea06605ffae37957, type: 3}
+  SecondSwitchStateSprite: {fileID: 299086662, guid: cafa8b77b6c19ae4ea06605ffae37957, type: 3}
+  OnFirstSwitchState:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSecondSwitchState:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2064992855}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8742651764357682692}
+        m_TargetAssemblyTypeName: Switch, Assembly-CSharp
+        m_MethodName: Break
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  IsToggleable: 0
+  IsBroken: 0
 --- !u!1 &1788594396
 GameObject:
   m_ObjectHideFlags: 0
@@ -2510,23 +2497,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4827923677449453362, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
       propertyPath: orthographic size
-      value: 135
+      value: 108
       objectReference: {fileID: 0}
     - target: {fileID: 4827923677449453362, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.35781252
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4827923677449453362, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0.109259255
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4827923677449453362, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.25
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4827923677449453362, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 0.25
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7228991048986225550, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2819,11 +2806,88 @@ PrefabInstance:
       propertyPath: m_Name
       value: PressurePlate
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 947257412626457305, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7935605826389816080, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8742651764357682692}
+    - targetCorrespondingSourceObject: {fileID: 7935605826389816080, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8742651764357682691}
   m_SourcePrefab: {fileID: 100100000, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
+--- !u!1 &8742651764357682689 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7935605826389816080, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
+  m_PrefabInstance: {fileID: 8742651764357682688}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &8742651764357682690 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2172163314105285991, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
+  m_PrefabInstance: {fileID: 8742651764357682688}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8742651764357682691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8742651764357682689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 779f8e64e9620804791b6d1a2d91bab3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Switch: {fileID: 8742651764357682692}
+--- !u!114 &8742651764357682692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8742651764357682689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3365ae00776869b4b9fccc2a64eac0ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SwitchSpriteRenderer: {fileID: 8742651764357682690}
+  FirstSwitchStateSprite: {fileID: 1499682296, guid: cafa8b77b6c19ae4ea06605ffae37957, type: 3}
+  SecondSwitchStateSprite: {fileID: 1374224640, guid: cafa8b77b6c19ae4ea06605ffae37957, type: 3}
+  OnFirstSwitchState:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2064992855}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  OnSecondSwitchState:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2064992855}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  IsToggleable: 1
+  IsBroken: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
