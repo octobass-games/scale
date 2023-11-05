@@ -6,49 +6,37 @@ public class Dialogue : MonoBehaviour
 {
     public List<DialogueItem> texts;
     private bool interactable = false;
-    private int pos = 0;
     public UnityEvent OnEnd;
-
-
+    private DialogueController DialogueController;
     private DialogueRenderer dialogueRenderer;
+    private CharacterSwitcher CharacterSwitcher;
 
     void Awake()
     {
         dialogueRenderer = FindObjectOfType<DialogueRenderer>();
+        DialogueController = new DialogueController(texts, OnEnd, dialogueRenderer);
+        CharacterSwitcher = FindObjectOfType<CharacterSwitcher>();
+
     }
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        interactable = true;
+        if (TagComparer.IsPlayer(col) && col.CompareTag(CharacterSwitcher.ActiveCharacterTag))
+        {
+            interactable = true;
+        }
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
         interactable = false;
+        DialogueController.Reset();
     }
 
     void Update()
     {
         if ((Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return)) && interactable) {
-            if (dialogueRenderer.IsOpen() && texts.Count == pos)
-            {
-                dialogueRenderer.closeDialogue();
-                pos = 0;
-                if (OnEnd != null)
-                {
-                    OnEnd.Invoke();
-                }
-            }
-            else
-            {
-                var a = texts[pos];
-                dialogueRenderer.ShowDialogue(a.Text, a.Name);
-                pos++;
-
-            }
-
+           DialogueController.HandleProgressDialogue();
         }
-
-
     }
 }

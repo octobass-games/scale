@@ -14,7 +14,13 @@ public class CharacterSwitcher : MonoBehaviour
 
     private CharacterController2D GiantCharacterController;
     private CharacterController2D GnomeCharacterController;
+    public string ActiveCharacterTag = TagComparer.GNOME;
+    public bool EnableSwitching = true;
 
+    public void SetEnableSwithing(bool e)
+    {
+        EnableSwitching = e;
+    }
     void Start()
     {
         GiantCharacterController = Giant.GetComponent<CharacterController2D>();
@@ -26,6 +32,7 @@ public class CharacterSwitcher : MonoBehaviour
             GiantCharacterController.Thaw();
             GnomeImage.color = Color.white.WithAlpha(0.5f);
             GiantImage.color = Color.white.WithAlpha(1f);
+            ActiveCharacterTag = TagComparer.GIANT;
         }
         else
         {
@@ -33,12 +40,13 @@ public class CharacterSwitcher : MonoBehaviour
             GiantCharacterController.Freeze();
             GnomeImage.color = Color.white.WithAlpha(1f);
             GiantImage.color = Color.white.WithAlpha(0.5f);
+            ActiveCharacterTag = TagComparer.GNOME;
         }
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (EnableSwitching && Input.GetKeyDown(KeyCode.Tab))
         {
             SwitchCharacter();
         }
@@ -63,6 +71,7 @@ public class CharacterSwitcher : MonoBehaviour
         CinemachineVirtualCamera.Follow = Gnome.transform;
         GnomeImage.color = Color.white.WithAlpha(1f);
         GiantImage.color = Color.white.WithAlpha(0.5f);
+        ActiveCharacterTag = TagComparer.GNOME;
     }
 
     public void SelectGiant()
@@ -72,5 +81,7 @@ public class CharacterSwitcher : MonoBehaviour
         CinemachineVirtualCamera.Follow = Giant.transform;
         GnomeImage.color = Color.white.WithAlpha(0.5f);
         GiantImage.color = Color.white.WithAlpha(1f);
+        ActiveCharacterTag = TagComparer.GIANT;
     }
+
 }
