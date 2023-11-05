@@ -10,8 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5943798236462619071}
   - component: {fileID: 2474139779459333536}
-  - component: {fileID: 5322749101999311595}
   - component: {fileID: 6697855213070632811}
+  - component: {fileID: 2409673459525965356}
+  - component: {fileID: 924182457010485813}
+  - component: {fileID: 8619494009684732619}
+  - component: {fileID: 2936519749863922264}
   m_Layer: 0
   m_Name: BigLever
   m_TagString: Untagged
@@ -86,28 +89,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5322749101999311595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7089255784809278807}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 673c7097b160f59479798a6d7bc3b227, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SpriteRenderer: {fileID: 2474139779459333536}
-  LeftSprite: {fileID: 263592732, guid: cafa8b77b6c19ae4ea06605ffae37957, type: 3}
-  RightSprite: {fileID: 1628488559, guid: cafa8b77b6c19ae4ea06605ffae37957, type: 3}
-  OnLeft:
-    m_PersistentCalls:
-      m_Calls: []
-  OnRight:
-    m_PersistentCalls:
-      m_Calls: []
-  IsGiantLever: 1
 --- !u!61 &6697855213070632811
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -153,3 +134,129 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 48, y: 24}
   m_EdgeRadius: 0
+--- !u!114 &2409673459525965356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7089255784809278807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3365ae00776869b4b9fccc2a64eac0ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SwitchSpriteRenderer: {fileID: 2474139779459333536}
+  FirstSwitchStateSprite: {fileID: 263592732, guid: cafa8b77b6c19ae4ea06605ffae37957, type: 3}
+  SecondSwitchStateSprite: {fileID: 1628488559, guid: cafa8b77b6c19ae4ea06605ffae37957, type: 3}
+  OnFirstSwitchState:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  OnSecondSwitchState:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  IsToggleable: 1
+  IsBroken: 0
+--- !u!114 &924182457010485813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7089255784809278807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a8b09fc05cabcb469b408bac01b00a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ValidUserTags:
+  - Giant
+--- !u!114 &8619494009684732619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7089255784809278807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ac3d8efc1fcb394b9fea2a5270527a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Switch: {fileID: 2409673459525965356}
+  SwitchTagChecker: {fileID: 924182457010485813}
+  OnInvalidUser:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2936519749863922264}
+        m_TargetAssemblyTypeName: LeverErrorMessage, Assembly-CSharp
+        m_MethodName: ShowNoUseDialogue
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Gnome
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2936519749863922264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7089255784809278807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92cdd230578e58344ba4370a319bcdde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

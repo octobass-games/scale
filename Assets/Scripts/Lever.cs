@@ -1,7 +1,5 @@
-using FMOD.Studio;
 using UnityEngine;
 using UnityEngine.Events;
-using static UnityEditor.PlayerSettings;
 
 public class Lever : MonoBehaviour
 {
