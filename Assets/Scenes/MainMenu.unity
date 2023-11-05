@@ -303,6 +303,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1051680906}
   m_CullTransparentMesh: 1
+--- !u!1 &1710768359
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1710768361}
+  - component: {fileID: 1710768360}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1710768360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710768359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 959d628181b95ff4ba47686ba3ad232f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1710768361
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710768359}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -112.82057, y: 171.4059, z: -0.84755605}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1710987597
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,6 +567,7 @@ GameObject:
   - component: {fileID: 1872310827}
   - component: {fileID: 1872310829}
   - component: {fileID: 1872310828}
+  - component: {fileID: 1872310830}
   m_Layer: 5
   m_Name: Start Game
   m_TagString: Untagged
@@ -593,7 +638,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1872310830}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &1872310829
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -602,6 +659,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1872310826}
   m_CullTransparentMesh: 1
+--- !u!114 &1872310830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872310826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50ad6534af424e44082f8328f6e697d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChangeLevelInfo:
+    PositionToSpawn: {x: 0, y: 0, z: 0}
+    LevelName: Level1Village
 --- !u!1 &1943483139
 GameObject:
   m_ObjectHideFlags: 0
@@ -1009,6 +1081,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1943483142}
+  - {fileID: 1710768361}
   - {fileID: 610663140}
   - {fileID: 2115935965}
   - {fileID: 1985844373}
