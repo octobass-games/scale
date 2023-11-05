@@ -11,7 +11,7 @@ public class ProximitySwitch : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (SwitchTagChecker.IsValidUser(collision.gameObject.tag))
+        if (SwitchTagChecker == null || SwitchTagChecker.IsValidUser(collision.gameObject.tag))
         {
             if (ActorsInProximity.Count == 0)
             {
