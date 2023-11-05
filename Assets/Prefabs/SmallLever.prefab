@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 828212399316551796}
   - component: {fileID: 3216895253036172522}
   - component: {fileID: 4961302904063484251}
-  - component: {fileID: 6885737932419063729}
   - component: {fileID: 54419206066451468}
   - component: {fileID: -7334584024964175919}
   - component: {fileID: 8583768950465665824}
@@ -135,28 +134,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 24, y: 24}
   m_EdgeRadius: 0
---- !u!114 &6885737932419063729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7429836676304830131}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 673c7097b160f59479798a6d7bc3b227, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SpriteRenderer: {fileID: 3216895253036172522}
-  LeftSprite: {fileID: 251451741, guid: cafa8b77b6c19ae4ea06605ffae37957, type: 3}
-  RightSprite: {fileID: 299086662, guid: cafa8b77b6c19ae4ea06605ffae37957, type: 3}
-  OnLeft:
-    m_PersistentCalls:
-      m_Calls: []
-  OnRight:
-    m_PersistentCalls:
-      m_Calls: []
-  IsGiantLever: 0
 --- !u!114 &54419206066451468
 MonoBehaviour:
   m_ObjectHideFlags: 0
