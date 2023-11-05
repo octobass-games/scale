@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 2300249598417442213}
   - component: {fileID: 6939635167091054494}
   - component: {fileID: 4636623087679941627}
+  - component: {fileID: 906283852425376310}
+  - component: {fileID: 7023341559113245854}
   m_Layer: 0
   m_Name: Gnome
   m_TagString: Gnome
@@ -54,7 +56,7 @@ MonoBehaviour:
   LayerMask:
     serializedVersion: 2
     m_Bits: 72
-  CoyoteTime: 0
+  CoyoteTime: 0.2
   TimeToReachJumpApex: 0.4
   JumpHeight: 70
   Animator: {fileID: 3723070471761917970}
@@ -145,6 +147,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 024cba356a1548242a561137986d0554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &906283852425376310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872179014486394609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 142892f69eecf8d4d8ce2060870d5ac3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CharacterController: {fileID: 7247004948739742953}
+--- !u!114 &7023341559113245854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872179014486394609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d29be39c950dd2b4784573b4edfc43c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Items: []
 --- !u!1 &4595131967294342126
 GameObject:
   m_ObjectHideFlags: 0
