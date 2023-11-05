@@ -16,7 +16,23 @@ public class PressurePlate : MonoBehaviour
         IsBroken = true;
     }
 
+    public void ForcePressurePlateDown()
+    {
+        PressurePlateDown();
+        BreakPressurePlate();
+    }
+
     void OnTriggerEnter2D(Collider2D collision)
+    {
+        PressurePlateDown();
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        PressurePlateUp();
+    }
+
+    private void PressurePlateDown()
     {
         if (!IsBroken)
         {
@@ -25,7 +41,7 @@ public class PressurePlate : MonoBehaviour
         }
     }
 
-    void OnTriggerExit2D(Collider2D collision)
+    private void PressurePlateUp()
     {
         if (!IsBroken)
         {

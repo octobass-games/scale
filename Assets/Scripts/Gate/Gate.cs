@@ -20,6 +20,11 @@ public class Gate : MonoBehaviour
         }
     }
 
+    public void ForceOpen()
+    {
+        OnOpen.Invoke();
+    }
+
     private bool IsUnlocked()
     {
         for (int i = 0; i < Locks.Count; i++)
