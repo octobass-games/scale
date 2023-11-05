@@ -8,7 +8,7 @@ public class Gate : MonoBehaviour
     public UnityEvent OnOpen;
     public UnityEvent OnClose;
 
-    public void CheckLocks()
+    public void TryToOpen()
     {
         if (IsUnlocked())
         {

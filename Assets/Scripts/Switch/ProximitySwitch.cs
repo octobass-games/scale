@@ -24,11 +24,14 @@ public class ProximitySwitch : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        ActorsInProximity.Remove(collision.gameObject);
-
-        if (ActorsInProximity.Count == 0)
+        if (SwitchTagChecker == null || SwitchTagChecker.IsValidUser(collision.gameObject.tag))
         {
-            Switch.ToggleState();    
+            ActorsInProximity.Remove(collision.gameObject);
+
+            if (ActorsInProximity.Count == 0)
+            {
+                Switch.ToggleState();
+            }
         }
     }
 }

@@ -8,12 +8,12 @@ public class Lock : MonoBehaviour
     public void Open()
     {
         IsLocked = false;
-        Gate.CheckLocks();
+        Gate.TryToOpen();
     }
 
     public void Close()
     {
         IsLocked = true;
-        Gate.CheckLocks();
+        Gate.TryToOpen();
     }
 }
