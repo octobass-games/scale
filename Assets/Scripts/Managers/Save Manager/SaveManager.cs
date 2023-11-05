@@ -10,23 +10,7 @@ public class SaveManager : MonoBehaviour
     void Start()
     {
         SaveFilePath = Application.persistentDataPath + "/save-data.json";
-        SaveData = Load() ?? InitialiseSaveData();
-    }
-
-    public SaveData InitialiseSaveData()
-    {
-        return new SaveData(
-            new List<LevelData>()
-                {
-                    new LevelData("Level1Village", false),
-                    new LevelData("Level2MountainBase", false),
-                    new LevelData("Level2-2", false),
-                    new LevelData("Level2-3", false),
-                    new LevelData("Level2-4", false),
-                    new LevelData("Level2-5", false),
-                    new LevelData("Level2-6", false)
-                }
-            );
+        SaveData = Load() ?? GetFreshSaveData();
     }
 
     public void SaveLevelProgress(string levelName)
@@ -83,6 +67,8 @@ public class SaveManager : MonoBehaviour
             {
                 PlayerPrefs.DeleteKey("save-data");
             }
+
+            SaveData = GetFreshSaveData();
         }
     }
 
@@ -96,5 +82,21 @@ public class SaveManager : MonoBehaviour
         {
             return PlayerPrefs.GetString("save-data") != "";
         }
+    }
+
+    private SaveData GetFreshSaveData()
+    {
+        return new SaveData(
+            new List<LevelData>()
+                {
+                    new LevelData("Level1Village", false),
+                    new LevelData("Level2MountainBase", false),
+                    new LevelData("Level2-2", false),
+                    new LevelData("Level2-3", false),
+                    new LevelData("Level2-4", false),
+                    new LevelData("Level2-5", false),
+                    new LevelData("Level2-6", false)
+                }
+            );
     }
 }
