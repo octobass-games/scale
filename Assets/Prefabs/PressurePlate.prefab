@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 748885563998328798}
   - component: {fileID: 2172163314105285991}
   - component: {fileID: 6241963440019634120}
-  - component: {fileID: 947257412626457305}
+  - component: {fileID: 3665166937412649581}
+  - component: {fileID: 6466932072515102366}
+  - component: {fileID: 3503070902335450040}
   m_Layer: 8
   m_Name: PressurePlate
   m_TagString: Untagged
@@ -98,10 +100,10 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 255
+    m_Bits: 0
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -131,7 +133,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 48, y: 11.795189}
   m_EdgeRadius: 0
---- !u!114 &947257412626457305
+--- !u!114 &3665166937412649581
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,15 +142,69 @@ MonoBehaviour:
   m_GameObject: {fileID: 7935605826389816080}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 579f6382b59561b409827a82642d8188, type: 3}
+  m_Script: {fileID: 11500000, guid: 3365ae00776869b4b9fccc2a64eac0ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpriteRenderer: {fileID: 2172163314105285991}
-  PressurePlateUpSprite: {fileID: 1499682296, guid: cafa8b77b6c19ae4ea06605ffae37957, type: 3}
-  PressurePlateDownSprite: {fileID: 1374224640, guid: cafa8b77b6c19ae4ea06605ffae37957, type: 3}
-  OnPressurePlateDown:
+  SwitchSpriteRenderer: {fileID: 2172163314105285991}
+  FirstSwitchStateSprite: {fileID: 1499682296, guid: cafa8b77b6c19ae4ea06605ffae37957, type: 3}
+  SecondSwitchStateSprite: {fileID: 1374224640, guid: cafa8b77b6c19ae4ea06605ffae37957, type: 3}
+  OnFirstSwitchState:
     m_PersistentCalls:
-      m_Calls: []
-  OnPressurePlateUp:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  OnSecondSwitchState:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  IsToggleable: 1
+  IsBroken: 0
+--- !u!114 &6466932072515102366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7935605826389816080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 779f8e64e9620804791b6d1a2d91bab3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Switch: {fileID: 3665166937412649581}
+  SwitchTagChecker: {fileID: 3503070902335450040}
+--- !u!114 &3503070902335450040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7935605826389816080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a8b09fc05cabcb469b408bac01b00a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ValidUserTags:
+  - Giant

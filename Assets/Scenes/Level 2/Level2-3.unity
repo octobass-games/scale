@@ -2088,6 +2088,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!114 &575574304 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3665166937412649581, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
+  m_PrefabInstance: {fileID: 1144879968}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3365ae00776869b4b9fccc2a64eac0ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &815078795
 GameObject:
   m_ObjectHideFlags: 0
@@ -2251,10 +2262,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 815078795}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4fdae74dfd3c4948beca1cfe36d209c, type: 3}
+  m_Script: {fileID: 11500000, guid: 0cb73d41c037c964285f5b144affb945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PressurePlate: {fileID: 1228447882}
+  Switch: {fileID: 575574304}
 --- !u!1 &827219321
 GameObject:
   m_ObjectHideFlags: 0
@@ -2543,6 +2554,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1872179014486394609, guid: 7da31ab733c4d6f4fb56b4c5be442ea6, type: 3}
   m_PrefabInstance: {fileID: 972976034}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1028717466 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3665166937412649581, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
+  m_PrefabInstance: {fileID: 1109944800}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3365ae00776869b4b9fccc2a64eac0ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1109944800
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2647,6 +2669,38 @@ PrefabInstance:
       propertyPath: OnPressurePlateDown.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3665166937412649581, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
+      propertyPath: OnFirstSwitchState.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3665166937412649581, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
+      propertyPath: OnSecondSwitchState.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3665166937412649581, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
+      propertyPath: OnFirstSwitchState.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 203909176}
+    - target: {fileID: 3665166937412649581, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
+      propertyPath: OnSecondSwitchState.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 203909176}
+    - target: {fileID: 3665166937412649581, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
+      propertyPath: OnFirstSwitchState.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Close
+      objectReference: {fileID: 0}
+    - target: {fileID: 3665166937412649581, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
+      propertyPath: OnSecondSwitchState.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Open
+      objectReference: {fileID: 0}
+    - target: {fileID: 3665166937412649581, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
+      propertyPath: OnFirstSwitchState.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Lock, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3665166937412649581, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
+      propertyPath: OnSecondSwitchState.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Lock, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 7935605826389816080, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
       propertyPath: m_Name
       value: PressurePlate
@@ -2656,17 +2710,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
---- !u!114 &1109944801 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 947257412626457305, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
-  m_PrefabInstance: {fileID: 1109944800}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 579f6382b59561b409827a82642d8188, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1144879968
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2771,6 +2814,50 @@ PrefabInstance:
       propertyPath: OnPressurePlateDown.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3503070902335450040, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
+      propertyPath: ValidUserTags.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3503070902335450040, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
+      propertyPath: ValidUserTags.Array.data[1]
+      value: Rock
+      objectReference: {fileID: 0}
+    - target: {fileID: 3665166937412649581, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
+      propertyPath: OnFirstSwitchState.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3665166937412649581, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
+      propertyPath: OnSecondSwitchState.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3665166937412649581, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
+      propertyPath: OnFirstSwitchState.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 203909175}
+    - target: {fileID: 3665166937412649581, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
+      propertyPath: OnSecondSwitchState.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 203909175}
+    - target: {fileID: 3665166937412649581, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
+      propertyPath: OnFirstSwitchState.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Close
+      objectReference: {fileID: 0}
+    - target: {fileID: 3665166937412649581, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
+      propertyPath: OnSecondSwitchState.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Open
+      objectReference: {fileID: 0}
+    - target: {fileID: 3665166937412649581, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
+      propertyPath: OnFirstSwitchState.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Lock, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3665166937412649581, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
+      propertyPath: OnSecondSwitchState.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Lock, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3665166937412649581, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
+      propertyPath: OnSecondSwitchState.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7935605826389816080, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
       propertyPath: m_Name
       value: PressurePlate (1)
@@ -2780,17 +2867,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
---- !u!114 &1228447882 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 947257412626457305, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
-  m_PrefabInstance: {fileID: 1144879968}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 579f6382b59561b409827a82642d8188, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1269800979
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2822,11 +2898,11 @@ PrefabInstance:
     - target: {fileID: 54419206066451468, guid: 0a6d7af55e5bd80439aaf47d8871fe60, type: 3}
       propertyPath: OnSecondSwitchState.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1109944801}
+      objectReference: {fileID: 1028717466}
     - target: {fileID: 54419206066451468, guid: 0a6d7af55e5bd80439aaf47d8871fe60, type: 3}
       propertyPath: OnSecondSwitchState.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 1228447882}
+      objectReference: {fileID: 575574304}
     - target: {fileID: 54419206066451468, guid: 0a6d7af55e5bd80439aaf47d8871fe60, type: 3}
       propertyPath: OnSecondSwitchState.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -2845,11 +2921,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 54419206066451468, guid: 0a6d7af55e5bd80439aaf47d8871fe60, type: 3}
       propertyPath: OnSecondSwitchState.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: BreakPressurePlate
+      value: Break
       objectReference: {fileID: 0}
     - target: {fileID: 54419206066451468, guid: 0a6d7af55e5bd80439aaf47d8871fe60, type: 3}
       propertyPath: OnSecondSwitchState.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: BreakPressurePlate
+      value: Break
       objectReference: {fileID: 0}
     - target: {fileID: 54419206066451468, guid: 0a6d7af55e5bd80439aaf47d8871fe60, type: 3}
       propertyPath: OnSecondSwitchState.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -2857,11 +2933,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 54419206066451468, guid: 0a6d7af55e5bd80439aaf47d8871fe60, type: 3}
       propertyPath: OnSecondSwitchState.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: PressurePlate, Assembly-CSharp
+      value: Switch, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 54419206066451468, guid: 0a6d7af55e5bd80439aaf47d8871fe60, type: 3}
       propertyPath: OnSecondSwitchState.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: PressurePlate, Assembly-CSharp
+      value: Switch, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 54419206066451468, guid: 0a6d7af55e5bd80439aaf47d8871fe60, type: 3}
       propertyPath: OnSecondSwitchState.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -2938,11 +3014,11 @@ PrefabInstance:
     - target: {fileID: 6885737932419063729, guid: 0a6d7af55e5bd80439aaf47d8871fe60, type: 3}
       propertyPath: OnRight.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1109944801}
+      objectReference: {fileID: 0}
     - target: {fileID: 6885737932419063729, guid: 0a6d7af55e5bd80439aaf47d8871fe60, type: 3}
       propertyPath: OnRight.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 1228447882}
+      objectReference: {fileID: 0}
     - target: {fileID: 6885737932419063729, guid: 0a6d7af55e5bd80439aaf47d8871fe60, type: 3}
       propertyPath: OnRight.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2

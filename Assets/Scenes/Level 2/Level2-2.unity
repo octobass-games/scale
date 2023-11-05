@@ -2048,7 +2048,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5643757887842153031, guid: 783055dd5eb48d1478bfaf050c844265, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 783055dd5eb48d1478bfaf050c844265, type: 3}
@@ -2667,153 +2668,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 947257412626457305, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
-      propertyPath: OnPressurePlateUp.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 947257412626457305, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
-      propertyPath: OnPressurePlateDown.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 947257412626457305, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
-      propertyPath: OnPressurePlateUp.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 947257412626457305, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
-      propertyPath: OnPressurePlateDown.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 947257412626457305, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
-      propertyPath: OnPressurePlateUp.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+    - target: {fileID: 3665166937412649581, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
+      propertyPath: OnFirstSwitchState.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2064992855}
-    - target: {fileID: 947257412626457305, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
-      propertyPath: OnPressurePlateDown.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+    - target: {fileID: 3665166937412649581, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
+      propertyPath: OnSecondSwitchState.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2064992855}
-    - target: {fileID: 947257412626457305, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
-      propertyPath: OnPressurePlateUp.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 947257412626457305, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
-      propertyPath: OnPressurePlateUp.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 947257412626457305, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
-      propertyPath: OnPressurePlateDown.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 947257412626457305, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
-      propertyPath: OnPressurePlateDown.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 947257412626457305, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
-      propertyPath: OnPressurePlateUp.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 947257412626457305, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
-      propertyPath: OnPressurePlateDown.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 947257412626457305, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
-      propertyPath: OnPressurePlateUp.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 947257412626457305, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
-      propertyPath: OnPressurePlateUp.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 947257412626457305, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
-      propertyPath: OnPressurePlateDown.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 7935605826389816080, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
       propertyPath: m_Name
       value: PressurePlate
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 947257412626457305, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7935605826389816080, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8742651764357682692}
-    - targetCorrespondingSourceObject: {fileID: 7935605826389816080, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8742651764357682691}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
---- !u!1 &8742651764357682689 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7935605826389816080, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
+--- !u!114 &8742651764357682692 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3665166937412649581, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
   m_PrefabInstance: {fileID: 8742651764357682688}
   m_PrefabAsset: {fileID: 0}
---- !u!212 &8742651764357682690 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 2172163314105285991, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
-  m_PrefabInstance: {fileID: 8742651764357682688}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8742651764357682691
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8742651764357682689}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 779f8e64e9620804791b6d1a2d91bab3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Switch: {fileID: 8742651764357682692}
-  SwitchTagChecker: {fileID: 0}
---- !u!114 &8742651764357682692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8742651764357682689}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3365ae00776869b4b9fccc2a64eac0ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SwitchSpriteRenderer: {fileID: 8742651764357682690}
-  FirstSwitchStateSprite: {fileID: 1499682296, guid: cafa8b77b6c19ae4ea06605ffae37957, type: 3}
-  SecondSwitchStateSprite: {fileID: 1374224640, guid: cafa8b77b6c19ae4ea06605ffae37957, type: 3}
-  OnFirstSwitchState:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2064992855}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  OnSecondSwitchState:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2064992855}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  IsToggleable: 1
-  IsBroken: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

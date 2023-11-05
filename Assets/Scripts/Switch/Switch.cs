@@ -19,6 +19,11 @@ public class Switch : MonoBehaviour
         IsBroken = true;
     }
 
+    public void ForceSecondSwitchState()
+    {
+        EnterSecondState();
+    }
+
     public void ToggleState()
     {
         if ((IsToggleable || !HasBeenSwitched) && !IsBroken)
