@@ -1,20 +1,25 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ProximitySwitch : MonoBehaviour
 {
     public Switch Switch;
+    public SwitchTagChecker SwitchTagChecker;
 
     private List<GameObject> ActorsInProximity = new List<GameObject>();
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (ActorsInProximity.Count == 0)
+        if (SwitchTagChecker.IsValidUser(collision.gameObject.tag))
         {
-            Switch.ToggleState();
-        }
+            if (ActorsInProximity.Count == 0)
+            {
+                Switch.ToggleState();
+            }
 
-        ActorsInProximity.Add(collision.gameObject);
+            ActorsInProximity.Add(collision.gameObject);
+        }
     }
 
     void OnTriggerExit2D(Collider2D collision)

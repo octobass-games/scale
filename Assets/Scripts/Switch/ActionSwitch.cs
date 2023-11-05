@@ -1,8 +1,11 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ActionSwitch : MonoBehaviour
 {
     public Switch Switch;
+    public SwitchTagChecker SwitchTagChecker;
+    public UnityEvent OnInvalidUser;
 
     private GameObject ActorInActionProximity;
 
@@ -10,7 +13,14 @@ public class ActionSwitch : MonoBehaviour
     {
         if (ActorInActionProximity != null && Input.GetKeyDown(KeyCode.E))
         {
-            Switch.ToggleState();
+            if (SwitchTagChecker != null && !SwitchTagChecker.IsValidUser(ActorInActionProximity.tag))
+            {
+                OnInvalidUser.Invoke();
+            }
+            else
+            {
+                Switch.ToggleState();
+            }
         }    
     }
 
