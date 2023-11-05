@@ -2111,7 +2111,7 @@ GameObject:
   - component: {fileID: 815078797}
   - component: {fileID: 815078796}
   - component: {fileID: 815078799}
-  - component: {fileID: 815078800}
+  - component: {fileID: 815078801}
   m_Layer: 8
   m_Name: Rock
   m_TagString: Untagged
@@ -2253,7 +2253,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &815078800
+--- !u!114 &815078801
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2262,10 +2262,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 815078795}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cb73d41c037c964285f5b144affb945, type: 3}
+  m_Script: {fileID: 11500000, guid: b265373003e84c940a67701a6ee7bde1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Switch: {fileID: 575574304}
+  Events:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 575574304}
+        m_TargetAssemblyTypeName: Switch, Assembly-CSharp
+        m_MethodName: ForceSecondSwitchState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &827219321
 GameObject:
   m_ObjectHideFlags: 0
@@ -2668,6 +2682,14 @@ PrefabInstance:
     - target: {fileID: 947257412626457305, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
       propertyPath: OnPressurePlateDown.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3503070902335450040, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
+      propertyPath: ValidUserTags.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3503070902335450040, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
+      propertyPath: ValidUserTags.Array.data[1]
+      value: Gnome
       objectReference: {fileID: 0}
     - target: {fileID: 3665166937412649581, guid: 51af1fe76144f524ebcc3a4ba42d5d52, type: 3}
       propertyPath: OnFirstSwitchState.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
