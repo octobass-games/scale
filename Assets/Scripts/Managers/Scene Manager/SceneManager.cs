@@ -1,31 +1,25 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+public class SceneManager : MonoBehaviour
 {
-    public static GameManager Instance;
-
     private ChangeLevelInfo ChangeLevelInfo;
-    
-    public void ChangeLevel(ChangeLevelInfo changeLevelInfo)
+
+    public void ChangeScene(string sceneName)
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
+    }
+
+    public void ChangeLevelScene(ChangeLevelInfo changeLevelInfo)
     {
         ChangeLevelInfo = changeLevelInfo;
 
-        UnityEngine.SceneManagement.SceneManager.LoadScene(ChangeLevelInfo.LevelName);
+        ChangeScene(ChangeLevelInfo.LevelName);
     }
 
     void Awake()
     {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            Instance = this;
-            DontDestroyOnLoad(this);
-            UnityEngine.SceneManagement.SceneManager.sceneLoaded += OnSceneLoaded;
-        }
+        UnityEngine.SceneManagement.SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
@@ -41,10 +35,5 @@ public class GameManager : MonoBehaviour
 
             ChangeLevelInfo = null;
         }
-    }
-
-    public void Exit()
-    {
-        Application.Quit();
     }
 }
