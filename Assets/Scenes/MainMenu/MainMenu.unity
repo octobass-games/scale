@@ -134,7 +134,6 @@ GameObject:
   - component: {fileID: 59981542}
   - component: {fileID: 59981545}
   - component: {fileID: 59981544}
-  - component: {fileID: 59981543}
   m_Layer: 5
   m_Name: Continue Game
   m_TagString: Untagged
@@ -162,21 +161,6 @@ RectTransform:
   m_AnchoredPosition: {x: -59, y: -23}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &59981543
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 59981541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50ad6534af424e44082f8328f6e697d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ChangeLevelInfo:
-    PositionToSpawn: {x: 0, y: 0, z: 0}
-    LevelName: Level1Village
 --- !u!114 &59981544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,19 +204,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1507996731}
-        m_TargetAssemblyTypeName: SaveManager, Assembly-CSharp
-        m_MethodName: SaveLevelProgress
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Level1Village
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!222 &59981545
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -253,6 +225,7 @@ GameObject:
   - component: {fileID: 610663139}
   - component: {fileID: 610663138}
   - component: {fileID: 610663137}
+  - component: {fileID: 610663141}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -350,6 +323,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &610663141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610663136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6305a20052fa4cf45a3ebd1a9c614a4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SaveManager: {fileID: 1507996731}
+  SceneManager: {fileID: 874209059}
+  ContinueButton: {fileID: 59981541}
 --- !u!1 &874209058
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,7 +349,7 @@ GameObject:
   - component: {fileID: 874209060}
   - component: {fileID: 874209059}
   m_Layer: 0
-  m_Name: MenuSceneManager
+  m_Name: SceneManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -655,8 +643,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ChangeLevelInfo:
-    PositionToSpawn: {x: 0, y: 0, z: 0}
     LevelName: Level1Village
+    GnomePosition: {x: 0, y: 0}
+    GiantPosition: {x: 0, y: 0}
+    PositionGnome: 0
+    PositionGiant: 0
 --- !u!114 &1304244383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -773,8 +764,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ChangeLevelInfo:
-    PositionToSpawn: {x: 0, y: 0, z: 0}
     LevelName: Level1Village
+    GnomePosition: {x: 0, y: 0}
+    GiantPosition: {x: 0, y: 0}
+    PositionGnome: 0
+    PositionGiant: 0
 --- !u!114 &1435257247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1281,7 +1275,6 @@ GameObject:
   - component: {fileID: 1872310827}
   - component: {fileID: 1872310829}
   - component: {fileID: 1872310828}
-  - component: {fileID: 1872310830}
   m_Layer: 5
   m_Name: Start Game
   m_TagString: Untagged
@@ -1353,9 +1346,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1872310830}
-        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
-        m_MethodName: ChangeScene
+      - m_Target: {fileID: 610663141}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: NewGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1373,21 +1366,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1872310826}
   m_CullTransparentMesh: 1
---- !u!114 &1872310830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1872310826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50ad6534af424e44082f8328f6e697d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ChangeLevelInfo:
-    PositionToSpawn: {x: 0, y: 0, z: 0}
-    LevelName: Level1Village
 --- !u!1 &1905372898
 GameObject:
   m_ObjectHideFlags: 0
@@ -2046,8 +2024,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ChangeLevelInfo:
-    PositionToSpawn: {x: 0, y: 0, z: 0}
     LevelName: Level1Village
+    GnomePosition: {x: 0, y: 0}
+    GiantPosition: {x: 0, y: 0}
+    PositionGnome: 0
+    PositionGiant: 0
 --- !u!114 &2011197667
 MonoBehaviour:
   m_ObjectHideFlags: 0
