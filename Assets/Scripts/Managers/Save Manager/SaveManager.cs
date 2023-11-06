@@ -7,7 +7,7 @@ public class SaveManager : MonoBehaviour
     private string SaveFilePath;
     private SaveData SaveData;
 
-    void Start()
+    void Awake()
     {
         SaveFilePath = Application.persistentDataPath + "/save-data.json";
         SaveData = Load() ?? GetFreshSaveData();
