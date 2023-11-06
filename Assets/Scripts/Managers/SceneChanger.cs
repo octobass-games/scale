@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SceneChanger : MonoBehaviour
 {
-    public ChangeLevelInfo ChangeLevelInfo;
+    public ChangeLevelSceneData ChangeLevelInfo;
 
     public void ChangeScene()
     {

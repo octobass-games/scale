@@ -5,9 +5,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    private ChangeLevelInfo ChangeLevelInfo;
+    private ChangeLevelSceneData ChangeLevelInfo;
     
-    public void ChangeLevel(ChangeLevelInfo changeLevelInfo)
+    public void ChangeLevel(ChangeLevelSceneData changeLevelInfo)
     {
         ChangeLevelInfo = changeLevelInfo;
 
@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
 
             if (player != null)
             {
-                player.GetComponent<CharacterController2D>().ForcePosition(ChangeLevelInfo.PositionToSpawn);
+                player.GetComponent<CharacterController2D>().ForcePosition(ChangeLevelInfo.GnomePosition);
             }
 
             ChangeLevelInfo = null;

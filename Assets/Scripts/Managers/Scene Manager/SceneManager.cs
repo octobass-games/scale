@@ -3,18 +3,18 @@ using UnityEngine.SceneManagement;
 
 public class SceneManager : MonoBehaviour
 {
-    private ChangeLevelInfo ChangeLevelInfo;
+    private ChangeLevelSceneData ChangeLevelSceneData;
 
     public void ChangeScene(string sceneName)
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
     }
 
-    public void ChangeLevelScene(ChangeLevelInfo changeLevelInfo)
+    public void ChangeLevelScene(ChangeLevelSceneData changeLevelSceneData)
     {
-        ChangeLevelInfo = changeLevelInfo;
+        ChangeLevelSceneData = changeLevelSceneData;
 
-        ChangeScene(ChangeLevelInfo.LevelName);
+        ChangeScene(ChangeLevelSceneData.LevelName);
     }
 
     void Awake()
@@ -24,16 +24,21 @@ public class SceneManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
     {
-        if (ChangeLevelInfo != null)
+        if (ChangeLevelSceneData != null)
         {
-            var player = GameObject.FindGameObjectWithTag("Player");
-
-            if (player != null)
+            if (ChangeLevelSceneData.PositionGiant)
             {
-                player.GetComponent<CharacterController2D>().ForcePosition(ChangeLevelInfo.PositionToSpawn);
+                var giant = GameObject.FindGameObjectWithTag("Giant");
+                giant.GetComponent<CharacterController2D>().ForcePosition(ChangeLevelSceneData.GiantPosition);
             }
 
-            ChangeLevelInfo = null;
+            if (ChangeLevelSceneData.PositionGnome)
+            {
+                var gnome = GameObject.FindGameObjectWithTag("Gnome");
+                gnome.GetComponent<CharacterController2D>().ForcePosition(ChangeLevelSceneData.GnomePosition);
+            }
+
+            ChangeLevelSceneData = null;
         }
     }
 }
