@@ -281,7 +281,7 @@ GameObject:
   - component: {fileID: 195205284}
   - component: {fileID: 195205285}
   m_Layer: 0
-  m_Name: MenuSceneManager
+  m_Name: SceneManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -366,8 +366,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ChangeLevelInfo:
-    PositionToSpawn: {x: 0, y: 0, z: 0}
     LevelName: Level1Village
+    GnomePosition: {x: 0, y: 0}
+    GiantPosition: {x: 0, y: 0}
+    PositionGnome: 0
+    PositionGiant: 0
 --- !u!114 &411872606
 MonoBehaviour:
   m_ObjectHideFlags: 0
