@@ -42,4 +42,9 @@ public class GameManager : MonoBehaviour
             ChangeLevelInfo = null;
         }
     }
+
+    public void Exit()
+    {
+        Application.Quit();
+    }
 }
