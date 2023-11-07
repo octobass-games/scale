@@ -25,7 +25,7 @@ public class Zipline : MonoBehaviour
             else if (!Rider.transform.position.Approximately(ZiplineEnd.position))
             {
                 var newPosition = Vector3.MoveTowards(Rider.transform.position, ZiplineEnd.position, ZiplineSpeed);
-               MoveRider(newPosition);
+                MoveRider(newPosition);
             }
             else
             {
