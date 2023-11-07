@@ -5,6 +5,11 @@ public class SceneManager : MonoBehaviour
 {
     private ChangeLevelSceneData ChangeLevelSceneData;
 
+    public string GetCurrentSceneName()
+    {
+        return UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+    }
+
     public void ChangeScene(string sceneName)
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
