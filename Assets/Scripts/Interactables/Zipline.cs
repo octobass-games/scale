@@ -35,11 +35,13 @@ public class Zipline : MonoBehaviour
             }
         }
     }
+
     private void LockRiderIntoZipline()
     {
         Rider.Freeze();
         Rider.GravityModifier = 0f;
     }
+
     private void UnlockRiderFromZipline()
     {
         Rider.Thaw();
