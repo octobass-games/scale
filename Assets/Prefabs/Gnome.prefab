@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7247004948739742953}
   - component: {fileID: 2300249598417442213}
   - component: {fileID: 6939635167091054494}
-  - component: {fileID: 906283852425376310}
   - component: {fileID: 7023341559113245854}
   m_Layer: 0
   m_Name: Gnome
@@ -134,19 +133,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &906283852425376310
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1872179014486394609}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 142892f69eecf8d4d8ce2060870d5ac3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CharacterController: {fileID: 7247004948739742953}
 --- !u!114 &7023341559113245854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,7 +310,7 @@ MonoBehaviour:
   - {x: 2.3385658, y: -12.517937, z: 0}
   m_ShapePathHash: -1468998959
   m_Mesh: {fileID: 0}
-  m_InstanceId: 61654
+  m_InstanceId: 62512
   m_LocalBounds:
     m_Center: {x: -0.08968544, y: -11.905829, z: 0}
     m_Extent: {x: 2.4282513, y: 0.6121073, z: 0}

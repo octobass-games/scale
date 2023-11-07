@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TunnelEntrance : MonoBehaviour
+public class Tunnel : MonoBehaviour
 {
     public Transform Exit;
 
