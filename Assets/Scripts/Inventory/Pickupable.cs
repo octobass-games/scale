@@ -2,23 +2,8 @@ using UnityEngine;
 
 public class Pickupable : MonoBehaviour
 {
-    private Inventory InventoryInProximity;
-
-    void Update()
+    public void PickUp(GameObject interacter)
     {
-        if (InventoryInProximity != null && Input.GetKeyDown(KeyCode.E))
-        {
-            InventoryInProximity.AddItem(this.gameObject);
-        }   
-    }
-
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        InventoryInProximity = collision.GetComponent<Inventory>();
-    }
-
-    void OnTriggerExit2D(Collider2D collision)
-    {
-        InventoryInProximity = null;
+        interacter.GetComponent<Inventory>().AddItem(gameObject);
     }
 }
