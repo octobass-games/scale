@@ -2,8 +2,10 @@ using UnityEngine;
 
 public class TunnelEntrance : MonoBehaviour
 {
-    public Transform GetExit()
+    public Transform Exit;
+
+    public void Navigate(GameObject gameObject)
     {
-        return gameObject.GetComponentInParent<Tunnel>().GetExit(this).transform;
+        gameObject.GetComponent<CharacterController2D>().ForcePosition(Exit.position);
     }
 }

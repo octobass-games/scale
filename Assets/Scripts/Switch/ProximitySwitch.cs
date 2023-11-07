@@ -1,17 +1,16 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class ProximitySwitch : MonoBehaviour
 {
     public Switch Switch;
-    public SwitchTagChecker SwitchTagChecker;
+    public List<string> ValidUserTags = new List<string>();
 
     private List<GameObject> ActorsInProximity = new List<GameObject>();
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (SwitchTagChecker == null || SwitchTagChecker.IsValidUser(collision.gameObject.tag))
+        if (IsValidUser(collision.gameObject.tag))
         {
             if (ActorsInProximity.Count == 0)
             {
@@ -24,7 +23,7 @@ public class ProximitySwitch : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        if (SwitchTagChecker == null || SwitchTagChecker.IsValidUser(collision.gameObject.tag))
+        if (IsValidUser(collision.gameObject.tag))
         {
             ActorsInProximity.Remove(collision.gameObject);
 
@@ -33,5 +32,10 @@ public class ProximitySwitch : MonoBehaviour
                 Switch.ToggleState();
             }
         }
+    }
+
+    private bool IsValidUser(string userTag)
+    {
+        return ValidUserTags.Count == 0 || ValidUserTags.Contains(userTag);
     }
 }

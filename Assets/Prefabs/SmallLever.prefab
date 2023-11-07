@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 828212399316551796}
   - component: {fileID: 3216895253036172522}
   - component: {fileID: 4961302904063484251}
+  - component: {fileID: 488685487715109343}
   - component: {fileID: 54419206066451468}
-  - component: {fileID: -7334584024964175919}
-  - component: {fileID: 8583768950465665824}
   - component: {fileID: -7373007191608191982}
   m_Layer: 0
   m_Name: SmallLever
@@ -134,6 +133,51 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 24, y: 24}
   m_EdgeRadius: 0
+--- !u!114 &488685487715109343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7429836676304830131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306f824b6c57f1c4eb6757b3d7229f97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ValidInteracterTags:
+  - Gnome
+  CharacterSwitcher: {fileID: 0}
+  OnValidInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 54419206066451468}
+        m_TargetAssemblyTypeName: Switch, Assembly-CSharp
+        m_MethodName: ToggleState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnInvalidInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -7373007191608191982}
+        m_TargetAssemblyTypeName: LeverErrorMessage, Assembly-CSharp
+        m_MethodName: ShowNoUseDialogue
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Giant
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &54419206066451468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,52 +198,21 @@ MonoBehaviour:
       m_Calls: []
   OnSecondSwitchState:
     m_PersistentCalls:
-      m_Calls: []
-  IsToggleable: 1
-  IsBroken: 0
---- !u!114 &-7334584024964175919
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7429836676304830131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a8b09fc05cabcb469b408bac01b00a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ValidUserTags:
-  - Gnome
---- !u!114 &8583768950465665824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7429836676304830131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ac3d8efc1fcb394b9fea2a5270527a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Switch: {fileID: 54419206066451468}
-  SwitchTagChecker: {fileID: -7334584024964175919}
-  OnInvalidUser:
-    m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: -7373007191608191982}
-        m_TargetAssemblyTypeName: LeverErrorMessage, Assembly-CSharp
-        m_MethodName: ShowNoUseDialogue
-        m_Mode: 5
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Gate, Assembly-CSharp
+        m_MethodName: TryToOpen
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Giant
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  IsToggleable: 0
+  IsBroken: 0
 --- !u!114 &-7373007191608191982
 MonoBehaviour:
   m_ObjectHideFlags: 0

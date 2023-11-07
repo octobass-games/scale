@@ -12,9 +12,8 @@ GameObject:
   - component: {fileID: 2474139779459333536}
   - component: {fileID: 6697855213070632811}
   - component: {fileID: 2409673459525965356}
-  - component: {fileID: 924182457010485813}
-  - component: {fileID: 8619494009684732619}
   - component: {fileID: 2936519749863922264}
+  - component: {fileID: -5083987623124794916}
   m_Layer: 0
   m_Name: BigLever
   m_TagString: Untagged
@@ -157,7 +156,7 @@ MonoBehaviour:
       m_Calls: []
   IsToggleable: 1
   IsBroken: 0
---- !u!114 &924182457010485813
+--- !u!114 &2936519749863922264
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -166,26 +165,40 @@ MonoBehaviour:
   m_GameObject: {fileID: 7089255784809278807}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a8b09fc05cabcb469b408bac01b00a2, type: 3}
+  m_Script: {fileID: 11500000, guid: 92cdd230578e58344ba4370a319bcdde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ValidUserTags:
+--- !u!114 &-5083987623124794916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7089255784809278807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306f824b6c57f1c4eb6757b3d7229f97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ValidInteracterTags:
   - Giant
---- !u!114 &8619494009684732619
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7089255784809278807}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ac3d8efc1fcb394b9fea2a5270527a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Switch: {fileID: 2409673459525965356}
-  SwitchTagChecker: {fileID: 924182457010485813}
-  OnInvalidUser:
+  CharacterSwitcher: {fileID: 0}
+  OnValidInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2409673459525965356}
+        m_TargetAssemblyTypeName: Switch, Assembly-CSharp
+        m_MethodName: ToggleState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnInvalidInteraction:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2936519749863922264}
@@ -200,15 +213,3 @@ MonoBehaviour:
           m_StringArgument: Gnome
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2936519749863922264
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7089255784809278807}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92cdd230578e58344ba4370a319bcdde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
