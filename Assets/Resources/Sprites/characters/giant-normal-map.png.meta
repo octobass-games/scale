@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: cd922f18cbb73d14f84bfee34a4c4921
+guid: e57214c4393fe3e4391b3015521bb0be
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
-    sRGBTexture: 1
+    enableMipMap: 1
+    sRGBTexture: 0
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
@@ -52,9 +52,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 1
+  alphaIsTransparency: 0
   spriteTessellationDetail: -1
-  textureType: 8
+  textureType: 1
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: giant_0
+      name: giant-normal-map_0
       rect:
         serializedVersion: 2
         x: 0
@@ -118,20 +118,20 @@ TextureImporter:
         width: 67
         height: 103
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4fd3c216940c7349bc2a0129167ff58
-      internalID: 162395227
+      spriteID: 021e6e5e2973e204291f2aa7b5fb5354
+      internalID: -1677581469
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: giant_1
+      name: giant-normal-map_1
       rect:
         serializedVersion: 2
         x: 67
@@ -139,20 +139,20 @@ TextureImporter:
         width: 67
         height: 103
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec572f699613d2b40b0d952e6d7078d8
-      internalID: 1025475089
+      spriteID: c99c4feea3077c24da9bd1e7c1187b2f
+      internalID: 1571455819
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: giant_2
+      name: giant-normal-map_2
       rect:
         serializedVersion: 2
         x: 134
@@ -160,20 +160,20 @@ TextureImporter:
         width: 67
         height: 103
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f4856668703420479d889d78859477e
-      internalID: 772474039
+      spriteID: de730231fb218114ea45e52386434aa8
+      internalID: -772411464
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: giant_3
+      name: giant-normal-map_3
       rect:
         serializedVersion: 2
         x: 201
@@ -181,20 +181,20 @@ TextureImporter:
         width: 67
         height: 103
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 344a3e63d6887714ab7c886a6b7d926c
-      internalID: 943122670
+      spriteID: 3b77d20f39c0875419f9917e97670a5c
+      internalID: -1982706024
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: giant_4
+      name: giant-normal-map_4
       rect:
         serializedVersion: 2
         x: 268
@@ -202,20 +202,20 @@ TextureImporter:
         width: 67
         height: 103
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d4719416c87cdc40b0a6880986232e5
-      internalID: 412088021
+      spriteID: 8a47f10ce2574ec498e9c1a1d6813635
+      internalID: -1849761194
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: giant_5
+      name: giant-normal-map_5
       rect:
         serializedVersion: 2
         x: 335
@@ -223,20 +223,20 @@ TextureImporter:
         width: 67
         height: 103
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbaad34449123ac4b9ce6761bc0c28a6
-      internalID: 1329482287
+      spriteID: 1ccd211512477ef45be1e50e040bf891
+      internalID: -1474832395
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: giant_6
+      name: giant-normal-map_6
       rect:
         serializedVersion: 2
         x: 402
@@ -244,20 +244,20 @@ TextureImporter:
         width: 67
         height: 103
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83f2cb4740940324694cfda5e3b23e67
-      internalID: 1217152588
+      spriteID: 85a96f44ea017fa4a8a4cba1bb01fc6f
+      internalID: 1273990655
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: giant_7
+      name: giant-normal-map_7
       rect:
         serializedVersion: 2
         x: 469
@@ -265,20 +265,20 @@ TextureImporter:
         width: 67
         height: 103
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db163a9b4c5b9b944877be8cab66e98a
-      internalID: -1251562973
+      spriteID: 9fdb67eef5631a847984ac6608d478b3
+      internalID: 933935201
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: giant_8
+      name: giant-normal-map_8
       rect:
         serializedVersion: 2
         x: 536
@@ -286,20 +286,20 @@ TextureImporter:
         width: 67
         height: 103
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1354306ea3cd0354db347a18995463d5
-      internalID: -1258581897
+      spriteID: 0202a82a62364a04690ec49ec57bc838
+      internalID: 522410532
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: giant_9
+      name: giant-normal-map_9
       rect:
         serializedVersion: 2
         x: 603
@@ -307,20 +307,20 @@ TextureImporter:
         width: 67
         height: 103
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21b2c6e8b65b2d949a5eb393fd35b669
-      internalID: -659581045
+      spriteID: f0c43a44d39798d419be1113e51bb4bb
+      internalID: 1470981205
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: giant_10
+      name: giant-normal-map_10
       rect:
         serializedVersion: 2
         x: 670
@@ -328,20 +328,20 @@ TextureImporter:
         width: 67
         height: 103
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4d0c574197204547a9d894cfbdf8bde
-      internalID: -722561937
+      spriteID: 85a7228a2143e6043989f85e9b023e2e
+      internalID: 173993732
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: giant_11
+      name: giant-normal-map_11
       rect:
         serializedVersion: 2
         x: 737
@@ -349,20 +349,20 @@ TextureImporter:
         width: 67
         height: 103
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9b80c6400d993e41bb0c426e83a9d7b
-      internalID: -871554073
+      spriteID: 182976c3ee610a046a4d7f272e79a7c4
+      internalID: 396283471
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: giant_12
+      name: giant-normal-map_12
       rect:
         serializedVersion: 2
         x: 804
@@ -370,20 +370,20 @@ TextureImporter:
         width: 67
         height: 103
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4322db8aadda2c44a8745ccf16273e6a
-      internalID: 745988253
+      spriteID: 9071634992740b34bbed95cfaf943fe0
+      internalID: 773865937
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: giant_13
+      name: giant-normal-map_13
       rect:
         serializedVersion: 2
         x: 871
@@ -391,20 +391,20 @@ TextureImporter:
         width: 67
         height: 103
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 921f25f8fdf79ac43893de9197901b5b
-      internalID: 1740475828
+      spriteID: 1d884f751433e7246be2e16618dfaab7
+      internalID: -1655236909
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: giant_14
+      name: giant-normal-map_14
       rect:
         serializedVersion: 2
         x: 938
@@ -412,20 +412,20 @@ TextureImporter:
         width: 67
         height: 103
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b297cf10b299fd41b818fc4f06de721
-      internalID: 1018256050
+      spriteID: 7d57e7f1bd5ac7942976879850004199
+      internalID: 42565631
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: giant_15
+      name: giant-normal-map_15
       rect:
         serializedVersion: 2
         x: 1005
@@ -433,20 +433,20 @@ TextureImporter:
         width: 67
         height: 103
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7336b512cc266a438153665e58f03a4
-      internalID: 843968053
+      spriteID: e9a96106015e226499e84ef6f31918e1
+      internalID: -992515484
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: giant_16
+      name: giant-normal-map_16
       rect:
         serializedVersion: 2
         x: 1072
@@ -454,20 +454,20 @@ TextureImporter:
         width: 67
         height: 103
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4d06a3cfb23b224195ee57bbf69f4f6
-      internalID: -73065352
+      spriteID: e9617fcc48ec5fe4894149e3c73ff315
+      internalID: -421703066
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: giant_17
+      name: giant-normal-map_17
       rect:
         serializedVersion: 2
         x: 1139
@@ -475,20 +475,20 @@ TextureImporter:
         width: 67
         height: 103
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3f81fd6a0198e84eaf95ce6c49f7846
-      internalID: -1440782094
+      spriteID: 74b20e599d2a3fc4bb0b8b974e63b2e2
+      internalID: -206893175
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: giant_18
+      name: giant-normal-map_18
       rect:
         serializedVersion: 2
         x: 1206
@@ -496,14 +496,14 @@ TextureImporter:
         width: 67
         height: 103
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4b5c04918c3a9f4d9a7a7f1bb02c81d
-      internalID: 2118711914
+      spriteID: 7d9cbe27d98748a40b36a6d3a070ebf7
+      internalID: -13394820
       vertices: []
       indices: 
       edges: []
@@ -517,29 +517,27 @@ TextureImporter:
     indices: 
     edges: []
     weights: []
-    secondaryTextures:
-    - texture: {fileID: 2800000, guid: e57214c4393fe3e4391b3015521bb0be, type: 3}
-      name: _NormalMap
+    secondaryTextures: []
     nameFileIdTable:
-      giant_0: 162395227
-      giant_1: 1025475089
-      giant_10: -722561937
-      giant_11: -871554073
-      giant_12: 745988253
-      giant_13: 1740475828
-      giant_14: 1018256050
-      giant_15: 843968053
-      giant_16: -73065352
-      giant_17: -1440782094
-      giant_18: 2118711914
-      giant_2: 772474039
-      giant_3: 943122670
-      giant_4: 412088021
-      giant_5: 1329482287
-      giant_6: 1217152588
-      giant_7: -1251562973
-      giant_8: -1258581897
-      giant_9: -659581045
+      giant-normal-map_0: -1677581469
+      giant-normal-map_1: 1571455819
+      giant-normal-map_10: 173993732
+      giant-normal-map_11: 396283471
+      giant-normal-map_12: 773865937
+      giant-normal-map_13: -1655236909
+      giant-normal-map_14: 42565631
+      giant-normal-map_15: -992515484
+      giant-normal-map_16: -421703066
+      giant-normal-map_17: -206893175
+      giant-normal-map_18: -13394820
+      giant-normal-map_2: -772411464
+      giant-normal-map_3: -1982706024
+      giant-normal-map_4: -1849761194
+      giant-normal-map_5: -1474832395
+      giant-normal-map_6: 1273990655
+      giant-normal-map_7: 933935201
+      giant-normal-map_8: 522410532
+      giant-normal-map_9: 1470981205
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
