@@ -53,8 +53,8 @@ public class PositionSwapper : MonoBehaviour
                 giantXOffset = 0;
             }
 
-            Gnome.transform.position = new Vector3(Giant.transform.position.x, giantFeetPosition + gnomeExtents.y, 0);
-            Giant.transform.position = new Vector3(gnomeCurrentPosition.x + giantXOffset, gnomeFeetPosition + giantExtents.y, 0);
+            Gnome.GetComponent<CharacterController2D>().ForcePosition(new Vector3(Giant.transform.position.x, giantFeetPosition + gnomeExtents.y, 0));
+            Giant.GetComponent<CharacterController2D>().ForcePosition(new Vector3(gnomeCurrentPosition.x + giantXOffset, gnomeFeetPosition + giantExtents.y, 0));
 
             Swap = false;
         }
