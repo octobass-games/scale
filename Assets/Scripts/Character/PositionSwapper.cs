@@ -8,6 +8,7 @@ public class PositionSwapper : MonoBehaviour
 
     private bool Swap;
     private ContactFilter2D ContactFilter = new ContactFilter2D();
+    private RaycastHit2D[] Hits = new RaycastHit2D[1];
 
     void Start()
     {
@@ -30,28 +31,30 @@ public class PositionSwapper : MonoBehaviour
             var gnomeCurrentPosition = Gnome.transform.position;
 
             var gnomeCollider  = Gnome.GetComponent<Collider2D>();
+            var gnomeExtents = gnomeCollider.bounds.extents;
             var gnomeFeetPosition = Gnome.transform.position.y - gnomeCollider.bounds.extents.y;
 
             var giantCollider = Giant.GetComponent<Collider2D>();
+            var giantExtents = giantCollider.bounds.extents;
             var giantFeetPosition = Giant.transform.position.y - giantCollider.bounds.extents.y;
 
             float giantXOffset;
 
             if (IsGnomeTouchingLeftWall())
             {
-                giantXOffset = giantCollider.bounds.extents.x;
+                giantXOffset = giantExtents.x;
             }
             else if (IsGnomeTouchingRightWall())
             {
-                giantXOffset = -giantCollider.bounds.extents.x;
+                giantXOffset = -giantExtents.x;
             }
             else
             {
                 giantXOffset = 0;
             }
 
-            Gnome.transform.position = new Vector3(Giant.transform.position.x, giantFeetPosition + gnomeCollider.bounds.extents.y, 0);
-            Giant.transform.position = new Vector3(gnomeCurrentPosition.x + giantXOffset, gnomeFeetPosition + giantCollider.bounds.extents.y, 0);
+            Gnome.transform.position = new Vector3(Giant.transform.position.x, giantFeetPosition + gnomeExtents.y, 0);
+            Giant.transform.position = new Vector3(gnomeCurrentPosition.x + giantXOffset, gnomeFeetPosition + giantExtents.y, 0);
 
             Swap = false;
         }
@@ -59,19 +62,16 @@ public class PositionSwapper : MonoBehaviour
 
     private bool IsGnomeTouchingRightWall()
     {
-        RaycastHit2D[] results = new RaycastHit2D[10];
-
-        int resultCount = Gnome.GetComponent<Rigidbody2D>().Cast(Vector2.right, ContactFilter, results, 0.5f);
-
-        return resultCount > 0;
+        return IsGnomeTouchingWall(Vector2.right);
     }
 
     private bool IsGnomeTouchingLeftWall()
     {
-        RaycastHit2D[] results = new RaycastHit2D[10];
+        return IsGnomeTouchingWall(Vector2.left);
+    }
 
-        int resultCount = Gnome.GetComponent<Rigidbody2D>().Cast(Vector2.left, ContactFilter, results, 0.5f);
-
-        return resultCount > 0;
+    private bool IsGnomeTouchingWall(Vector2 direction)
+    {
+        return Gnome.GetComponent<Rigidbody2D>().Cast(direction, ContactFilter, Hits, 0.5f) > 0;
     }
 }
