@@ -12,6 +12,8 @@ public class DialogueRenderer : MonoBehaviour
     public GameObject canvas;
 
     private IEnumerator Coroutine;
+    private string TextToWrite;
+    private bool IsWriting;
 
     void Awake()
     {
@@ -26,12 +28,19 @@ public class DialogueRenderer : MonoBehaviour
 
     public void ShowDialogue(string text, string speaker)
     {
-        Name.text = speaker;
-        Coroutine = Write(text);
-        StartCoroutine(Coroutine);
-        Time.timeScale = 0;
-    
-        canvas.SetActive(true);
+        if (IsWriting)
+        {
+            StopCoroutine(Coroutine);
+            WriteFull();
+        }
+        else
+        {
+            Name.text = speaker;
+            Coroutine = Write(text);
+            StartCoroutine(Coroutine);
+            Time.timeScale = 0;
+            canvas.SetActive(true);
+        }
     }
 
     public void closeDialogue()
@@ -47,13 +56,24 @@ public class DialogueRenderer : MonoBehaviour
 
     private IEnumerator Write(string text)
     {
+        IsWriting = true;
+
+        TextToWrite = text;
         Text.maxVisibleCharacters = 0;
         Text.text = text;
 
-        for (int i = 0; i < text.Length; i++)
+        for (int i = 0; i < TextToWrite.Length; i++)
         {
             Text.maxVisibleCharacters = i + 1;
             yield return Timer;
         }
+
+        IsWriting = false;
+    }
+
+    private void WriteFull()
+    {
+        Text.maxVisibleCharacters = TextToWrite.Length;
+        Text.text = TextToWrite;
     }
 }
