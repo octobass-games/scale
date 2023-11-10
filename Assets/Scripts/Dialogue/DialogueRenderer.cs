@@ -26,12 +26,13 @@ public class DialogueRenderer : MonoBehaviour
         canvas.SetActive(false);
     }
 
-    public void ShowDialogue(string text, string speaker)
+    public bool ShowDialogue(string text, string speaker)
     {
         if (IsWriting)
         {
             StopCoroutine(Coroutine);
             WriteFull();
+            return false;
         }
         else
         {
@@ -40,6 +41,7 @@ public class DialogueRenderer : MonoBehaviour
             StartCoroutine(Coroutine);
             Time.timeScale = 0;
             canvas.SetActive(true);
+            return true;
         }
     }
 
@@ -75,5 +77,6 @@ public class DialogueRenderer : MonoBehaviour
     {
         Text.maxVisibleCharacters = TextToWrite.Length;
         Text.text = TextToWrite;
+        IsWriting = false;
     }
 }
