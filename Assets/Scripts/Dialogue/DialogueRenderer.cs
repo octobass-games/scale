@@ -5,9 +5,18 @@ using UnityEngine;
 
 public class DialogueRenderer : MonoBehaviour
 {
+    public float WriteRate;
+    private WaitForSecondsRealtime Timer;
     public TextMeshProUGUI Name;
     public TextMeshProUGUI Text;
     public GameObject canvas;
+
+    private IEnumerator Coroutine;
+
+    void Awake()
+    {
+        Timer = new WaitForSecondsRealtime(WriteRate);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +27,8 @@ public class DialogueRenderer : MonoBehaviour
     public void ShowDialogue(string text, string speaker)
     {
         Name.text = speaker;
-        Text.text = text;
+        Coroutine = Write(text);
+        StartCoroutine(Coroutine);
         Time.timeScale = 0;
     
         canvas.SetActive(true);
@@ -33,5 +43,17 @@ public class DialogueRenderer : MonoBehaviour
     public bool IsOpen()
     {
         return canvas.activeSelf;
+    }
+
+    private IEnumerator Write(string text)
+    {
+        Text.maxVisibleCharacters = 0;
+        Text.text = text;
+
+        for (int i = 0; i < text.Length; i++)
+        {
+            Text.maxVisibleCharacters = i + 1;
+            yield return Timer;
+        }
     }
 }
