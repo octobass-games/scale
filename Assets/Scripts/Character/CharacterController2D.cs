@@ -35,6 +35,7 @@ public class CharacterController2D : MonoBehaviour
         ProcessInputs = false;
         HorizontalMovement = 0;
         Jumping = false;
+        Velocity.y = 0;
     }
 
     public void Thaw()
