@@ -207,6 +207,54 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &86491707
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 86491709}
+  - component: {fileID: 86491708}
+  m_Layer: 0
+  m_Name: Cursor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &86491708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86491707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8b55aee126784837bb3e28d0d424537, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CursorNeutralTexture: {fileID: 2800000, guid: 7a8c864011164354fb379be0a010b932, type: 3}
+  CursorNeutralHotspot: {x: 0, y: 0}
+  CursorPointerTexture: {fileID: 2800000, guid: 34296990da1521941add6f0d787b2157, type: 3}
+  CursorPointerHotspot: {x: 0, y: 0}
+--- !u!4 &86491709
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86491707}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 198.21613, y: 35.958183, z: -14.782067}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &214473828
 GameObject:
   m_ObjectHideFlags: 0
@@ -597,7 +645,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SaveManager: {fileID: 1507996731}
   SceneManager: {fileID: 874209059}
-  ContinueButton: {fileID: 0}
+  ContinueButton: {fileID: 987148628}
 --- !u!1 &638824503
 GameObject:
   m_ObjectHideFlags: 0
@@ -854,7 +902,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56832d75b4b4cfa46b447274bb5f6671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChangeCursor: 0
   OnHover:
     m_PersistentCalls:
       m_Calls:
@@ -1101,7 +1148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56832d75b4b4cfa46b447274bb5f6671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChangeCursor: 0
   OnHover:
     m_PersistentCalls:
       m_Calls:
@@ -1304,7 +1350,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56832d75b4b4cfa46b447274bb5f6671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChangeCursor: 0
   OnHover:
     m_PersistentCalls:
       m_Calls:
@@ -1507,7 +1552,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56832d75b4b4cfa46b447274bb5f6671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChangeCursor: 0
   OnHover:
     m_PersistentCalls:
       m_Calls:
@@ -2216,7 +2260,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56832d75b4b4cfa46b447274bb5f6671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChangeCursor: 0
   OnHover:
     m_PersistentCalls:
       m_Calls:
@@ -2265,3 +2308,4 @@ SceneRoots:
   - {fileID: 1227942158}
   - {fileID: 648915227}
   - {fileID: 976215669}
+  - {fileID: 86491709}

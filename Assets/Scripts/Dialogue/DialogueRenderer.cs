@@ -5,9 +5,20 @@ using UnityEngine;
 
 public class DialogueRenderer : MonoBehaviour
 {
+    private WaitForSecondsRealtime Timer;
     public TextMeshProUGUI Name;
     public TextMeshProUGUI Text;
     public GameObject canvas;
+
+    private IEnumerator Coroutine;
+    private string TextToWrite;
+    private bool IsWriting;
+    private float WriteRate = 0.025f;
+
+    void Awake()
+    {
+        Timer = new WaitForSecondsRealtime(WriteRate);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -15,13 +26,23 @@ public class DialogueRenderer : MonoBehaviour
         canvas.SetActive(false);
     }
 
-    public void ShowDialogue(string text, string speaker)
+    public bool ShowDialogue(string text, string speaker)
     {
-        Name.text = speaker;
-        Text.text = text;
-        Time.timeScale = 0;
-    
-        canvas.SetActive(true);
+        if (IsWriting)
+        {
+            StopCoroutine(Coroutine);
+            WriteFull();
+            return false;
+        }
+        else
+        {
+            Name.text = speaker;
+            Coroutine = Write(text);
+            StartCoroutine(Coroutine);
+            Time.timeScale = 0;
+            canvas.SetActive(true);
+            return true;
+        }
     }
 
     public void closeDialogue()
@@ -33,5 +54,29 @@ public class DialogueRenderer : MonoBehaviour
     public bool IsOpen()
     {
         return canvas.activeSelf;
+    }
+
+    private IEnumerator Write(string text)
+    {
+        IsWriting = true;
+
+        TextToWrite = text;
+        Text.maxVisibleCharacters = 0;
+        Text.text = text;
+
+        for (int i = 0; i < TextToWrite.Length; i++)
+        {
+            Text.maxVisibleCharacters = i + 1;
+            yield return Timer;
+        }
+
+        IsWriting = false;
+    }
+
+    private void WriteFull()
+    {
+        Text.maxVisibleCharacters = TextToWrite.Length;
+        Text.text = TextToWrite;
+        IsWriting = false;
     }
 }
