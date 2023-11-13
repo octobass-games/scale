@@ -3,6 +3,7 @@ using UnityEngine;
 public class Zipline : MonoBehaviour
 {
     public Transform ZiplineEnd;
+    public Transform ZiplineLine;
     public float ZiplineSpeed = 5f;
 
     private CharacterController2D Rider;
@@ -40,6 +41,7 @@ public class Zipline : MonoBehaviour
     {
         Rider.Freeze();
         Rider.GravityModifier = 0f;
+        Rider.ForcePosition(new Vector3(Rider.transform.position.x, ZiplineLine.position.y, Rider.transform.position.z));
     }
 
     private void UnlockRiderFromZipline()
