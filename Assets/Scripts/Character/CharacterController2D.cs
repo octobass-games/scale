@@ -14,7 +14,7 @@ public class CharacterController2D : MonoBehaviour
     public float GravityModifier = 1.0f;
 
     private float HorizontalMovement;
-    private bool ProcessInputs;
+    private bool ProcessInputs = true;
     private bool Jumping;
     private bool IsGrounded = true;
     private Vector2 Velocity;
@@ -45,7 +45,7 @@ public class CharacterController2D : MonoBehaviour
 
     public bool IsFrozen()
     {
-        return ProcessInputs;
+        return !ProcessInputs;
     }
 
     void Awake()

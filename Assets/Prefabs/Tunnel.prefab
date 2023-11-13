@@ -106,6 +106,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ValidInteracterTags: []
   CharacterSwitcher: {fileID: 0}
+  InteractionAnimationTrigger: dive
+  InteractionAnimationLength: 0.25
   OnValidInteraction:
     m_PersistentCalls:
       m_Calls:
@@ -230,6 +232,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ValidInteracterTags: []
   CharacterSwitcher: {fileID: 0}
+  InteractionAnimationTrigger: dive
+  InteractionAnimationLength: 0.25
   OnValidInteraction:
     m_PersistentCalls:
       m_Calls:

@@ -53,7 +53,7 @@ public class CharacterSwitcher : MonoBehaviour
 
     public void SwitchCharacter()
     {
-        if (GiantCharacterController.IsFrozen())
+        if (!GiantCharacterController.IsFrozen())
         {
             SelectGnome();
         }
