@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class DialogueRenderer : MonoBehaviour
 {
-    public float WriteRate;
     private WaitForSecondsRealtime Timer;
     public TextMeshProUGUI Name;
     public TextMeshProUGUI Text;
@@ -14,6 +13,7 @@ public class DialogueRenderer : MonoBehaviour
     private IEnumerator Coroutine;
     private string TextToWrite;
     private bool IsWriting;
+    private float WriteRate = 0.025f;
 
     void Awake()
     {
