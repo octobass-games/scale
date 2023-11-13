@@ -6,52 +6,55 @@ public class Zipline : MonoBehaviour
     public Transform ZiplineLine;
     public float ZiplineSpeed = 5f;
 
-    private CharacterController2D Rider;
+    private CharacterController2D RiderCharacterController;
+    private Animator RiderAnimator;
     private bool Riding;
 
     public void Ride(GameObject rider)
     {
-        Rider = rider.GetComponent<CharacterController2D>();
+        RiderCharacterController = rider.GetComponent<CharacterController2D>();
+        RiderAnimator = rider.GetComponentInChildren<Animator>();
     }
 
     void FixedUpdate()
     {
-        if (Rider != null)
+        if (RiderCharacterController != null)
         {
             if (!Riding)
             {
-                Riding = true;
                 LockRiderIntoZipline();
             }
-            else if (!Rider.transform.position.Approximately(ZiplineEnd.position))
+            else if (!RiderCharacterController.transform.position.Approximately(ZiplineEnd.position))
             {
-                var newPosition = Vector3.MoveTowards(Rider.transform.position, ZiplineEnd.position, ZiplineSpeed);
-                MoveRider(newPosition);
+                MoveRider();
             }
             else
             {
-                Riding = false;
                 UnlockRiderFromZipline();
-                Rider = null;
             }
         }
     }
 
     private void LockRiderIntoZipline()
     {
-        Rider.Freeze();
-        Rider.GravityModifier = 0f;
-        Rider.ForcePosition(new Vector3(Rider.transform.position.x, ZiplineLine.position.y, Rider.transform.position.z));
+        Riding = true;
+        RiderAnimator.SetBool("isZipping", true);
+        RiderCharacterController.Freeze();
+        RiderCharacterController.GravityModifier = 0f;
+        RiderCharacterController.ForcePosition(new Vector3(RiderCharacterController.transform.position.x, ZiplineLine.position.y, RiderCharacterController.transform.position.z));
     }
 
     private void UnlockRiderFromZipline()
     {
-        Rider.Thaw();
-        Rider.GravityModifier = 1f;
+        Riding = false;
+        RiderCharacterController.Thaw();
+        RiderCharacterController.GravityModifier = 1f;
+        RiderAnimator.SetBool("isZipping", false);
+        RiderCharacterController = null;
     }
 
-    private void MoveRider(Vector3 position)
+    private void MoveRider()
     {
-        Rider.ForcePosition(position);
+        RiderCharacterController.ForcePosition(Vector3.MoveTowards(RiderCharacterController.transform.position, ZiplineEnd.position, ZiplineSpeed));
     }
 }
