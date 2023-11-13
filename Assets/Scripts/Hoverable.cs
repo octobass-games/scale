@@ -3,18 +3,20 @@ using UnityEngine.Events;
 
 public class Hoverable : MonoBehaviour
 {
+    public bool ChangeCursor;
     public UnityEvent OnHover;
     public UnityEvent OnExit;
 
-    void OnMouseEnter()
+    void Awake()
     {
-        FindObjectOfType<Cursor>().SetCursorPointer(); 
+        
+    }
+    void OnMouseOver()
+    {
         OnHover.Invoke();
     }
-
     void OnMouseExit()
     {
-        FindObjectOfType<Cursor>().SetCursorNeutral(); 
         OnExit.Invoke();
     }
 

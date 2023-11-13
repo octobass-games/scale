@@ -30,13 +30,8 @@ public class DialogueController
         else
         {
             var a = texts[pos];
-
-            var isRendererNotRevealingPreviousLine = DialogueRenderer.ShowDialogue(a.Text, a.Name);
-
-            if (isRendererNotRevealingPreviousLine)
-            {
-                pos++;
-            }
+            DialogueRenderer.ShowDialogue(a.Text, a.Name);
+            pos++;
         }
     }
 
