@@ -47,6 +47,7 @@ public class Interactable : MonoBehaviour
 
         OnValidInteraction.Invoke(Interacter);
 
+        // TODO: this causes a bug when tabbing immediately after interacting. Need to count freezers in controller
         characterController.Thaw();
     }
 
