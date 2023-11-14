@@ -24,6 +24,7 @@ public class CharacterController2D : MonoBehaviour
     private float CoyoteTimer;
     private float Gravity;
     private float JumpSpeed;
+    private int Freezers;
 
     public void ForcePosition(Vector3 position)
     {
@@ -32,6 +33,7 @@ public class CharacterController2D : MonoBehaviour
 
     public void Freeze()
     {
+        Freezers += 1;
         ProcessInputs = false;
         HorizontalMovement = 0;
         Jumping = false;
@@ -40,7 +42,12 @@ public class CharacterController2D : MonoBehaviour
 
     public void Thaw()
     {
-        ProcessInputs = true;
+        Freezers -= 1;
+
+        if (Freezers == 0)
+        {
+            ProcessInputs = true;
+        }
     }
 
     public bool IsFrozen()

@@ -28,14 +28,12 @@ public class CharacterSwitcher : MonoBehaviour
         if (FirstActiveCharacter == Giant)
         {
             GnomeCharacterController.Freeze();
-            GiantCharacterController.Thaw();
             GnomeImage.color = new Color(Color.white.r, Color.white.g, Color.white.b, 0.5f);
             GiantImage.color = new Color(Color.white.r, Color.white.g, Color.white.b, 1.0f);
             ActiveCharacterTag = TagComparer.GIANT;
         }
         else
         {
-            GnomeCharacterController.Thaw();
             GiantCharacterController.Freeze();
             GnomeImage.color = new Color(Color.white.r, Color.white.g, Color.white.b, 1.0f);
             GiantImage.color = new Color(Color.white.r, Color.white.g, Color.white.b, 0.5f);
