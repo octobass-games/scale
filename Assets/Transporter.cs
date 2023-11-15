@@ -48,7 +48,7 @@ public class Transporter : MonoBehaviour
     {
         if (IsMoving)
         {
-            if (Passenger.transform.parent != transform)
+            if (Passenger != null && Passenger.transform.parent != transform)
             {
                 Passenger.transform.SetParent(transform);
             }
