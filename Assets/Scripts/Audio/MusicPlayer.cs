@@ -6,33 +6,15 @@ public class MusicPlayer : MonoBehaviour
 {
     public string fmodEvent;
 
-    private FMOD.Studio.EventInstance musicInstance;
-
-
-    private void Awake()
+    public string CheckFmodEvent()
     {
-        if (MusicManager.instance.newTrack == true)
-        {
-            StopMusic();
-        }
+        return fmodEvent;
     }
+
 
     private void Start()
     {
-        musicInstance = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
-
-        if(MusicManager.instance.musicPlaying == false && MusicManager.instance.newTrack == true)
-        {
-            musicInstance.start();
-        }
-
-        MusicManager.instance.musicPlaying = true;
-    }
-
-    private void StopMusic()
-    {
-        musicInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        musicInstance.release();
-        //MusicManager.instance.musicPlaying = false;
-    }
+        MusicManager.instance.newTrack = true;
+        MusicManager.instance.MusicStarter();
+    } 
 }

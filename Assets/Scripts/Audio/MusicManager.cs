@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class MusicManager : MonoBehaviour
 {
+
+    
+
     private static MusicManager Instance;
 
     public bool musicPlaying;
     public bool stopMusic;
     public bool newTrack = true;
+
+    private FMOD.Studio.EventInstance musicInstance;
+
 
 
     public static MusicManager instance
@@ -43,6 +49,23 @@ public class MusicManager : MonoBehaviour
         }
     }
 
+    public void MusicStarter()
+    {
+        musicInstance = FMODUnity.RuntimeManager.CreateInstance(FindObjectOfType<MusicPlayer>().CheckFmodEvent());
 
+        if (musicPlaying == false && newTrack == true)
+        {
+            musicInstance.start();
+        }
+
+        MusicManager.instance.musicPlaying = true;
+    }
+
+    private void StopMusic()
+    {
+        musicInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        musicInstance.release();
+        musicPlaying = false;
+    }
 
 }
