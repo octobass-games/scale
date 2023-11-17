@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class MusicManager : MonoBehaviour
 {
-    private bool musicPlaying;
     public bool newTrack;
     public string fmodEventChecker;
 
+    private bool musicPlaying;
     private FMOD.Studio.EventInstance musicInstance;
 
     private static MusicManager Instance;
