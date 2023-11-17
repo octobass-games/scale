@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class MusicManager : MonoBehaviour
 {
-    public bool musicPlaying;
+    private bool musicPlaying;
     public bool newTrack;
     public string fmodEventChecker;
 
@@ -17,12 +17,14 @@ public class MusicManager : MonoBehaviour
             if(Instance == null)
             {
                 Instance = FindObjectOfType<MusicManager>();
+
                 if(Instance == null)
                 {
-                    GameObject singltonGO = new GameObject("MusicManager");
-                    Instance = singltonGO.AddComponent<MusicManager>();
+                    GameObject singletonGO = new GameObject("MusicManager");
 
-                    DontDestroyOnLoad(singltonGO);
+                    Instance = singletonGO.AddComponent<MusicManager>();
+
+                    DontDestroyOnLoad(singletonGO);
                 }
             }
 
@@ -32,12 +34,11 @@ public class MusicManager : MonoBehaviour
 
     public void MusicStarter()
     {
-
         fmodEventChecker = FindObjectOfType<MusicPlayer>().CheckFmodEvent();
 
         musicInstance = FMODUnity.RuntimeManager.CreateInstance(fmodEventChecker);
 
-        if (musicPlaying == false && newTrack == true)
+        if (!musicPlaying && newTrack)
         {
             musicInstance.start();
         }

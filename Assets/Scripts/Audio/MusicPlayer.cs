@@ -17,7 +17,6 @@ public class MusicPlayer : MonoBehaviour
             MusicManager.instance.StopMusic();
             MusicManager.instance.MusicStarter();
         }
-
         else if (fmodEvent == MusicManager.instance.fmodEventChecker)
         {
             Debug.Log("Same Music");
