@@ -14,7 +14,7 @@ public class MusicPlayer : MonoBehaviour
 
     private void Start()
     {
-        MusicManager.instance.newTrack = true;
+        MusicManager.instance.StopMusic();
         MusicManager.instance.MusicStarter();
     } 
 }
