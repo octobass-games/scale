@@ -106,6 +106,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -824,12 +837,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: buttons_36
+      name: big-lever-no-handle
       rect:
         serializedVersion: 2
         x: 96
         y: 24
-        width: 24
+        width: 48
         height: 24
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -840,27 +853,6 @@ TextureImporter:
       bones: []
       spriteID: cd7a4716477b1f44e87da849b4539552
       internalID: 395621429
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: buttons_37
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 24
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d4568507e86b5494da9fb6501fb64676
-      internalID: -630062481
       vertices: []
       indices: 
       edges: []
@@ -1047,6 +1039,7 @@ TextureImporter:
       name: _NormalMap
     nameFileIdTable:
       big-lever-left: 263592732
+      big-lever-no-handle: 395621429
       big-lever-right: 1628488559
       buttons_0: -1069342729
       buttons_1: -829883280
@@ -1076,7 +1069,6 @@ TextureImporter:
       buttons_31: -2082787261
       buttons_33: -896977436
       buttons_35: 1742999863
-      buttons_36: 395621429
       buttons_37: -630062481
       buttons_38: -1631727069
       buttons_39: -1799135659
