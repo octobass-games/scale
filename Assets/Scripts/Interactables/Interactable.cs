@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -11,6 +12,7 @@ public class Interactable : MonoBehaviour
     public float InteractionAnimationLength;
     public UnityEvent<GameObject> OnValidInteraction;
     public UnityEvent<GameObject> OnInvalidInteraction;
+    public List<Condition> Conditions;
 
     private GameObject Interacter;
     private CharacterController2D InteracterCharacterController;
@@ -21,7 +23,10 @@ public class Interactable : MonoBehaviour
         {
             if (ValidInteracterTags.Count == 0 || ValidInteracterTags.Contains(Interacter.tag))
             {
-                StartCoroutine(Interact());
+                if (Conditions.All(condition => condition.Evaluate(Interacter)))
+                {
+                    StartCoroutine(Interact());
+                }
             }
             else
             {
