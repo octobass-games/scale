@@ -10,7 +10,9 @@ public class MusicManager : MonoBehaviour
     private static MusicManager Instance;
 
     public bool musicPlaying;
-    public bool newTrack = true;
+    public bool newTrack;
+
+    public string fmodEventChecker;
 
     private FMOD.Studio.EventInstance musicInstance;
 
@@ -51,7 +53,9 @@ public class MusicManager : MonoBehaviour
     public void MusicStarter()
     {
 
-        musicInstance = FMODUnity.RuntimeManager.CreateInstance(FindObjectOfType<MusicPlayer>().CheckFmodEvent());
+        fmodEventChecker = FindObjectOfType<MusicPlayer>().CheckFmodEvent();
+
+        musicInstance = FMODUnity.RuntimeManager.CreateInstance(fmodEventChecker);
 
         if (musicPlaying == false && newTrack == true)
         {
@@ -65,7 +69,6 @@ public class MusicManager : MonoBehaviour
     {
         musicInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         musicInstance.release();
-        newTrack = true;
         musicPlaying = false;
     }
 
