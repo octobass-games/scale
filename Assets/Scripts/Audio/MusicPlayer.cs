@@ -17,15 +17,13 @@ public class MusicPlayer : MonoBehaviour
         if (fmodEvent != MusicManager.instance.fmodEventChecker)
         {
             MusicManager.instance.newTrack = true;
-            Debug.Log(fmodEvent);
-            Debug.Log(MusicManager.instance.fmodEventChecker);
             MusicManager.instance.StopMusic();
             MusicManager.instance.MusicStarter();
         }
 
         else if (fmodEvent == MusicManager.instance.fmodEventChecker)
         {
-
+            Debug.Log("Same Music");
         }
     } 
 }

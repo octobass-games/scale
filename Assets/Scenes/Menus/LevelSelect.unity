@@ -307,7 +307,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56832d75b4b4cfa46b447274bb5f6671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChangeCursor: 0
   OnHover:
     m_PersistentCalls:
       m_Calls:
@@ -687,7 +686,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4827923677449453362, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
       propertyPath: orthographic size
-      value: 90
+      value: 118
       objectReference: {fileID: 0}
     - target: {fileID: 4827923677449453362, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
       propertyPath: m_BackGroundColor.a
@@ -943,7 +942,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56832d75b4b4cfa46b447274bb5f6671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChangeCursor: 0
   OnHover:
     m_PersistentCalls:
       m_Calls:
@@ -1022,7 +1020,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56832d75b4b4cfa46b447274bb5f6671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChangeCursor: 0
   OnHover:
     m_PersistentCalls:
       m_Calls:
@@ -1273,7 +1270,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56832d75b4b4cfa46b447274bb5f6671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChangeCursor: 0
   OnHover:
     m_PersistentCalls:
       m_Calls:
@@ -1459,6 +1455,67 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1564300867
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1733552586451269775, guid: 7dc274e3c1fc21641a3b4e2109d53e5e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 36.1425
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733552586451269775, guid: 7dc274e3c1fc21641a3b4e2109d53e5e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 78.67114
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733552586451269775, guid: 7dc274e3c1fc21641a3b4e2109d53e5e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.8755474
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733552586451269775, guid: 7dc274e3c1fc21641a3b4e2109d53e5e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733552586451269775, guid: 7dc274e3c1fc21641a3b4e2109d53e5e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733552586451269775, guid: 7dc274e3c1fc21641a3b4e2109d53e5e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733552586451269775, guid: 7dc274e3c1fc21641a3b4e2109d53e5e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733552586451269775, guid: 7dc274e3c1fc21641a3b4e2109d53e5e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733552586451269775, guid: 7dc274e3c1fc21641a3b4e2109d53e5e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733552586451269775, guid: 7dc274e3c1fc21641a3b4e2109d53e5e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2121265994758039702, guid: 7dc274e3c1fc21641a3b4e2109d53e5e, type: 3}
+      propertyPath: fmodEvent
+      value: event:/Music/menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 4088692100475647645, guid: 7dc274e3c1fc21641a3b4e2109d53e5e, type: 3}
+      propertyPath: m_Name
+      value: Music
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7dc274e3c1fc21641a3b4e2109d53e5e, type: 3}
 --- !u!1 &1607579622
 GameObject:
   m_ObjectHideFlags: 0
@@ -1618,7 +1675,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56832d75b4b4cfa46b447274bb5f6671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChangeCursor: 0
   OnHover:
     m_PersistentCalls:
       m_Calls:
@@ -2036,3 +2092,4 @@ SceneRoots:
   - {fileID: 493899816}
   - {fileID: 1607579624}
   - {fileID: 1002134812}
+  - {fileID: 1564300867}
