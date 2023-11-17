@@ -2010,28 +2010,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1985844371}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Script: {fileID: 11500000, guid: 65bfdb52d76222a4997d87f9051f6167, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: 405945111
-      Data2: 1205814112
-      Data3: -1440662358
-      Data4: -2106378600
-    Path: event:/Music/menu
-  Event: 
-  PlayEvent: 1
-  StopEvent: 2
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  AllowNonRigidbodyDoppler: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
+  fmodEvent: event:/Music/menu
 --- !u!1 &2115935962
 GameObject:
   m_ObjectHideFlags: 0
