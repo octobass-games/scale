@@ -22,6 +22,11 @@ public class Transporter : MonoBehaviour
         IsMoving = true;
     }
 
+    public void StopTransport()
+    {
+        IsMoving = false;
+    }
+
     public void TogglePassenger(GameObject passenger)
     {
         if (!IsMoving)
