@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MusicPlayer : MonoBehaviour
@@ -11,8 +9,7 @@ public class MusicPlayer : MonoBehaviour
         return fmodEvent;
     }
 
-
-    private void Start()
+    void Start()
     {
         if (fmodEvent != MusicManager.instance.fmodEventChecker)
         {

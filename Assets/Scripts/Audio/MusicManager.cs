@@ -1,22 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MusicManager : MonoBehaviour
 {
-
-    
-
-    private static MusicManager Instance;
-
     public bool musicPlaying;
     public bool newTrack;
-
     public string fmodEventChecker;
 
     private FMOD.Studio.EventInstance musicInstance;
 
-
+    private static MusicManager Instance;
 
     public static MusicManager instance
     {
@@ -35,18 +27,6 @@ public class MusicManager : MonoBehaviour
             }
 
             return Instance;
-        }
-    }
-
-    private void Awake()
-    {
-        if(Instance != null && Instance != this)
-        {
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            Instance = this;
         }
     }
 
@@ -72,5 +52,15 @@ public class MusicManager : MonoBehaviour
         musicPlaying = false;
     }
 
-
+    void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
 }
