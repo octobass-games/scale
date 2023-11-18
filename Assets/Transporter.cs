@@ -12,7 +12,9 @@ public class Transporter : MonoBehaviour
 
     private GameObject Passenger;
     private Vector3 PositionAVector;
+    private Vector3 PositionAExitVector;
     private Vector3 PositionBVector;
+    private Vector3 PositionBExitVector;
     private Vector3 TargetPositionVector;
     private bool IsMoving;
 
@@ -29,8 +31,11 @@ public class Transporter : MonoBehaviour
 
     public void TogglePassenger(GameObject passenger)
     {
+        Debug.Log("Hello");
         if (!IsMoving)
         {
+            Debug.Log("World");
+
             if (Passenger == null)
             {
                 PickUpPassenger(passenger);
@@ -45,7 +50,9 @@ public class Transporter : MonoBehaviour
     void Awake()
     {
         PositionAVector = PositionA.position;
+        PositionAExitVector = PositionAExit.position;
         PositionBVector = PositionB.position;
+        PositionBExitVector = PositionBExit.position;
         TargetPositionVector = PositionAVector;
     }
 
@@ -81,10 +88,10 @@ public class Transporter : MonoBehaviour
 
     private void DropOffPassenger()
     {
-        var exit = TargetPositionVector == PositionAVector ? PositionAExit : PositionBExit;
+        var exit = TargetPositionVector == PositionAVector ? PositionAExitVector : PositionBExitVector;
 
         var characterController = Passenger.GetComponent<CharacterController2D>();
-        characterController.ForcePosition(exit.position);
+        characterController.ForcePosition(exit);
 
         Passenger.transform.SetParent(null);
 
