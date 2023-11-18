@@ -135,10 +135,16 @@ public class CharacterController2D : MonoBehaviour
 
             for (int i = 0; i < RaycastResultCount; i++)
             {
-                if (Mathf.Approximately(RaycastResults[i].normal.y, 1))
+                var yNormal = RaycastResults[i].normal.y;
+
+                if (Mathf.Approximately(yNormal, 1))
                 {
                     IsGrounded = true;
                     CoyoteTimer = CoyoteTime;
+                    Velocity.y = 0;
+                }
+                else if (Mathf.Approximately(yNormal, -1))
+                {
                     Velocity.y = 0;
                 }
             }

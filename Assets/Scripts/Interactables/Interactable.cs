@@ -21,7 +21,6 @@ public class Interactable : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && Interacter != null && Interacter.tag == CharacterSwitcher.ActiveCharacterTag && !InteracterCharacterController.IsFrozen())
         {
-            Debug.Log("Here");
             if (ValidInteracterTags.Count == 0 || ValidInteracterTags.Contains(Interacter.tag))
             {
                 if (Conditions.All(condition => condition.Evaluate(Interacter)))
