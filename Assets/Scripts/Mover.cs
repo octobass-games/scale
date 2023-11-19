@@ -4,7 +4,6 @@ public class Mover : MonoBehaviour
 {
     public Transform PositionA;
     public Transform PositionB;
-    public Transform PassengerPosition;
     public Rigidbody2D Rb2d;
     public float Speed;
 
@@ -42,14 +41,14 @@ public class Mover : MonoBehaviour
             }
             else
             {
-                var displacement = Vector3.MoveTowards(transform.position, TargetPositionVector, Speed * Time.fixedDeltaTime);
-                var displacementa = (TargetPositionVector - transform.position).normalized * Speed * (Time.fixedDeltaTime);
-                Rb2d.position = (displacement);
+                var nextPosition = Vector3.MoveTowards(transform.position, TargetPositionVector, Speed * Time.fixedDeltaTime);
+                Rb2d.position = nextPosition;
+                
+                var displacement = (TargetPositionVector - transform.position).normalized * Speed * (Time.fixedDeltaTime);
 
-                if (displacementa.y < 0 || (displacementa.y == 0 && displacementa.x != 0))
+                if (Passenger != null && displacement.y < 0 || (displacement.y == 0 && displacement.x != 0))
                 {
-                    Debug.Log("Hello");
-                    Passenger.GetComponent<CharacterController2D>().ApplyExternalDisplacement(displacementa);
+                    Passenger.GetComponent<CharacterController2D>().ApplyExternalDisplacement(displacement);
                 }
             }
         }
@@ -59,7 +58,6 @@ public class Mover : MonoBehaviour
     {
         if (TagComparer.IsPlayer(collision.tag))
         {
-            Debug.Log("World");
             Passenger = collision.gameObject;
         }    
     }
@@ -68,7 +66,6 @@ public class Mover : MonoBehaviour
     {
         if (TagComparer.IsPlayer(collision.tag))
         {
-            Debug.Log("Hello");
             Passenger = null;
         }
     }
