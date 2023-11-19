@@ -34,7 +34,9 @@ public class Wind : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Gnome = GameObject.FindWithTag(TagComparer.GNOME).GetComponent<CharacterController2D>();
+
+
     }
 
     // Update is called once per frame
