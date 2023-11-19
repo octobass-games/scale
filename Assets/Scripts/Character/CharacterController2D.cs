@@ -27,6 +27,12 @@ public class CharacterController2D : MonoBehaviour
     private float JumpSpeed;
     private int Freezers;
     public Vector2 VelocityModifier = new Vector2(0, 0);
+    private Vector2 ExternalDisplacement;
+
+    public void ApplyExternalDisplacement(Vector2 displacement)
+    {
+        ExternalDisplacement = displacement;
+    }
 
     public void ForcePosition(Vector3 position)
     {
@@ -142,9 +148,26 @@ public class CharacterController2D : MonoBehaviour
         }
         else
         {
-            var displacement = Velocity * Time.fixedDeltaTime;
+            var displacement = Velocity * Time.fixedDeltaTime + ExternalDisplacement;
+
+            ExternalDisplacement = Vector2.zero;
             
-            Rb2d.SafeMove(Vector2.right * displacement.x, displacement.x, RaycastResults, ContactFilter);
+            
+
+            var results = new Collider2D[10];
+
+            int count = Rb2d.OverlapCollider(ContactFilter, results);
+
+            for (int i = 0; i < count; i++)
+            {
+                var col = results[i];
+
+                var distance = Rb2d.Distance(col);
+
+                Rb2d.position += distance.normal * distance.distance;
+            }
+
+
             int RaycastResultCount = Rb2d.SafeMove(Vector2.up * displacement.y, displacement.y, RaycastResults, ContactFilter);
 
             for (int i = 0; i < RaycastResultCount; i++)
@@ -163,9 +186,23 @@ public class CharacterController2D : MonoBehaviour
                 }
             }
 
+            Rb2d.SafeMove(Vector2.right * displacement.x, displacement.x, RaycastResults, ContactFilter);
+            
             if (RaycastResultCount == 0)
             {
-                IsGrounded = false;
+                // IsGrounded = false;
+            }
+
+
+            int a = Rb2d.OverlapCollider(ContactFilter, results);
+
+            for (int i = 0; i < a; i++)
+            {
+                var col = results[i];
+
+                var distance = Rb2d.Distance(col);
+
+                Rb2d.position += distance.normal * distance.distance;
             }
         }
     }
