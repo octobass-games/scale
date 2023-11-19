@@ -45,10 +45,10 @@ public class Mover : MonoBehaviour
                 var displacement = Vector3.MoveTowards(transform.position, TargetPositionVector, Speed * Time.fixedDeltaTime);
                 var displacementa = (TargetPositionVector - transform.position).normalized * Speed * (Time.fixedDeltaTime);
                 Rb2d.position = (displacement);
-                Debug.Log(displacementa);
 
-                if (displacementa.y < 0)
+                if (displacementa.y < 0 || (displacementa.y == 0 && displacementa.x != 0))
                 {
+                    Debug.Log("Hello");
                     Passenger.GetComponent<CharacterController2D>().ApplyExternalDisplacement(displacementa);
                 }
             }
