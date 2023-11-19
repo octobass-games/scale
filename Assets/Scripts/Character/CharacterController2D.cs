@@ -18,6 +18,7 @@ public class CharacterController2D : MonoBehaviour
     private bool Jumping;
     private bool IsGrounded = true;
     private Vector2 Velocity;
+    private Vector2 PreviousVelocity;
     private RaycastHit2D[] RaycastResults = new RaycastHit2D[10];
     private ContactFilter2D ContactFilter = new ContactFilter2D();
     private Vector3 PositionOverride = Vector2.zero;
@@ -53,6 +54,11 @@ public class CharacterController2D : MonoBehaviour
     public bool IsFrozen()
     {
         return !ProcessInputs;
+    }
+
+    public bool IsTravellingRight()
+    {
+        return PreviousVelocity.x >= 0;
     }
 
     void Awake()
@@ -158,6 +164,7 @@ public class CharacterController2D : MonoBehaviour
 
     private void ResetVelocity()
     {
+        PreviousVelocity = Velocity;
         Velocity.x = 0;
     }
 }

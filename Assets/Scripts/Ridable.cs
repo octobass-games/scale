@@ -6,11 +6,17 @@ public class Ridable : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        collision.gameObject.transform.SetParent(RidableGameObject.transform);   
+        if (TagComparer.IsPlayer(collision.tag))
+        {
+            collision.gameObject.transform.SetParent(RidableGameObject.transform);   
+        }
     }
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        collision.gameObject.transform.SetParent(null);    
+        if (TagComparer.IsPlayer(collision.tag))
+        {
+            collision.gameObject.transform.SetParent(null);    
+        }
     }
 }

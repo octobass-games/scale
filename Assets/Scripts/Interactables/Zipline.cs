@@ -2,10 +2,12 @@ using UnityEngine;
 
 public class Zipline : MonoBehaviour
 {
-    public Transform ZiplineEnd;
+    public Transform ZiplineLeftEnd;
+    public Transform ZiplineRightEnd;
     public Transform ZiplineLine;
     public float ZiplineSpeed = 5f;
 
+    private Transform TargetEnd;
     private CharacterController2D RiderCharacterController;
     private Animator RiderAnimator;
     private bool Riding;
@@ -14,6 +16,8 @@ public class Zipline : MonoBehaviour
     {
         RiderCharacterController = rider.GetComponent<CharacterController2D>();
         RiderAnimator = rider.GetComponentInChildren<Animator>();
+
+        TargetEnd = RiderCharacterController.IsTravellingRight() ? ZiplineRightEnd : ZiplineLeftEnd;
     }
 
     void FixedUpdate()
@@ -24,7 +28,7 @@ public class Zipline : MonoBehaviour
             {
                 LockRiderIntoZipline();
             }
-            else if (!RiderCharacterController.transform.position.Approximately(ZiplineEnd.position))
+            else if (!RiderCharacterController.transform.position.Approximately(TargetEnd.position))
             {
                 MoveRider();
             }
@@ -55,6 +59,6 @@ public class Zipline : MonoBehaviour
 
     private void MoveRider()
     {
-        RiderCharacterController.ForcePosition(Vector3.MoveTowards(RiderCharacterController.transform.position, ZiplineEnd.position, ZiplineSpeed));
+        RiderCharacterController.ForcePosition(Vector3.MoveTowards(RiderCharacterController.transform.position, TargetEnd.position, ZiplineSpeed));
     }
 }
