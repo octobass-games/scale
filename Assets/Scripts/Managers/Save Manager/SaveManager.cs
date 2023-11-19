@@ -13,6 +13,11 @@ public class SaveManager : MonoBehaviour
         SaveData = Load() ?? GetFreshSaveData();
     }
 
+    public LevelData GetLevelData(string levelName)
+    {
+        return SaveData.LevelData.Find(level => level.Name == levelName);
+    }
+
     public void SaveLevelProgress(string levelName, bool levelCollectableFound)
     {
         var level = SaveData.LevelData.Find(level => level.Name == levelName);

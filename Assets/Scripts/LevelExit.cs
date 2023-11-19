@@ -5,21 +5,31 @@ public class LevelExit : MonoBehaviour
     public SceneManager SceneManager;
     public SaveManager SaveManager;
     public ChangeLevelSceneData NextLevel;
+    public bool CollectableFound;
 
+    private string SceneName;
     private bool IsGnomeInProximity;
     private bool IsGiantInProximity;
-    private bool CollectableFound;
 
     public void CollectCollectable()
     {
         CollectableFound = true;
     }
 
+    void Awake()
+    {
+        SceneName = SceneManager.GetCurrentSceneName();
+
+        var levelData = SaveManager.GetLevelData(SceneName);
+
+        CollectableFound = levelData.CollectableFound;
+    }
+
     void Update()
     {
         if (IsGnomeInProximity && IsGiantInProximity)
         {
-            SaveManager.SaveLevelProgress(SceneManager.GetCurrentSceneName(), CollectableFound);
+            SaveManager.SaveLevelProgress(SceneName, CollectableFound);
             SceneManager.ChangeLevelScene(NextLevel);
         }    
     }
