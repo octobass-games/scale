@@ -8,12 +8,18 @@ public class LevelExit : MonoBehaviour
 
     private bool IsGnomeInProximity;
     private bool IsGiantInProximity;
+    private bool CollectableFound;
+
+    public void CollectCollectable()
+    {
+        CollectableFound = true;
+    }
 
     void Update()
     {
         if (IsGnomeInProximity && IsGiantInProximity)
         {
-            SaveManager.SaveLevelProgress(SceneManager.GetCurrentSceneName());
+            SaveManager.SaveLevelProgress(SceneManager.GetCurrentSceneName(), CollectableFound);
             SceneManager.ChangeLevelScene(NextLevel);
         }    
     }

@@ -13,9 +13,12 @@ public class SaveManager : MonoBehaviour
         SaveData = Load() ?? GetFreshSaveData();
     }
 
-    public void SaveLevelProgress(string levelName)
+    public void SaveLevelProgress(string levelName, bool levelCollectableFound)
     {
-        SaveData.LevelData.Find(level => level.Name == levelName).IsComplete = true;
+        var level = SaveData.LevelData.Find(level => level.Name == levelName);
+        
+        level.IsComplete = true;
+        level.CollectableFound = levelCollectableFound;
         
         var json = JsonUtility.ToJson(SaveData);
 
@@ -89,13 +92,13 @@ public class SaveManager : MonoBehaviour
         return new SaveData(
             new List<LevelData>()
                 {
-                    new LevelData("Level1Village", false),
-                    new LevelData("Level2MountainBase", false),
-                    new LevelData("Level2-2", false),
-                    new LevelData("Level2-3", false),
-                    new LevelData("Level2-4", false),
-                    new LevelData("Level2-5", false),
-                    new LevelData("Level2-6", false)
+                    new LevelData("Level1Village", false, "", false),
+                    new LevelData("Level2MountainBase", false, "", false),
+                    new LevelData("Level2-2", false, "", false),
+                    new LevelData("Level2-3", false, "", false),
+                    new LevelData("Level2-4", false, "", false),
+                    new LevelData("Level2-5", false, "", false),
+                    new LevelData("Level2-6", false, "", false  )
                 }
             );
     }
