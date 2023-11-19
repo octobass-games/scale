@@ -8,7 +8,7 @@ public class Mover : MonoBehaviour
     public Rigidbody2D Rb2d;
     public float Speed;
 
-    private GameObject Passenger;
+    public GameObject Passenger;
     private Vector3 PositionAVector;
     private Vector3 PositionBVector;
     private Vector3 TargetPositionVector;
@@ -46,7 +46,11 @@ public class Mover : MonoBehaviour
                 var displacementa = (TargetPositionVector - transform.position).normalized * Speed * (Time.fixedDeltaTime);
                 Rb2d.position = (displacement);
                 Debug.Log(displacementa);
-                Passenger.GetComponent<CharacterController2D>().ApplyExternalDisplacement(displacementa);
+
+                if (displacementa.y < 0)
+                {
+                    Passenger.GetComponent<CharacterController2D>().ApplyExternalDisplacement(displacementa);
+                }
             }
         }
     }
@@ -55,6 +59,7 @@ public class Mover : MonoBehaviour
     {
         if (TagComparer.IsPlayer(collision.tag))
         {
+            Debug.Log("World");
             Passenger = collision.gameObject;
         }    
     }
@@ -63,6 +68,7 @@ public class Mover : MonoBehaviour
     {
         if (TagComparer.IsPlayer(collision.tag))
         {
+            Debug.Log("Hello");
             Passenger = null;
         }
     }

@@ -164,19 +164,11 @@ public class CharacterController2D : MonoBehaviour
 
                 var distance = Rb2d.Distance(col);
 
-                Rb2d.position += distance.normal * distance.distance;
-            }
-
-            int a = Rb2d.OverlapCollider(ContactFilter, results);
-
-            for (int i = 0; i < a; i++)
-            {
-                var col = results[i];
-
-                var distance = Rb2d.Distance(col);
+                Debug.Log($"First resolution: {col.name} {distance.distance} {distance.normal}");
 
                 Rb2d.position += distance.normal * distance.distance;
             }
+
 
             int RaycastResultCount = Rb2d.SafeMove(Vector2.up * displacement.y, displacement.y, RaycastResults, ContactFilter);
 
@@ -201,6 +193,33 @@ public class CharacterController2D : MonoBehaviour
             if (RaycastResultCount == 0)
             {
                 // IsGrounded = false;
+            }
+
+
+            int a = Rb2d.OverlapCollider(ContactFilter, results);
+
+            for (int i = 0; i < a; i++)
+            {
+                var col = results[i];
+
+                var distance = Rb2d.Distance(col);
+
+                Debug.Log($"Final resolution: {col.name} {distance.distance} {distance.normal}");
+
+                Rb2d.position += distance.normal * distance.distance;
+            }
+
+            int b = Rb2d.OverlapCollider(ContactFilter, results);
+
+            for (int i = 0; i < b; i++)
+            {
+                var col = results[i];
+
+                var distance = Rb2d.Distance(col);
+
+                Debug.Log($"Final final resolution: {col.name} {distance.distance} {distance.normal}");
+
+                Rb2d.position += distance.normal * distance.distance;
             }
         }
     }
