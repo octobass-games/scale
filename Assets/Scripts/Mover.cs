@@ -6,6 +6,7 @@ public class Mover : MonoBehaviour
     public Transform PositionB;
     public Rigidbody2D Rb2d;
     public float Speed;
+    public Collider2D SafetyChecker;
 
     public GameObject Passenger;
     private Vector3 PositionAVector;
@@ -41,14 +42,31 @@ public class Mover : MonoBehaviour
             }
             else
             {
-                var nextPosition = Vector3.MoveTowards(transform.position, TargetPositionVector, Speed * Time.fixedDeltaTime);
-                Rb2d.position = nextPosition;
-                
-                var displacement = (TargetPositionVector - transform.position).normalized * Speed * (Time.fixedDeltaTime);
+                var results = new Collider2D[10];
 
-                if (Passenger != null && displacement.y < 0 || (displacement.y == 0 && displacement.x != 0))
+                var count = SafetyChecker.OverlapCollider(new ContactFilter2D(), results);
+
+                bool isPlayerSafe = true;
+
+                for (int i = 0; i < count; i++)
                 {
-                    Passenger.GetComponent<CharacterController2D>().ApplyExternalDisplacement(displacement);
+                    if (TagComparer.IsPlayer(results[i].tag))
+                    {
+                        isPlayerSafe = false;
+                    }
+                }
+
+                if (isPlayerSafe)
+                {
+                    var nextPosition = Vector3.MoveTowards(transform.position, TargetPositionVector, Speed * Time.fixedDeltaTime);
+                    Rb2d.position = nextPosition;
+                
+                    var displacement = (TargetPositionVector - transform.position).normalized * Speed * (Time.fixedDeltaTime);
+
+                    if (Passenger != null && displacement.y < 0 || (displacement.y == 0 && displacement.x != 0))
+                    {
+                        Passenger.GetComponent<CharacterController2D>().ApplyExternalDisplacement(displacement);
+                    }
                 }
             }
         }
