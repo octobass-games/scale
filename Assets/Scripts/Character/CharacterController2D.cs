@@ -26,6 +26,7 @@ public class CharacterController2D : MonoBehaviour
     private float Gravity;
     private float JumpSpeed;
     private int Freezers;
+    public Vector2 VelocityModifier = new Vector2(0, 0);
 
     public void ForcePosition(Vector3 position)
     {
@@ -85,8 +86,14 @@ public class CharacterController2D : MonoBehaviour
         DecrementCoyoteTimer();
         UpdateVelocity();
         UpdateAnimations();
+        ApplyEnviromentModifications();
         UpdatePosition();
         ResetVelocity();
+    }
+
+    private void ApplyEnviromentModifications()
+    {
+        Velocity += VelocityModifier;
     }
 
     private void DecrementCoyoteTimer()
@@ -110,6 +117,7 @@ public class CharacterController2D : MonoBehaviour
         }
 
         Velocity -= new Vector2(0, GravityModifier) * new Vector2(0, Gravity) * Time.fixedDeltaTime;
+
     }
 
     private void UpdateAnimations()
