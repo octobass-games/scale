@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2936519749863922264}
   - component: {fileID: -5083987623124794916}
   - component: {fileID: 7300132952912308139}
+  - component: {fileID: 2513078117804803256}
   m_Layer: 0
   m_Name: BigLever
   m_TagString: Untagged
@@ -185,12 +186,26 @@ MonoBehaviour:
   ValidInteracterTags:
   - Giant
   CharacterSwitcher: {fileID: 0}
+  InteractionAnimationTrigger: 
+  InteractionAnimationLength: 0
   OnValidInteraction:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2409673459525965356}
         m_TargetAssemblyTypeName: Switch, Assembly-CSharp
         m_MethodName: ToggleState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2513078117804803256}
+        m_TargetAssemblyTypeName: AudioTrigger, Assembly-CSharp
+        m_MethodName: FmodOneShot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -215,6 +230,7 @@ MonoBehaviour:
           m_StringArgument: Gnome
           m_BoolArgument: 0
         m_CallState: 2
+  Conditions: []
 --- !u!114 &7300132952912308139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,6 +247,19 @@ MonoBehaviour:
   InteractingSprite: {fileID: 2474139779459333536}
   Lit: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   Unlit: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+--- !u!114 &2513078117804803256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7089255784809278807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79d665ff4202c94e8fe65c88ab34bb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent: event:/SFX/lever
 --- !u!1 &7320330833984968715
 GameObject:
   m_ObjectHideFlags: 0
