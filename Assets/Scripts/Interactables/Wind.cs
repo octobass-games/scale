@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Wind : MonoBehaviour
@@ -15,8 +16,8 @@ public class Wind : MonoBehaviour
         {
 
             Interacter = collision.gameObject;
-            Gnome.VelocityModifier = ForcedVelocity;
-            InWind= true;
+            Gnome.AddVelocityModifiers(ForcedVelocity);
+            InWind = true;
         }
     }
 
@@ -27,7 +28,7 @@ public class Wind : MonoBehaviour
             Interacter = null;
             InWind = false;
 
-            Gnome.VelocityModifier = new Vector2(0, 0);
+            Gnome.RemoveVelocityModifiers(ForcedVelocity);
 
         }
     }

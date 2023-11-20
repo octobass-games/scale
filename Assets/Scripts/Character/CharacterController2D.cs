@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterController2D : MonoBehaviour
@@ -26,7 +28,7 @@ public class CharacterController2D : MonoBehaviour
     private float Gravity;
     private float JumpSpeed;
     private int Freezers;
-    public Vector2 VelocityModifier = new Vector2(0, 0);
+    public List<Vector2> VelocityModifiers;
     private Vector2 ExternalDisplacement;
 
     public void ApplyExternalDisplacement(Vector2 displacement)
@@ -87,6 +89,18 @@ public class CharacterController2D : MonoBehaviour
         }
     }
 
+
+    public void AddVelocityModifiers(Vector2 modifier)
+    {
+        VelocityModifiers.Add(modifier);
+    }
+
+    public void RemoveVelocityModifiers(Vector2 modifier)
+    {
+        VelocityModifiers.Remove(modifier);
+    }
+
+
     void FixedUpdate()
     {
         DecrementCoyoteTimer();
@@ -99,7 +113,10 @@ public class CharacterController2D : MonoBehaviour
 
     private void ApplyEnviromentModifications()
     {
-        Velocity += VelocityModifier;
+        for (int i = 0; i < VelocityModifiers.Count; i++)
+        {
+            Velocity += VelocityModifiers[i];
+        }
     }
 
     private void DecrementCoyoteTimer()
