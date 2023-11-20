@@ -92,6 +92,9 @@
 		<property name="triggerConditionMode">
 			<value>1</value>
 		</property>
+		<property name="pitch">
+			<value>3.79999995</value>
+		</property>
 		<relationship name="modulators">
 			<destination>{2972a464-c648-48d1-8046-fc4f4bb151f7}</destination>
 		</relationship>
@@ -130,10 +133,31 @@
 	</object>
 	<object class="MixerBusEffectChain" id="{e3475c19-8076-481e-9076-c57f586b6468}">
 		<relationship name="effects">
+			<destination>{b75b2ded-d285-4bf8-aa20-5ba4ad409f5c}</destination>
 			<destination>{c1672e31-44bf-47e2-8d4c-16e8f2ec0969}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{53b074d4-aee6-4381-b830-e84926c5e9c1}" />
 	<object class="MixerBusFader" id="{27619ea7-2e46-497c-bcc6-f309dffcc4e6}" />
+	<object class="SFXReverbEffect" id="{b75b2ded-d285-4bf8-aa20-5ba4ad409f5c}">
+		<property name="decayTime">
+			<value>240</value>
+		</property>
+		<property name="earlyDelay">
+			<value>8</value>
+		</property>
+		<property name="lateDelay">
+			<value>10</value>
+		</property>
+		<property name="HFDecayRatio">
+			<value>31.5</value>
+		</property>
+		<property name="lowShelfGain">
+			<value>-23.5</value>
+		</property>
+		<property name="highCut">
+			<value>360</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{c1672e31-44bf-47e2-8d4c-16e8f2ec0969}" />
 </objects>
