@@ -148,6 +148,7 @@
 	<object class="MixerBusEffectChain" id="{c9bd64a2-ebfe-41d8-b729-8bafbda4ed13}">
 		<relationship name="effects">
 			<destination>{30b52ab6-25b0-4165-87ad-99c666dabf0b}</destination>
+			<destination>{0178b8b6-470f-4c95-aee9-39fd8730ff1d}</destination>
 			<destination>{916833fb-6c60-4375-b334-4a21ea549b2a}</destination>
 		</relationship>
 	</object>
@@ -178,6 +179,35 @@
 		</property>
 		<property name="highGain">
 			<value>-10</value>
+		</property>
+	</object>
+	<object class="SFXReverbEffect" id="{0178b8b6-470f-4c95-aee9-39fd8730ff1d}">
+		<property name="decayTime">
+			<value>3500</value>
+		</property>
+		<property name="earlyDelay">
+			<value>20.5</value>
+		</property>
+		<property name="lateDelay">
+			<value>18.5</value>
+		</property>
+		<property name="HFDecayRatio">
+			<value>57</value>
+		</property>
+		<property name="lowShelfFrequency">
+			<value>720</value>
+		</property>
+		<property name="lowShelfGain">
+			<value>-7.5</value>
+		</property>
+		<property name="highCut">
+			<value>1900</value>
+		</property>
+		<property name="wetLevel">
+			<value>-10.5</value>
+		</property>
+		<property name="dryLevel">
+			<value>0.5</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{916833fb-6c60-4375-b334-4a21ea549b2a}" />
