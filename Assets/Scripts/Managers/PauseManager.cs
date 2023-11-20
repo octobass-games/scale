@@ -4,7 +4,30 @@ public class PauseManager : MonoBehaviour
 {
     public GameObject PauseMenu;
 
+    private SceneManager SceneManager;
     private bool IsPaused;
+
+    public void Close()
+    {
+        Unpause();
+    }
+
+    public void Reset()
+    {
+        Time.timeScale = 1.0f;
+        SceneManager.ReloadScene();
+    }
+
+    public void Quit()
+    {
+        Time.timeScale = 1.0f;
+        SceneManager.ChangeScene("MainMenu");
+    }
+
+    void Awake()
+    {
+        SceneManager = FindObjectOfType<SceneManager>();    
+    }
 
     void Update()
     {
@@ -12,16 +35,26 @@ public class PauseManager : MonoBehaviour
         {
             if (!IsPaused)
             {
-                IsPaused = true;
-                PauseMenu.SetActive(true);
-                Time.timeScale = 0.0f;
+                Pause();
             }
             else
             {
-                IsPaused = false;
-                PauseMenu.SetActive(false);
-                Time.timeScale = 1.0f;
+                Unpause();
             }
         }
+    }
+
+    private void Pause()
+    {
+        IsPaused = true;
+        PauseMenu.SetActive(true);
+        Time.timeScale = 0.0f;
+    }
+
+    private void Unpause()
+    {
+        IsPaused = false;
+        PauseMenu.SetActive(false);
+        Time.timeScale = 1.0f;
     }
 }
