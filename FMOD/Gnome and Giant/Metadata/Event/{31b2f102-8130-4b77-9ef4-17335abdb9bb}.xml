@@ -90,8 +90,14 @@
 	<object class="MixerBusPanner" id="{cae2174d-b222-4914-9136-20a05e3c74c9}" />
 	<object class="SingleSound" id="{45913ea8-3f88-4f06-9064-53f254d5db74}">
 		<property name="length">
-			<value>1.8</value>
+			<value>1.6499999999999999</value>
 		</property>
+		<property name="timelockedOffset">
+			<value>0.15000000000000002</value>
+		</property>
+		<relationship name="fadeOutCurve">
+			<destination>{f2bf2a35-a20d-4751-8588-7914c496e158}</destination>
+		</relationship>
 		<relationship name="audioFile">
 			<destination>{6914fa91-020f-4c27-b7c9-1489d92042cf}</destination>
 		</relationship>
@@ -117,6 +123,14 @@
 	</object>
 	<object class="MixerBusPanner" id="{9cc7ec4a-8048-4154-9310-246a9d66eddf}" />
 	<object class="MixerBusFader" id="{d6951586-8f16-4047-a01b-eaced16a52c1}" />
+	<object class="FadeCurve" id="{f2bf2a35-a20d-4751-8588-7914c496e158}">
+		<relationship name="startPoint">
+			<destination>{2ca6d80b-8da7-41d5-a1f0-0ea35028e9b3}</destination>
+		</relationship>
+		<relationship name="endPoint">
+			<destination>{b4c91254-9105-404d-8e2d-828a714fcf56}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusEffectChain" id="{a3255231-4d5c-45d4-8da8-3dae7503c1d9}">
 		<relationship name="effects">
 			<destination>{4d01ed94-bfd5-4e3d-aa67-17391140d99a}</destination>
@@ -125,6 +139,25 @@
 	</object>
 	<object class="MixerBusPanner" id="{9e4a810e-82f7-4a4d-9c67-01beb6b6b3dc}" />
 	<object class="MixerBusFader" id="{96ba4dfa-4250-43f5-8ef3-82383f66b5fd}" />
+	<object class="AutomationPoint" id="{2ca6d80b-8da7-41d5-a1f0-0ea35028e9b3}">
+		<property name="position">
+			<value>1.45</value>
+		</property>
+		<property name="value">
+			<value>1</value>
+		</property>
+		<property name="curveShape">
+			<value>0.25471893</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{b4c91254-9105-404d-8e2d-828a714fcf56}">
+		<property name="position">
+			<value>1.6499999999999999</value>
+		</property>
+		<property name="value">
+			<value>0</value>
+		</property>
+	</object>
 	<object class="SFXReverbEffect" id="{4d01ed94-bfd5-4e3d-aa67-17391140d99a}">
 		<property name="decayTime">
 			<value>3500</value>

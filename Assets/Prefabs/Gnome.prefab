@@ -61,6 +61,7 @@ MonoBehaviour:
   SpriteRenderer: {fileID: 4917509284343875798}
   CanJump: 1
   GravityModifier: 1
+  VelocityModifiers: []
 --- !u!61 &2300249598417442213
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -157,6 +158,7 @@ GameObject:
   - component: {fileID: 507351674404911327}
   - component: {fileID: 4917509284343875798}
   - component: {fileID: 3723070471761917970}
+  - component: {fileID: 3885827775883194768}
   m_Layer: 0
   m_Name: GnomeSprite
   m_TagString: Untagged
@@ -252,6 +254,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3885827775883194768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4595131967294342126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79d665ff4202c94e8fe65c88ab34bb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent: event:/SFX/Steps/grass step gnome
 --- !u!1 &6556584526686923259
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,7 +325,7 @@ MonoBehaviour:
   - {x: 2.3385658, y: -12.517937, z: 0}
   m_ShapePathHash: -1468998959
   m_Mesh: {fileID: 0}
-  m_InstanceId: 62512
+  m_InstanceId: 63004
   m_LocalBounds:
     m_Center: {x: -0.08968544, y: -11.905829, z: 0}
     m_Extent: {x: 2.4282513, y: 0.6121073, z: 0}
