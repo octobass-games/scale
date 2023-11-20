@@ -51,6 +51,8 @@ MonoBehaviour:
   GiantImage: {fileID: 8404702480454485089}
   GnomeImage: {fileID: 4829774731619154826}
   FirstActiveCharacter: {fileID: 0}
+  ActiveCharacterTag: Gnome
+  EnableSwitching: 1
 --- !u!1001 &2008250402266123779
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -192,6 +194,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5532499269350633927, guid: 0ac311022e91f8b46b22b1d1e9341a04, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5532499269350633927, guid: 0ac311022e91f8b46b22b1d1e9341a04, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 969214582788175230}
@@ -200,15 +206,31 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5532499269350633927, guid: 0ac311022e91f8b46b22b1d1e9341a04, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5532499269350633927, guid: 0ac311022e91f8b46b22b1d1e9341a04, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SelectGnome
+      objectReference: {fileID: 0}
+    - target: {fileID: 5532499269350633927, guid: 0ac311022e91f8b46b22b1d1e9341a04, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: FmodOneShot
       objectReference: {fileID: 0}
     - target: {fileID: 5532499269350633927, guid: 0ac311022e91f8b46b22b1d1e9341a04, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: CharacterSwitcher, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5532499269350633927, guid: 0ac311022e91f8b46b22b1d1e9341a04, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: AudioTrigger, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5532499269350633927, guid: 0ac311022e91f8b46b22b1d1e9341a04, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5532499269350633927, guid: 0ac311022e91f8b46b22b1d1e9341a04, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6989668479936301844, guid: 0ac311022e91f8b46b22b1d1e9341a04, type: 3}

@@ -69,6 +69,7 @@ public class CharacterSwitcher : MonoBehaviour
         GnomeImage.color = new Color(Color.white.r, Color.white.g, Color.white.b, 1.0f);
         GiantImage.color = new Color(Color.white.r, Color.white.g, Color.white.b, 0.5f);
         ActiveCharacterTag = TagComparer.GNOME;
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/gnome voices/gnome switch");
     }
 
     public void SelectGiant()
