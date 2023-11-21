@@ -98,12 +98,22 @@ public class SaveManager : MonoBehaviour
             new List<LevelData>()
                 {
                     new LevelData("Level1Village", false, "", false),
-                    new LevelData("Level2MountainBase", false, "", false),
+                    new LevelData("Level2-1", false, "", false),
                     new LevelData("Level2-2", false, "", false),
                     new LevelData("Level2-3", false, "", false),
                     new LevelData("Level2-4", false, "", false),
-                    new LevelData("Level2-5", false, "", false),
-                    new LevelData("Level2-6", false, "", false  )
+                    new LevelData("Level3-1", false, "", false),
+                    new LevelData("Level3-2", false, "", false),
+                    new LevelData("Level3-3", false, "", false),
+                    new LevelData("Level3-4", false, "", false),
+                    new LevelData("Level4-1", false, "", false),
+                    new LevelData("Level4-2", false, "", false),
+                    new LevelData("Level4-3", false, "", false),
+                    new LevelData("Level4-4", false, "", false),
+                    new LevelData("Level5-1", false, "", false),
+                    new LevelData("Level5-2", false, "", false),
+                    new LevelData("Level5-3", false, "", false),
+                    new LevelData("Level5-4", false, "", false),
                 }
             );
     }
