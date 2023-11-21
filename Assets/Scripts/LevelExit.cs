@@ -21,10 +21,6 @@ public class LevelExit : MonoBehaviour
         SceneManager = FindObjectOfType<SceneManager>();
         SaveManager = FindObjectOfType<SaveManager>();
 
-    }
-
-    void Start()
-    {
         SceneName = SceneManager.GetCurrentSceneName();
 
         var levelData = SaveManager.GetLevelData(SceneName);
