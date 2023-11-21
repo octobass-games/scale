@@ -266,7 +266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79d665ff4202c94e8fe65c88ab34bb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fmodEvent: event:/SFX/Steps/grass step gnome
+  fmodEvent: event:/SFX/run/grass step gnome
 --- !u!1 &6556584526686923259
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,7 +325,7 @@ MonoBehaviour:
   - {x: 2.3385658, y: -12.517937, z: 0}
   m_ShapePathHash: -1468998959
   m_Mesh: {fileID: 0}
-  m_InstanceId: 63004
+  m_InstanceId: 36660
   m_LocalBounds:
     m_Center: {x: -0.08968544, y: -11.905829, z: 0}
     m_Extent: {x: 2.4282513, y: 0.6121073, z: 0}
