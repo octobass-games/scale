@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class LevelExit : MonoBehaviour
 {
-    public SceneManager SceneManager;
-    public SaveManager SaveManager;
     public ChangeLevelSceneData NextLevel;
     public bool CollectableFound;
 
+    private SceneManager SceneManager;
+    private SaveManager SaveManager;
     private string SceneName;
     private bool IsGnomeInProximity;
     private bool IsGiantInProximity;
@@ -17,6 +17,13 @@ public class LevelExit : MonoBehaviour
     }
 
     void Awake()
+    {
+        SceneManager = FindObjectOfType<SceneManager>();
+        SaveManager = FindObjectOfType<SaveManager>();
+
+    }
+
+    void Start()
     {
         SceneName = SceneManager.GetCurrentSceneName();
 
