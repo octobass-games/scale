@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class CharacterController2D : MonoBehaviour
@@ -95,6 +96,7 @@ public class CharacterController2D : MonoBehaviour
         VelocityModifiers.Add(modifier);
     }
 
+
     public void RemoveVelocityModifiers(Vector2 modifier)
     {
         VelocityModifiers.Remove(modifier);
@@ -127,8 +129,13 @@ public class CharacterController2D : MonoBehaviour
     private void UpdateVelocity()
     {
         Velocity.x = HorizontalMovement * HorizontalSpeed;
+        bool anyVerticalModifiersBeingApplied = VelocityModifiers.Any(v => v.y != 0);
 
-        if (Jumping)
+        if (anyVerticalModifiersBeingApplied)
+        {
+            return;
+        }
+        else if (Jumping)
         {
             if (IsGrounded || CoyoteTimer >= 0)
             {
@@ -139,13 +146,15 @@ public class CharacterController2D : MonoBehaviour
             }
         }
 
+
         Velocity -= new Vector2(0, GravityModifier) * new Vector2(0, Gravity) * Time.fixedDeltaTime;
 
     }
 
     private void UpdateAnimations()
     {
-        if (Animator != null && SpriteRenderer != null) { 
+        if (Animator != null && SpriteRenderer != null)
+        {
             Animator.SetBool("moving", Velocity.x != 0);
             Animator.SetBool("isGrounded", IsGrounded);
 
@@ -168,8 +177,8 @@ public class CharacterController2D : MonoBehaviour
             var displacement = Velocity * Time.fixedDeltaTime + ExternalDisplacement;
 
             ExternalDisplacement = Vector2.zero;
-            
-            
+
+
 
             var results = new Collider2D[10];
 
@@ -204,7 +213,7 @@ public class CharacterController2D : MonoBehaviour
             }
 
             Rb2d.SafeMove(Vector2.right * displacement.x, displacement.x, RaycastResults, ContactFilter);
-            
+
             if (RaycastResultCount == 0)
             {
                 // IsGrounded = false;
