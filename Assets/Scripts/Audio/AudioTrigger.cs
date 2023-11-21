@@ -24,8 +24,7 @@ public class AudioTrigger : MonoBehaviour
 
     public void StopFmodEvent()
     {
-        instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        instance.release();
+        instance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        // instance.release();
     }
-
 }
