@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &808931786038519704
 Transform:
   m_ObjectHideFlags: 0
@@ -352,7 +352,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1254565251682704928
 Transform:
   m_ObjectHideFlags: 0
@@ -559,8 +559,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46a9eab6238ec074f9763742e2158a17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level: {fileID: 11400000, guid: 951b80ca56b78cc46899ac01665cc492, type: 2}
-  SubLevel: {fileID: 11400000, guid: 48d2365acb54b3443bdaf2f7d9743308, type: 2}
+  LevelName: 
+  SaveManager: {fileID: 0}
+  LevelCompleteTick: {fileID: 2625047381513179571}
+  CollectableFoundTick: {fileID: 93918455242862122}
 --- !u!114 &5992827708545168558
 MonoBehaviour:
   m_ObjectHideFlags: 0

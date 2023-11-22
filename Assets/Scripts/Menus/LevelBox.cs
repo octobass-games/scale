@@ -2,17 +2,23 @@ using UnityEngine;
 
 public class LevelBox : MonoBehaviour
 {
-    public Level Level;
-    public SubLevel SubLevel;
+    public string LevelName;
+    public SaveManager SaveManager;
+    public GameObject LevelCompleteTick;
+    public GameObject CollectableFoundTick;
 
     void Start()
     {
-        
-    }
+        var levelData = SaveManager.GetLevelData(LevelName);
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (levelData.IsComplete)
+        {
+            LevelCompleteTick.SetActive(true);
+        }
+
+        if (levelData.CollectableFound)
+        {
+            CollectableFoundTick.SetActive(true);
+        }
     }
 }
