@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LevelBoxes : MonoBehaviour
 {
+    public SaveManager SaveManager;
     public List<LevelBox> boxes = new List<LevelBox>();
     private int index = 0;
 
@@ -14,17 +15,28 @@ public class LevelBoxes : MonoBehaviour
 
     private IEnumerator LoadBox()
     {
-        boxes[index].gameObject.SetActive(true);
+        SaveData saveData = SaveManager.Load();
+        List<LevelData> levelsData = saveData.LevelData;
 
-        yield return new WaitForSeconds(0.25f);
+        LevelData nextLevel = levelsData.Find(level => !level.IsComplete);
 
-        index += 1;
-        if (index < boxes.Count)
+        var levelData = SaveManager.GetLevelData(boxes[index].LevelName);
+
+        if (levelData.IsComplete || nextLevel.Name == boxes[index].LevelName)
         {
-            StartCoroutine(LoadBox());    
-        }else
-        {
-            index = 0;
+            boxes[index].gameObject.SetActive(true);
+
+            yield return new WaitForSeconds(0.25f);
+
+            index += 1;
+            if (index < boxes.Count)
+            {
+                StartCoroutine(LoadBox());    
+            }
+            else
+            {
+                index = 0;
+            }
         }
     }
 

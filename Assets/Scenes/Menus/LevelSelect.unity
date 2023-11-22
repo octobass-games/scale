@@ -1837,6 +1837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 569e9d13cd956e346975a099214ebc4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SaveManager: {fileID: 361484796}
   boxes:
   - {fileID: 219759422}
   - {fileID: 575586895}
@@ -2443,6 +2444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 569e9d13cd956e346975a099214ebc4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SaveManager: {fileID: 361484796}
   boxes:
   - {fileID: 677436727}
   - {fileID: 1827969026}
@@ -2494,6 +2496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 569e9d13cd956e346975a099214ebc4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SaveManager: {fileID: 361484796}
   boxes:
   - {fileID: 204694791}
   - {fileID: 64789243}
@@ -3463,6 +3466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 569e9d13cd956e346975a099214ebc4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SaveManager: {fileID: 361484796}
   boxes:
   - {fileID: 2027388496}
 --- !u!1 &1337325370
@@ -4618,6 +4622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 569e9d13cd956e346975a099214ebc4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SaveManager: {fileID: 361484796}
   boxes:
   - {fileID: 1782691786}
   - {fileID: 2144482210}
@@ -5255,7 +5260,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 48d2365acb54b3443bdaf2f7d9743308, type: 2}
     - target: {fileID: 7139113641486875137, guid: 56681e9c6bdd1cf49893a3215b78a62b, type: 3}
       propertyPath: LevelName
-      value: Level1-1
+      value: Level1Village
       objectReference: {fileID: 0}
     - target: {fileID: 7139113641486875137, guid: 56681e9c6bdd1cf49893a3215b78a62b, type: 3}
       propertyPath: SaveManager
