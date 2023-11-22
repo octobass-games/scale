@@ -133,6 +133,7 @@ public class CharacterController2D : MonoBehaviour
 
         if (anyVerticalModifiersBeingApplied)
         {
+            IsGrounded = false;
             return;
         }
         else if (Jumping)
