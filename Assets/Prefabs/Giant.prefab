@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3585676499091900243}
   - component: {fileID: 7775256612074801838}
   - component: {fileID: 7394105704793017679}
+  - component: {fileID: 3756939478924448781}
   m_Layer: 0
   m_Name: GiantSprite
   m_TagString: Untagged
@@ -106,6 +107,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3756939478924448781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75871236881576997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79d665ff4202c94e8fe65c88ab34bb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent: event:/SFX/run/grass step giant
 --- !u!1 &3473252978965404822
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,7 +178,7 @@ MonoBehaviour:
   - {x: 5.0140724, y: -50.565147, z: 0}
   m_ShapePathHash: -1832293484
   m_Mesh: {fileID: 0}
-  m_InstanceId: -414288
+  m_InstanceId: 42996
   m_LocalBounds:
     m_Center: {x: -3.1803675, y: -48.013298, z: 0}
     m_Extent: {x: 8.19444, y: 2.5518494, z: 0}
@@ -229,6 +243,7 @@ MonoBehaviour:
   SpriteRenderer: {fileID: 7775256612074801838}
   CanJump: 0
   GravityModifier: 1
+  VelocityModifiers: []
 --- !u!61 &1896796446197894966
 BoxCollider2D:
   m_ObjectHideFlags: 0
