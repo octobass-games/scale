@@ -4,7 +4,7 @@ using UnityEngine;
 public class LevelSelect : MonoBehaviour
 {
     public SaveManager SaveManager;
-    public List<GameObject> Levels;
+    public List<LevelSignpost> Signposts;
 
     void Start()
     {
@@ -13,15 +13,16 @@ public class LevelSelect : MonoBehaviour
 
         LevelData nextLevel = levelsData.Find(level => !level.IsComplete);
 
-        for (int i = 0; i < Levels.Count; i++)
+        for (int i = 0; i < Signposts.Count; i++)
         {
-            GameObject level = Levels[i];
+            LevelSignpost signpost = Signposts[i];
 
-            LevelData levelData = levelsData.Find(ld => ld.Name == level.name);
+            bool isSublevelComplete = levelsData.Find(ld => ld.Name.StartsWith(signpost.LevelNamePrefix) && ld.IsComplete) != null;
+            bool isNextLevel = nextLevel.Name.StartsWith(signpost.LevelNamePrefix);
             
-            if (levelData != null && levelData.IsComplete || levelData == nextLevel)
+            if (isSublevelComplete || isNextLevel)
             {
-                level.SetActive(true);
+                signpost.gameObject.SetActive(true);
             }
         }
     }

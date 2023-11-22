@@ -1343,6 +1343,17 @@ Transform:
   - {fileID: 1541208918}
   m_Father: {fileID: 803860671}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &361484796 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7851418067444546259, guid: d05f7167a35ccaf40a294304727e59a7, type: 3}
+  m_PrefabInstance: {fileID: 98793200}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9969480d6e2d3047a0d532d2c734eac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &414047896
 GameObject:
   m_ObjectHideFlags: 0
@@ -1363,7 +1374,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &414047897
 Transform:
   m_ObjectHideFlags: 0
@@ -1570,6 +1581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081267cd1396a8843b8e272667c3301a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LevelNamePrefix: Level2
   LevelBoxes: {fileID: 1761462501}
 --- !u!1001 &469645177
 PrefabInstance:
@@ -2588,7 +2600,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1006374912
 Transform:
   m_ObjectHideFlags: 0
@@ -2795,6 +2807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081267cd1396a8843b8e272667c3301a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LevelNamePrefix: Level1
   LevelBoxes: {fileID: 1156542537}
 --- !u!1 &1033088093
 GameObject:
@@ -2851,7 +2864,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1092097669
 Transform:
   m_ObjectHideFlags: 0
@@ -3058,6 +3071,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081267cd1396a8843b8e272667c3301a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LevelNamePrefix: Level3
   LevelBoxes: {fileID: 540205868}
 --- !u!1 &1103565887
 GameObject:
@@ -3075,7 +3089,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1103565888
 Transform:
   m_ObjectHideFlags: 0
@@ -3103,10 +3117,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5204987ff23aa7e47996299d595cc227, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SaveManager: {fileID: 0}
-  Levels:
-  - {fileID: 1366979861}
-  - {fileID: 493899815}
+  SaveManager: {fileID: 361484796}
+  Signposts:
+  - {fileID: 1006374918}
+  - {fileID: 414047902}
+  - {fileID: 1092097674}
+  - {fileID: 1739818448}
+  - {fileID: 1337325376}
 --- !u!1001 &1108123417
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3388,7 +3405,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1337325371
 Transform:
   m_ObjectHideFlags: 0
@@ -3595,6 +3612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081267cd1396a8843b8e272667c3301a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LevelNamePrefix: Level5
   LevelBoxes: {fileID: 818954807}
 --- !u!1001 &1348762371
 PrefabInstance:
@@ -4249,7 +4267,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1739818443
 Transform:
   m_ObjectHideFlags: 0
@@ -4456,6 +4474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081267cd1396a8843b8e272667c3301a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LevelNamePrefix: Level4
   LevelBoxes: {fileID: 803860672}
 --- !u!1 &1761462499
 GameObject:

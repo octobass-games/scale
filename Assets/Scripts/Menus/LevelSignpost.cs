@@ -1,12 +1,11 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelSignpost : MonoBehaviour
 {
+    public string LevelNamePrefix;
     public LevelBoxes LevelBoxes;
-  
+
     public void Pick()
     {
         StartCoroutine(LoadBoxes());
@@ -18,6 +17,5 @@ public class LevelSignpost : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         LevelBoxes.gameObject.SetActive(true);  
         LevelBoxes.LoadBoxes();
-
     }
 }
