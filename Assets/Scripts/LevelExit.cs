@@ -16,6 +16,12 @@ public class LevelExit : MonoBehaviour
         CollectableFound = true;
     }
 
+    public void MoveToNextLevel()
+    {
+        SaveManager.SaveLevelProgress(SceneName, CollectableFound);
+        SceneManager.ChangeLevelScene(NextLevel);
+    }
+
     void Awake()
     {
         SceneManager = FindObjectOfType<SceneManager>();
@@ -32,8 +38,7 @@ public class LevelExit : MonoBehaviour
     {
         if (IsGnomeInProximity && IsGiantInProximity)
         {
-            SaveManager.SaveLevelProgress(SceneName, CollectableFound);
-            SceneManager.ChangeLevelScene(NextLevel);
+            MoveToNextLevel();
         }    
     }
 

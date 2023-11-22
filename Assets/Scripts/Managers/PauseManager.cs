@@ -18,6 +18,12 @@ public class PauseManager : MonoBehaviour
         SceneManager.ReloadScene();
     }
 
+    public void SkipLevel()
+    {
+        Time.timeScale = 1.0f;
+        FindObjectOfType<LevelExit>().MoveToNextLevel();
+    }
+
     public void Quit()
     {
         Time.timeScale = 1.0f;
