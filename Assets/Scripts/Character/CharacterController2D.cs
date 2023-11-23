@@ -86,7 +86,7 @@ public class CharacterController2D : MonoBehaviour
         if (ProcessInputs)
         {
             HorizontalMovement = Input.GetAxisRaw("Horizontal");
-            Jumping = CanJump && (Input.GetAxisRaw("Vertical") != 0 || Input.GetAxisRaw("Jump") != 0);
+            Jumping = CanJump && (Input.GetAxisRaw("Vertical") > 0 || Input.GetAxisRaw("Jump") > 0);
         }
     }
 
