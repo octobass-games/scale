@@ -23,7 +23,6 @@ public class DialogueRenderer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        canvas.SetActive(false);
     }
 
     public bool ShowDialogue(string text, string speaker)
