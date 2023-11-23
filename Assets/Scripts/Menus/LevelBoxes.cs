@@ -19,7 +19,9 @@ public class LevelBoxes : MonoBehaviour
 
     private IEnumerator LoadBox()
     {
-        SaveData saveData = (SaveManager ?? FindObjectOfType<SaveManager>()).Load();
+        SaveManager = SaveManager != null ? SaveManager : FindObjectOfType<SaveManager>();
+
+        SaveData saveData = SaveManager.Load();
         List<LevelData> levelsData = saveData.LevelData;
 
         LevelData nextLevel = levelsData.Find(level => !level.IsComplete);
