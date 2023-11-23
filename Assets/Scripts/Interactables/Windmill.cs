@@ -32,6 +32,7 @@ public class Windmill : MonoBehaviour
     private void Start()
     {
         instance = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(instance, GetComponent<Transform>(), GetComponent<BoxCollider2D>());
         instance.start();
     }
 

@@ -5,7 +5,7 @@
 			<value>fan</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{6a56706e-c540-430e-a854-98fd87c1ee79}</destination>
@@ -215,6 +215,7 @@
 	<object class="MixerBusEffectChain" id="{3fd387d2-1561-4e7c-b67a-0231813319c9}">
 		<relationship name="effects">
 			<destination>{6c5424fc-7742-4e9c-b264-ce45e25d0bb5}</destination>
+			<destination>{b8147f21-850a-4842-a4d1-fba5ce0a3124}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{5cf8f3f1-b75c-4b84-98ed-aba7c2ea3676}" />
@@ -269,4 +270,5 @@
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{6c5424fc-7742-4e9c-b264-ce45e25d0bb5}" />
+	<object class="SpatialiserEffect" id="{b8147f21-850a-4842-a4d1-fba5ce0a3124}" />
 </objects>

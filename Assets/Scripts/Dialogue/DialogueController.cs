@@ -29,8 +29,9 @@ public class DialogueController
         }
         else
         {
-            var a = texts[pos];
 
+            var a = texts[pos];
+            Debug.Log(a);
             var isRendererNotRevealingPreviousLine = DialogueRenderer.ShowDialogue(a.Text, a.Name);
 
             if (isRendererNotRevealingPreviousLine)

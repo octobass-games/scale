@@ -15,13 +15,7 @@ public class Dialogue : MonoBehaviour
 
     void Awake()
     {
-        if (texts.Count == 0)
-        {
-            texts = text.ParseToDialogue();
-        }
-        dialogueRenderer = FindObjectOfType<DialogueRenderer>();
-        DialogueController = new DialogueController(texts, OnEnd, dialogueRenderer);
-        CharacterSwitcher = FindObjectOfType<CharacterSwitcher>();
+        init();
 
     }
 
@@ -44,5 +38,28 @@ public class Dialogue : MonoBehaviour
         if ((Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return)) && interactable) {
            DialogueController.HandleProgressDialogue();
         }
+    }
+
+    public void StartDialogue()
+    {
+        init();
+        interactable = true;
+        DialogueController.HandleProgressDialogue();
+    }
+
+    public void StopDialogue()
+    {
+        interactable = false;
+    }
+
+    private void init()
+    {
+        if (texts.Count == 0)
+        {
+            texts = text.ParseToDialogue();
+        }
+        dialogueRenderer = FindObjectOfType<DialogueRenderer>();
+        DialogueController = new DialogueController(texts, OnEnd, dialogueRenderer);
+        CharacterSwitcher = FindObjectOfType<CharacterSwitcher>();
     }
 }
