@@ -213,13 +213,12 @@ public class CharacterController2D : MonoBehaviour
                 }
             }
 
-            Rb2d.SafeMove(Vector2.right * displacement.x, displacement.x, RaycastResults, ContactFilter);
-
             if (RaycastResultCount == 0)
             {
-                // IsGrounded = false;
+                IsGrounded = false;
             }
 
+            Rb2d.SafeMove(Vector2.right * displacement.x, displacement.x, RaycastResults, ContactFilter);
 
             int a = Rb2d.OverlapCollider(ContactFilter, results);
 
