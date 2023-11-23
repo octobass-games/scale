@@ -19,22 +19,34 @@ public class Windmill : MonoBehaviour
     public GameObject UpWind;
     public GameObject DownWind;
     public ErrorDialogue ErrorDialogue;
+    public string fmodEvent;
+
 
     public bool On = true;
     public enum Direction { Left, Right, Up, Down };
     public Direction direction = Direction.Right;
-    private List<Direction> directions = new List<Direction>{  Direction.Left, Direction.Up, Direction.Right, Direction.Down };    
+    private List<Direction> directions = new List<Direction>{  Direction.Left, Direction.Up, Direction.Right, Direction.Down };
+
+    private FMOD.Studio.EventInstance instance;
+
+    private void Start()
+    {
+        instance = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
+        instance.start();
+    }
 
     public void TurnOn()
     {
         On = true;
         DoThings();
+        instance.start();
     }
 
     public void TurnOff()
     {
         On = false;
         DoThings();
+        instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
     public void Toggle()
