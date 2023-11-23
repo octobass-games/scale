@@ -10,6 +10,8 @@ public class LevelExit : MonoBehaviour
     private string SceneName;
     private bool IsGnomeInProximity;
     private bool IsGiantInProximity;
+    public SpriteRenderer GiantMarker;
+    public SpriteRenderer GnomeMarker;
 
     public void CollectCollectable()
     {
@@ -30,8 +32,11 @@ public class LevelExit : MonoBehaviour
         SceneName = SceneManager.GetCurrentSceneName();
 
         var levelData = SaveManager.GetLevelData(SceneName);
+        if (levelData != null )
+        {
+            CollectableFound = levelData.CollectableFound;
+        }
 
-        CollectableFound = levelData.CollectableFound;
     }
 
     void Update()
@@ -39,16 +44,20 @@ public class LevelExit : MonoBehaviour
         if (IsGnomeInProximity && IsGiantInProximity)
         {
             MoveToNextLevel();
-        }    
+        }
+
+        GnomeMarker.gameObject.SetActive(IsGnomeInProximity);
+        GiantMarker.gameObject.SetActive(IsGiantInProximity);
+
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Giant")
+        if (TagComparer.IsGiant(collision))
         {
             IsGiantInProximity = true;
         }
-        else if (collision.gameObject.tag == "Gnome")
+        else if (TagComparer.IsGnome(collision))
         {
             IsGnomeInProximity = true;
         }
@@ -56,11 +65,11 @@ public class LevelExit : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Giant")
+        if (TagComparer.IsGiant(collision))
         {
             IsGiantInProximity = false;
         }
-        else if (collision.gameObject.tag == "Gnome")
+        else if (TagComparer.IsGnome(collision))
         {
             IsGnomeInProximity = false;
         }
