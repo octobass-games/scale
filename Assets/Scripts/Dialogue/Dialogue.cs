@@ -5,6 +5,8 @@ using UnityEngine.Events;
 public class Dialogue : MonoBehaviour
 {
     public List<DialogueItem> texts;
+    [TextArea]
+    public string text;
     private bool interactable = false;
     public UnityEvent OnEnd;
     private DialogueController DialogueController;
@@ -13,6 +15,10 @@ public class Dialogue : MonoBehaviour
 
     void Awake()
     {
+        if (texts.Count == 0)
+        {
+            texts = text.ParseToDialogue();
+        }
         dialogueRenderer = FindObjectOfType<DialogueRenderer>();
         DialogueController = new DialogueController(texts, OnEnd, dialogueRenderer);
         CharacterSwitcher = FindObjectOfType<CharacterSwitcher>();

@@ -17,7 +17,7 @@ public class LevelSummary : MonoBehaviour
     void Start()
     {
         DialogueRenderer = FindObjectOfType<DialogueRenderer>();
-        DialogueController = new DialogueController(Parse(level.EndingDialogue), OnEndOfDialogue, DialogueRenderer);
+        DialogueController = new DialogueController(level.EndingDialogue.ParseToDialogue(), OnEndOfDialogue, DialogueRenderer);
         breakdown = LoadLevelBreakdown();
         OnEndOfDialogue.AddListener(OnDialogueDone);
         DialogueController.HandleProgressDialogue();
@@ -30,21 +30,6 @@ public class LevelSummary : MonoBehaviour
         {
             DialogueController.HandleProgressDialogue();
         }
-    }
-
-    private List<DialogueItem> Parse(string text)
-    {
-        var items = new List<DialogueItem>();
-        var lines = text.Split('\n');
-        foreach (var line in lines)
-        {
-            if (line.Trim() != "")
-            {
-                var split = line.Split(":");
-                items.Add(new DialogueItem(split[0], split[1]));
-            }
-        }
-        return items;
     }
 
 
