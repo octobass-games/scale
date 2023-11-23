@@ -20,28 +20,13 @@ public class DialogueRenderer : MonoBehaviour
         Timer = new WaitForSecondsRealtime(WriteRate);
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public void ShowDialogue(string text, string speaker)
     {
-    }
-
-    public bool ShowDialogue(string text, string speaker)
-    {
-        if (IsWriting)
-        {
-            StopCoroutine(Coroutine);
-            WriteFull();
-            return false;
-        }
-        else
-        {
-            Name.text = speaker;
-            Coroutine = Write(text);
-            StartCoroutine(Coroutine);
-            Time.timeScale = 0;
-            canvas.SetActive(true);
-            return true;
-        }
+        Name.text = speaker;
+        Coroutine = Write(text);
+        StartCoroutine(Coroutine);
+        Time.timeScale = 0;
+        canvas.SetActive(true);
     }
 
     public void closeDialogue()
