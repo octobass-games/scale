@@ -47,38 +47,6 @@ public class DialogueController
                 }
             }
         }
-
-        //if (DialogueRenderer.IsOpen() && texts.Count == pos)
-        //{
-        //    if (IsRendererNotRevealingPreviousLine)
-        //    {
-        //        var a = texts[pos];
-
-        //        IsRendererNotRevealingPreviousLine = DialogueRenderer.ShowDialogue(a.Text, a.Name);
-
-        //        pos++;
-        //    }
-        //    else
-        //    {
-        //        Reset();
-
-        //        if (OnEnd != null)
-        //        {
-        //            OnEnd.Invoke();
-        //        }
-        //    }
-        //}
-        //else
-        //{
-        //    var a = texts[pos];
-
-        //    DialogueRenderer.ShowDialogue(a.Text, a.Name);
-
-        //    if (DialogueRenderer.IsWriting)
-        //    {
-        //        pos++;
-        //    }
-        //}
     }
 
     public void Reset()
