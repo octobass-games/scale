@@ -9,6 +9,7 @@ public class LevelBox : MonoBehaviour
 
     void Start()
     {
+        SaveManager = SaveManager != null ? SaveManager : FindObjectOfType<SaveManager>();
         var levelData = SaveManager.GetLevelData(LevelName);
 
         if (levelData.IsComplete)
