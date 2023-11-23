@@ -14,14 +14,21 @@ public class DialogueRenderer : MonoBehaviour
     private IEnumerator Coroutine;
     private string TextToWrite;
     private float WriteRate = 0.025f;
+    private CharacterSwitcher CharacterSwitcher;
 
     void Awake()
     {
         Timer = new WaitForSecondsRealtime(WriteRate);
     }
 
+    void Start()
+    {
+        CharacterSwitcher = FindObjectOfType<CharacterSwitcher>();
+    }
+
     public void ShowDialogue(string text, string speaker)
     {
+        CharacterSwitcher?.SetEnableSwithing(false);
         Name.text = speaker;
         Coroutine = Write(text);
         StartCoroutine(Coroutine);
@@ -31,6 +38,7 @@ public class DialogueRenderer : MonoBehaviour
 
     public void closeDialogue()
     {
+        CharacterSwitcher?.SetEnableSwithing(true);
         canvas.SetActive(false);
         Time.timeScale = 1;
     }
