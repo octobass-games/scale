@@ -52,6 +52,6 @@ public class DialogueController
     public void Reset()
     {
         DialogueRenderer.closeDialogue();
-        pos = 0;
+        pos = -1;
     }
 }
