@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ErrorDialogue : MonoBehaviour
 {
@@ -10,13 +11,16 @@ public class ErrorDialogue : MonoBehaviour
     public List<DialogueItem> GnomeError;
     public List<DialogueItem> GiantError;
     public List<DialogueItem> DefaultError;
+
+    public UnityEvent OnDialogueEnd;
+
     void Awake()
     {
         DialogueRenderer = FindObjectOfType<DialogueRenderer>();
 
-        GnomeDialogueController = new DialogueController(GnomeError, null, DialogueRenderer);
-        GiantDialogueController = new DialogueController(GiantError, null, DialogueRenderer);
-        DefaultDialogueController = new DialogueController(DefaultError, null, DialogueRenderer);
+        GnomeDialogueController = new DialogueController(GnomeError, OnDialogueEnd, DialogueRenderer);
+        GiantDialogueController = new DialogueController(GiantError, OnDialogueEnd, DialogueRenderer);
+        DefaultDialogueController = new DialogueController(DefaultError, OnDialogueEnd, DialogueRenderer);
     }
 
     public void ShowNoUseDialogue(string tag)

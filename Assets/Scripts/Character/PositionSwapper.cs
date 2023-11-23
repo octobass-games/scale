@@ -5,8 +5,11 @@ public class PositionSwapper : MonoBehaviour
     public GameObject Gnome;
     public GameObject Giant;
     public LayerMask LayerMask;
+    public PositionSwapper otherSwapper;
+    public GameObject Interacter;
+    public ErrorDialogue ErrorDialogue;
+    public Animator Animator;
 
-    private bool Swap;
     private ContactFilter2D ContactFilter = new ContactFilter2D();
     private RaycastHit2D[] Hits = new RaycastHit2D[1];
 
@@ -16,21 +19,27 @@ public class PositionSwapper : MonoBehaviour
         ContactFilter.useLayerMask = true;
     }
 
-    void Update()
+    public void TrySwapPeople()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift))
+        if (otherSwapper.Interacter == null)
         {
-            Swap = true;
+            ErrorDialogue.ShowNoUseDialogue();
+            return;
         }
+
+        Animator.SetTrigger("swap");
     }
 
-    void FixedUpdate()
+    public void SwapPeople()
     {
-        if (Swap)
+        var a = TagComparer.IsGnome(Interacter.tag) && TagComparer.IsGiant(otherSwapper.Interacter.tag);
+        var b = TagComparer.IsGiant(Interacter.tag) && TagComparer.IsGnome(otherSwapper.Interacter.tag);
+
+        if (a || b)
         {
             var gnomeCurrentPosition = Gnome.transform.position;
 
-            var gnomeCollider  = Gnome.GetComponent<Collider2D>();
+            var gnomeCollider = Gnome.GetComponent<Collider2D>();
             var gnomeExtents = gnomeCollider.bounds.extents;
             var gnomeFeetPosition = Gnome.transform.position.y - gnomeCollider.bounds.extents.y;
 
@@ -55,9 +64,8 @@ public class PositionSwapper : MonoBehaviour
 
             Gnome.GetComponent<CharacterController2D>().ForcePosition(new Vector3(Giant.transform.position.x, giantFeetPosition + gnomeExtents.y, 0));
             Giant.GetComponent<CharacterController2D>().ForcePosition(new Vector3(gnomeCurrentPosition.x + giantXOffset, gnomeFeetPosition + giantExtents.y, 0));
-
-            Swap = false;
         }
+
     }
 
     private bool IsGnomeTouchingRightWall()
@@ -73,5 +81,22 @@ public class PositionSwapper : MonoBehaviour
     private bool IsGnomeTouchingWall(Vector2 direction)
     {
         return Gnome.GetComponent<Rigidbody2D>().Cast(direction, ContactFilter, Hits, 0.5f) > 0;
+    }
+
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (TagComparer.IsPlayer(collision.tag))
+        {
+            Interacter = collision.gameObject;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (TagComparer.IsPlayer(collision.tag) && collision.gameObject == Interacter)
+        {
+            Interacter = null;
+        }
     }
 }
