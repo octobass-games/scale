@@ -20,7 +20,7 @@ public class Interactable : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && Interacter != null && Interacter.tag == CharacterSwitcher.ActiveCharacterTag && !InteracterCharacterController.IsFrozen())
+        if (Input.GetKeyDown(KeyCode.E) && Interacter != null && Interacter.tag == GetCharacterSwitcher().ActiveCharacterTag && !InteracterCharacterController.IsFrozen())
         {
             if (ValidInteracterTags.Count == 0 || ValidInteracterTags.Contains(Interacter.tag))
             {
@@ -71,6 +71,18 @@ public class Interactable : MonoBehaviour
         {
             Interacter = null;
             InteracterCharacterController = null;
+        }
+    }
+
+    private CharacterSwitcher GetCharacterSwitcher()
+    {
+        if (CharacterSwitcher == null)
+        {
+            CharacterSwitcher = FindObjectOfType<CharacterSwitcher>();
+            return CharacterSwitcher;
+        } else
+        {
+            return CharacterSwitcher;
         }
     }
 }
