@@ -9,10 +9,10 @@ public class DialogueRenderer : MonoBehaviour
     public TextMeshProUGUI Name;
     public TextMeshProUGUI Text;
     public GameObject canvas;
+    public bool IsWriting;
 
     private IEnumerator Coroutine;
     private string TextToWrite;
-    private bool IsWriting;
     private float WriteRate = 0.025f;
 
     void Awake()
@@ -72,8 +72,9 @@ public class DialogueRenderer : MonoBehaviour
         IsWriting = false;
     }
 
-    private void WriteFull()
+    public void WriteFull()
     {
+        StopCoroutine(Coroutine);
         Text.maxVisibleCharacters = TextToWrite.Length;
         Text.text = TextToWrite;
         IsWriting = false;
