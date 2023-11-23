@@ -8,6 +8,10 @@ public class LevelBoxes : MonoBehaviour
     public List<LevelBox> boxes = new List<LevelBox>();
     private int index = 0;
 
+    void Start()
+    {
+    }
+
     public void LoadBoxes()
     {
         StartCoroutine(LoadBox());
@@ -15,7 +19,7 @@ public class LevelBoxes : MonoBehaviour
 
     private IEnumerator LoadBox()
     {
-        SaveData saveData = SaveManager.Load();
+        SaveData saveData = (SaveManager ?? FindObjectOfType<SaveManager>()).Load();
         List<LevelData> levelsData = saveData.LevelData;
 
         LevelData nextLevel = levelsData.Find(level => !level.IsComplete);

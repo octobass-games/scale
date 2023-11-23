@@ -6,4 +6,9 @@ public class Level : ScriptableObject
 {
     public string LevelName;
     public List<SubLevel> SubLevels;
+
+    [TextArea]
+    public string EndingDialogue;
+
+    public GameObject LevelSelectBreakdown;
 }
