@@ -311,6 +311,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: main-menu
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 170
+        width: 108
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63959d8d86669a34082c6960de6b15f0
+      internalID: -1018520021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main-menu-with-outline
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 149
+        width: 108
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72a7c96e281b82344bc4e7524d4ec139
+      internalID: -2141634295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -323,6 +365,8 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       controls: -1641768230
+      main-menu: -1018520021
+      main-menu-with-outline: -2141634295
       quit-sign: 2040872783
       quit-with-outline: 804729347
       reset: -736702313
