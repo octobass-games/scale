@@ -2000,7 +2000,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 674441412}
   m_CullTransparentMesh: 1
---- !u!43 &771965123
+--- !u!43 &841822926
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3335,6 +3335,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad1f670566eed6442a492a3c0489dfe2, type: 3}
+--- !u!20 &1436520888 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 4827923677449453362, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
+  m_PrefabInstance: {fileID: 3598885292811524056}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1438368504
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4250,6 +4255,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1183434922321908933, guid: 5581c8485dbba5b439a83f439450e266, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1436520888}
+    - target: {fileID: 1351702877209826123, guid: 5581c8485dbba5b439a83f439450e266, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -56.302094
+      objectReference: {fileID: 0}
     - target: {fileID: 3961666802012082461, guid: 5581c8485dbba5b439a83f439450e266, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -4333,6 +4346,14 @@ PrefabInstance:
     - target: {fileID: 4006827871505999523, guid: 5581c8485dbba5b439a83f439450e266, type: 3}
       propertyPath: m_Name
       value: PauseMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 7380469906587706231, guid: 5581c8485dbba5b439a83f439450e266, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -121.51044
+      objectReference: {fileID: 0}
+    - target: {fileID: 7652925294263831844, guid: 5581c8485dbba5b439a83f439450e266, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -88.90625
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8557,6 +8578,10 @@ PrefabInstance:
       propertyPath: CinemachineVirtualCamera
       value: 
       objectReference: {fileID: 360768356}
+    - target: {fileID: 1356076497998826181, guid: 36793998d57a8c0499569770184f75b3, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1436520888}
     - target: {fileID: 2647124479561840809, guid: 36793998d57a8c0499569770184f75b3, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -8997,6 +9022,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5789299581774369752, guid: b741aececbcc3ba4097c1ecfcf27fd9e, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1436520888}
     - target: {fileID: 6200620034218358392, guid: b741aececbcc3ba4097c1ecfcf27fd9e, type: 3}
       propertyPath: m_fontAsset
       value: 
@@ -15264,7 +15293,7 @@ PrefabInstance:
       objectReference: {fileID: 989901075}
     - target: {fileID: 4827923677449453362, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
       propertyPath: orthographic size
-      value: 108
+      value: 135
       objectReference: {fileID: 0}
     - target: {fileID: 4827923677449453362, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
       propertyPath: m_NormalizedViewPortRect.x

@@ -6,10 +6,11 @@ public class HoverableUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 {
     public UnityEvent OnHover;
     public UnityEvent OnExit;
+    private Cursor Cursor;
 
     void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData)
     {
-        FindObjectOfType<Cursor>().SetCursorPointer();
+        GetCursor()?.SetCursorPointer();
         OnHover.Invoke();
     }
 
@@ -21,6 +22,19 @@ public class HoverableUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     public void ResetCursor()
     {
-        FindObjectOfType<Cursor>().SetCursorNeutral();
+        GetCursor()?.SetCursorNeutral();
+    }
+
+    private Cursor GetCursor()
+    {
+        if (Cursor == null)
+        {
+            Cursor = FindObjectOfType<Cursor>();
+            return Cursor;
+        }
+        else
+        {
+            return Cursor;
+        }
     }
 }

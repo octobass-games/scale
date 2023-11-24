@@ -91,6 +91,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 652878434340586694, guid: 0ac311022e91f8b46b22b1d1e9341a04, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 652878434340586694, guid: 0ac311022e91f8b46b22b1d1e9341a04, type: 3}
+      propertyPath: m_PixelPerfect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 652878434340586694, guid: 0ac311022e91f8b46b22b1d1e9341a04, type: 3}
+      propertyPath: m_SortingOrder
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 3271211951081513996, guid: 0ac311022e91f8b46b22b1d1e9341a04, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -238,6 +250,14 @@ PrefabInstance:
     - target: {fileID: 6989668479936301844, guid: 0ac311022e91f8b46b22b1d1e9341a04, type: 3}
       propertyPath: m_Name
       value: CharacterSwitcherPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 6989668479936301844, guid: 0ac311022e91f8b46b22b1d1e9341a04, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7596337379751577496, guid: 0ac311022e91f8b46b22b1d1e9341a04, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439767853344861342, guid: 0ac311022e91f8b46b22b1d1e9341a04, type: 3}
       propertyPath: m_AnchorMax.y
