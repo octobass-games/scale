@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DialogueRenderer : MonoBehaviour
 {
@@ -15,6 +17,7 @@ public class DialogueRenderer : MonoBehaviour
     private string TextToWrite;
     private float WriteRate = 0.025f;
     private CharacterSwitcher CharacterSwitcher;
+    public Button SkipButton;
 
     void Awake()
     {
@@ -26,19 +29,24 @@ public class DialogueRenderer : MonoBehaviour
         CharacterSwitcher = FindObjectOfType<CharacterSwitcher>();
     }
 
-    public void ShowDialogue(string text, string speaker)
+    public void ShowDialogue(string text, string speaker, Action skip)
     {
         CharacterSwitcher?.SetEnableSwithing(false);
+        SetAnimation(true);
         Name.text = speaker;
         Coroutine = Write(text);
         StartCoroutine(Coroutine);
         Time.timeScale = 0;
         canvas.SetActive(true);
+
+        SkipButton.onClick.RemoveAllListeners();
+        SkipButton.onClick.AddListener(() =>skip.Invoke());
     }
 
     public void closeDialogue()
     {
         CharacterSwitcher?.SetEnableSwithing(true);
+        SetAnimation(false);
         canvas.SetActive(false);
         Time.timeScale = 1;
     }
@@ -46,6 +54,14 @@ public class DialogueRenderer : MonoBehaviour
     public bool IsOpen()
     {
         return canvas.activeSelf;
+    }
+
+    private void SetAnimation(bool inDialogue)
+    {
+        GameObject obj = CharacterSwitcher.GetActiveCharacter();
+        if (obj.activeSelf) {
+            obj.GetComponentInChildren<Animator>().SetBool("InDialogue", inDialogue);
+        }
     }
 
     private IEnumerator Write(string text)

@@ -93,4 +93,15 @@ public class CharacterSwitcher : MonoBehaviour
         Giant.GetComponentInChildren<SpriteRenderer>().material = UnlitMaterial;
     }
 
+    public GameObject GetActiveCharacter()
+    {
+        if (ActiveCharacterTag == TagComparer.GIANT)
+        {
+            return Giant;
+        }
+        else
+        {
+            return Gnome;
+        }
+    }
 }

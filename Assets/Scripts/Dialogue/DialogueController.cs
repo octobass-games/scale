@@ -32,18 +32,13 @@ public class DialogueController
             {
                 var dialogue = texts[pos];
 
-                DialogueRenderer.ShowDialogue(dialogue.Text, dialogue.Name);
+                DialogueRenderer.ShowDialogue(dialogue.Text, dialogue.Name, End);
             }
             else
             {
                 if (DialogueRenderer.IsOpen())
                 {
-                    Reset();
-
-                    if (OnEnd != null)
-                    {
-                        OnEnd.Invoke();
-                    }
+                    End();
                 }
             }
         }
@@ -53,5 +48,16 @@ public class DialogueController
     {
         DialogueRenderer.closeDialogue();
         pos = -1;
+    }
+
+    private void End()
+    {
+        Reset();
+
+        if (OnEnd != null)
+        {
+            OnEnd.Invoke();
+
+        }
     }
 }
