@@ -13,7 +13,7 @@ public static class StringExtension
             if (line.Trim() != "")
             {
                 var split = line.Split(":");
-                items.Add(new DialogueItem(split[0], split[1]));
+                items.Add(new DialogueItem(split[0].Trim(), split[1].Trim()));
             }
         }
         return items;
