@@ -10,6 +10,8 @@ public class CharacterSwitcher : MonoBehaviour
     public Image GiantImage;
     public Image GnomeImage;
     public GameObject FirstActiveCharacter;
+    public Material LitMaterial;
+    public Material UnlitMaterial;
 
     private CharacterController2D GiantCharacterController;
     private CharacterController2D GnomeCharacterController;
@@ -31,6 +33,8 @@ public class CharacterSwitcher : MonoBehaviour
             GnomeImage.color = new Color(Color.white.r, Color.white.g, Color.white.b, 0.5f);
             GiantImage.color = new Color(Color.white.r, Color.white.g, Color.white.b, 1.0f);
             ActiveCharacterTag = TagComparer.GIANT;
+            Gnome.GetComponentInChildren<SpriteRenderer>().material = LitMaterial;
+            Giant.GetComponentInChildren<SpriteRenderer>().material = UnlitMaterial;
         }
         else
         {
@@ -38,6 +42,8 @@ public class CharacterSwitcher : MonoBehaviour
             GnomeImage.color = new Color(Color.white.r, Color.white.g, Color.white.b, 1.0f);
             GiantImage.color = new Color(Color.white.r, Color.white.g, Color.white.b, 0.5f);
             ActiveCharacterTag = TagComparer.GNOME;
+            Gnome.GetComponentInChildren<SpriteRenderer>().material = UnlitMaterial;
+            Giant.GetComponentInChildren<SpriteRenderer>().material = LitMaterial;
         }
     }
 
@@ -70,6 +76,8 @@ public class CharacterSwitcher : MonoBehaviour
         GiantImage.color = new Color(Color.white.r, Color.white.g, Color.white.b, 0.5f);
         ActiveCharacterTag = TagComparer.GNOME;
         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/gnome voices/gnome switch");
+        Gnome.GetComponentInChildren<SpriteRenderer>().material = UnlitMaterial;
+        Giant.GetComponentInChildren<SpriteRenderer>().material = LitMaterial;
     }
 
     public void SelectGiant()
@@ -81,6 +89,8 @@ public class CharacterSwitcher : MonoBehaviour
         GiantImage.color = new Color(Color.white.r, Color.white.g, Color.white.b, 1.0f);
         ActiveCharacterTag = TagComparer.GIANT;
         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/giant voice/giant switcher");
+        Gnome.GetComponentInChildren<SpriteRenderer>().material = LitMaterial;
+        Giant.GetComponentInChildren<SpriteRenderer>().material = UnlitMaterial;
     }
 
 }
