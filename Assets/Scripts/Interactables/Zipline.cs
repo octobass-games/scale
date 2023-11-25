@@ -18,6 +18,8 @@ public class Zipline : MonoBehaviour
         RiderAnimator = rider.GetComponentInChildren<Animator>();
 
         TargetEnd = RiderCharacterController.IsTravellingRight() ? ZiplineRightEnd : ZiplineLeftEnd;
+
+        Debug.Log(TargetEnd.position);
     }
 
     void FixedUpdate()
