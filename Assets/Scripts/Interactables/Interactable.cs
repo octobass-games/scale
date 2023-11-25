@@ -16,27 +16,48 @@ public class Interactable : MonoBehaviour
     public List<Condition> Conditions;
 
     private List<CharacterController2D> Interacters = new List<CharacterController2D>();
+    private DisplayIconOnEnter Highlight;
+
+    void Start()
+    {
+        Highlight = GetComponent<DisplayIconOnEnter>();
+    }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && Interacters.Count != 0)
+        if (Interacters.Count != 0)
         {
-            var interacter = Interacters.Find(interacter => interacter.tag == GetCharacterSwitcher().ActiveCharacterTag);
+            var activeInteracter = Interacters.Find(interacter => interacter.tag == GetCharacterSwitcher().ActiveCharacterTag);
 
-            if (interacter != null)
-            {   
-                if (!interacter.IsFrozen() && ValidInteracterTags.Count == 0 || ValidInteracterTags.Contains(interacter.tag))
+            if (activeInteracter != null)
+            {
+                if (Input.GetKeyDown(KeyCode.E))
                 {
-                    if (Conditions.All(condition => condition.Evaluate(interacter.gameObject)))
+                    if (!activeInteracter.IsFrozen() && ValidInteracterTags.Count == 0 || ValidInteracterTags.Contains(activeInteracter.tag))
                     {
-                        StartCoroutine(Interact(interacter));
+                        if (Conditions.All(condition => condition.Evaluate(activeInteracter.gameObject)))
+                        {
+                            StartCoroutine(Interact(activeInteracter));
+                        }
+                    }
+                    else
+                    {
+                        OnInvalidInteraction.Invoke(activeInteracter.gameObject);
                     }
                 }
                 else
                 {
-                    OnInvalidInteraction.Invoke(interacter.gameObject);
+                    ShowHighlight();
                 }
             }
+            else
+            {
+                HideHighlight();
+            }
+        }
+        else
+        {
+            HideHighlight();
         }
     }
 
@@ -63,13 +84,6 @@ public class Interactable : MonoBehaviour
         if (TagComparer.IsPlayer(collision.tag))
         {
             Interacters.Add(collision.gameObject.GetComponent<CharacterController2D>());
-
-            var highlight = GetComponent<DisplayIconOnEnter>();
-
-            if (highlight && !highlight.IsProximityBased)
-            {
-                highlight.Show();
-            }
         }
     }
 
@@ -83,16 +97,6 @@ public class Interactable : MonoBehaviour
             {
                 Interacters.Remove(characterController);
             }
-
-            if (Interacters.Count == 0)
-            {
-                var highlight = GetComponent<DisplayIconOnEnter>();
-
-                if (highlight && !highlight.IsProximityBased)
-                {
-                    highlight.Hide();
-                }
-            }
         }
     }
 
@@ -105,6 +109,22 @@ public class Interactable : MonoBehaviour
         } else
         {
             return CharacterSwitcher;
+        }
+    }
+
+    private void ShowHighlight()
+    {
+        if (Highlight != null && !Highlight.IsProximityBased)
+        {
+            Highlight.Show();
+        }
+    }
+
+    private void HideHighlight()
+    {
+        if (Highlight != null && !Highlight.IsProximityBased)
+        {
+            Highlight.Hide();
         }
     }
 }
