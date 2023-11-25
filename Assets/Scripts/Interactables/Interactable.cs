@@ -23,9 +23,9 @@ public class Interactable : MonoBehaviour
         {
             var interacter = Interacters.Find(interacter => interacter.tag == GetCharacterSwitcher().ActiveCharacterTag);
 
-            if (interacter != null && !interacter.IsFrozen())
+            if (interacter != null)
             {   
-                if (ValidInteracterTags.Count == 0 || ValidInteracterTags.Contains(interacter.tag))
+                if (!interacter.IsFrozen() && ValidInteracterTags.Count == 0 || ValidInteracterTags.Contains(interacter.tag))
                 {
                     if (Conditions.All(condition => condition.Evaluate(interacter.gameObject)))
                     {

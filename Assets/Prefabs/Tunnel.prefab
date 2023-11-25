@@ -105,7 +105,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 306f824b6c57f1c4eb6757b3d7229f97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ValidInteracterTags: []
+  ValidInteracterTags:
+  - Gnome
   CharacterSwitcher: {fileID: 0}
   InteractionAnimationTrigger: dive
   InteractionAnimationLength: 0.25
@@ -258,7 +259,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 306f824b6c57f1c4eb6757b3d7229f97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ValidInteracterTags: []
+  ValidInteracterTags:
+  - Gnome
   CharacterSwitcher: {fileID: 0}
   InteractionAnimationTrigger: dive
   InteractionAnimationLength: 0.25

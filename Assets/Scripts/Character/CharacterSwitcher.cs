@@ -12,11 +12,12 @@ public class CharacterSwitcher : MonoBehaviour
     public GameObject FirstActiveCharacter;
     public Material LitMaterial;
     public Material UnlitMaterial;
+    public string ActiveCharacterTag = TagComparer.GNOME;
+    public bool EnableSwitching = true;
 
     private CharacterController2D GiantCharacterController;
     private CharacterController2D GnomeCharacterController;
-    public string ActiveCharacterTag = TagComparer.GNOME;
-    public bool EnableSwitching = true;
+    private bool IsFrozenForDialogue;
 
     public void SetEnableSwithing(bool e)
     {
@@ -91,6 +92,26 @@ public class CharacterSwitcher : MonoBehaviour
         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/giant voice/giant switcher");
         Gnome.GetComponentInChildren<SpriteRenderer>().material = LitMaterial;
         Giant.GetComponentInChildren<SpriteRenderer>().material = UnlitMaterial;
+    }
+
+    public void FreezeForDialogue()
+    {
+        if (!IsFrozenForDialogue)
+        {
+            GiantCharacterController.Freeze();
+            GnomeCharacterController.Freeze();
+            IsFrozenForDialogue = true;
+        }
+    }
+
+    public void ThawForDialogue()
+    {
+        if (IsFrozenForDialogue)
+        {
+            GiantCharacterController.Thaw();
+            GnomeCharacterController.Thaw();
+            IsFrozenForDialogue = false;
+        }
     }
 
     public GameObject GetActiveCharacter()
