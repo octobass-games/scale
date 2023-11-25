@@ -9,13 +9,15 @@ public class DialogueController
     public UnityEvent OnEnd;
     public DialogueRenderer DialogueRenderer;
     private bool IsRendererNotRevealingPreviousLine;
+    private List<Animator> Animators;
 
-    public DialogueController(List<DialogueItem> texts, UnityEvent onEnd, DialogueRenderer dialogueRenderer)
+    public DialogueController(List<DialogueItem> texts, UnityEvent onEnd, DialogueRenderer dialogueRenderer, List<Animator> animator = null)
     {
         this.texts = texts;
         OnEnd = onEnd;
         pos = -1;
         DialogueRenderer = dialogueRenderer;
+        Animators = animator;
     }
 
     public void HandleProgressDialogue()
@@ -33,6 +35,10 @@ public class DialogueController
                 var dialogue = texts[pos];
 
                 DialogueRenderer.ShowDialogue(dialogue.Text, dialogue.Name, End);
+                if ( dialogue.animatorTrigger != null)
+                {
+                    Animators.ForEach(a => a.SetTrigger(dialogue.animatorTrigger));
+                }
             }
             else
             {

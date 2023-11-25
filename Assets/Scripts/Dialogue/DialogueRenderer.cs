@@ -31,6 +31,7 @@ public class DialogueRenderer : MonoBehaviour
 
     public void ShowDialogue(string text, string speaker, Action skip)
     {
+        CharacterSwitcher = FindObjectOfType<CharacterSwitcher>();
         CharacterSwitcher?.SetEnableSwithing(false);
         SetAnimation(true);
         Name.text = speaker;

@@ -12,6 +12,7 @@ public class Dialogue : MonoBehaviour
     private DialogueController DialogueController;
     private DialogueRenderer dialogueRenderer;
     private CharacterSwitcher CharacterSwitcher;
+    public List<Animator> Animators;
 
     void Awake()
     {
@@ -59,7 +60,7 @@ public class Dialogue : MonoBehaviour
             texts = text.ParseToDialogue();
         }
         dialogueRenderer = FindObjectOfType<DialogueRenderer>();
-        DialogueController = new DialogueController(texts, OnEnd, dialogueRenderer);
+        DialogueController = new DialogueController(texts, OnEnd, dialogueRenderer, Animators);
         CharacterSwitcher = FindObjectOfType<CharacterSwitcher>();
     }
 }
