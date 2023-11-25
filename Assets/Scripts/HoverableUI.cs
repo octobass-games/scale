@@ -37,4 +37,9 @@ public class HoverableUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
             return Cursor;
         }
     }
+
+    void OnDisable()
+    {
+        ResetCursor();
+    }
 }
