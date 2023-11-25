@@ -341,6 +341,7 @@ MonoBehaviour:
   InteractingSprite: {fileID: 176961729123080858}
   Lit: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   Unlit: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  IsProximityBased: 1
 --- !u!61 &5844481873919828207
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -898,6 +899,9 @@ MonoBehaviour:
   DefaultError:
   - Name: Narrator
     Text: It would be somewhat unadvised to touch a spinning windmill.
+  OnDialogueEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &204175703814964995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -914,6 +918,7 @@ MonoBehaviour:
   InteractingSprite: {fileID: 1124437548504078121}
   Lit: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   Unlit: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  IsProximityBased: 0
 --- !u!114 &9049406544768611038
 MonoBehaviour:
   m_ObjectHideFlags: 0

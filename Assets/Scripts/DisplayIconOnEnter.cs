@@ -6,37 +6,48 @@ public class DisplayIconOnEnter : MonoBehaviour
     public SpriteRenderer InteractingSprite;
     public Material Lit;
     public Material Unlit;
+    public bool IsProximityBased = true;
 
-
-    void OnTriggerEnter2D(Collider2D collision)
+    public void Show()
     {
-        if (TagComparer.IsPlayer(collision.tag))
+        if (Icon != null)
         {
-            if (Icon != null)
-            {
-                Icon.gameObject.SetActive(true);
-            }
+            Icon.gameObject.SetActive(true);
+        }
 
-            if (InteractingSprite != null)
-            {
-                InteractingSprite.material = Unlit;
-            }
+        if (InteractingSprite != null)
+        {
+            InteractingSprite.material = Unlit;
+        }
+    }
+
+    public void Hide()
+    {
+        if (Icon != null)
+        {
+            Icon.gameObject.SetActive(false);
+        }
+
+        if (InteractingSprite != null)
+        {
+            InteractingSprite.material = Lit;
+        }
+    }
+
+
+    void OnTriggerStay2D(Collider2D collision)
+    {
+        if (IsProximityBased && TagComparer.IsPlayer(collision.tag))
+        {
+            Show();
         }
     }
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        if (TagComparer.IsPlayer(collision.tag))
+        if (IsProximityBased && TagComparer.IsPlayer(collision.tag))
         {
-            if (Icon != null)
-            {
-                Icon.gameObject.SetActive(false);
-            }
-
-            if (InteractingSprite != null)
-            {
-                InteractingSprite.material = Lit;
-            }
+            Hide();
         }
     }
 }

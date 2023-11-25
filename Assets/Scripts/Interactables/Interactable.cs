@@ -63,6 +63,13 @@ public class Interactable : MonoBehaviour
         if (TagComparer.IsPlayer(collision.tag))
         {
             Interacters.Add(collision.gameObject.GetComponent<CharacterController2D>());
+
+            var highlight = GetComponent<DisplayIconOnEnter>();
+
+            if (highlight && !highlight.IsProximityBased)
+            {
+                highlight.Show();
+            }
         }
     }
 
@@ -75,6 +82,16 @@ public class Interactable : MonoBehaviour
             if (characterController != null)
             {
                 Interacters.Remove(characterController);
+            }
+
+            if (Interacters.Count == 0)
+            {
+                var highlight = GetComponent<DisplayIconOnEnter>();
+
+                if (highlight && !highlight.IsProximityBased)
+                {
+                    highlight.Hide();
+                }
             }
         }
     }
