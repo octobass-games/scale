@@ -58,10 +58,15 @@ public class DialogueRenderer : MonoBehaviour
 
     private void SetAnimation(bool inDialogue)
     {
-        GameObject obj = CharacterSwitcher.GetActiveCharacter();
-        if (obj.activeSelf) {
-            obj.GetComponentInChildren<Animator>().SetBool("InDialogue", inDialogue);
+        if (CharacterSwitcher != null)
+        {
+            GameObject obj = CharacterSwitcher.GetActiveCharacter();
+            if (obj.activeSelf)
+            {
+                obj.GetComponentInChildren<Animator>().SetBool("InDialogue", inDialogue);
+            }
         }
+        
     }
 
     private IEnumerator Write(string text)
