@@ -6,6 +6,7 @@ public class Zipline : MonoBehaviour
     public Transform ZiplineRightEnd;
     public Transform ZiplineLine;
     public float ZiplineSpeed = 5f;
+    public bool IsHorizontal = true;
 
     private Transform TargetEnd;
     private CharacterController2D RiderCharacterController;
@@ -18,8 +19,6 @@ public class Zipline : MonoBehaviour
         RiderAnimator = rider.GetComponentInChildren<Animator>();
 
         TargetEnd = RiderCharacterController.IsTravellingRight() ? ZiplineRightEnd : ZiplineLeftEnd;
-
-        Debug.Log(TargetEnd.position);
     }
 
     void FixedUpdate()
@@ -47,7 +46,7 @@ public class Zipline : MonoBehaviour
         RiderAnimator.SetBool("isZipping", true);
         RiderCharacterController.Freeze();
         RiderCharacterController.GravityModifier = 0f;
-        RiderCharacterController.ForcePosition(new Vector3(RiderCharacterController.transform.position.x, ZiplineLine.position.y, RiderCharacterController.transform.position.z));
+        SetYAttachmentPoint();
     }
 
     private void UnlockRiderFromZipline()
@@ -62,5 +61,46 @@ public class Zipline : MonoBehaviour
     private void MoveRider()
     {
         RiderCharacterController.ForcePosition(Vector3.MoveTowards(RiderCharacterController.transform.position, TargetEnd.position, ZiplineSpeed));
+    }
+
+    private void SetYAttachmentPoint()
+    {
+        if (IsHorizontal)
+        {
+            RiderCharacterController.ForcePosition(new Vector3(RiderCharacterController.transform.position.x, ZiplineLine.position.y, RiderCharacterController.transform.position.z));
+        }
+        else
+        {
+            var rb2d = RiderCharacterController.GetComponent<BoxCollider2D>();
+
+            Collider2D[] results = new Collider2D[10];
+
+            var contactFilter = new ContactFilter2D();
+            contactFilter.useTriggers = true;
+
+            int count = rb2d.OverlapCollider(contactFilter, results);
+
+            for (int i = 0; i < count; i++)
+            {
+                if (results[i].name == "Line")
+                {
+                    var distance = rb2d.Distance(results[i]);
+
+                    var position = RiderCharacterController.GetComponent<Rigidbody2D>().position;
+                    var separation = distance.normal * distance.distance;
+
+                    if (distance.normal.x < 0)
+                    {
+                        var newPosition = new Vector3(position.x, position.y) + new Vector3(separation.x, separation.y - 35);
+                        RiderCharacterController.ForcePosition(newPosition);
+                    }
+                    else
+                    {
+                        var newPosition = new Vector3(position.x, position.y) + new Vector3(separation.x, separation.y + 5);
+                        RiderCharacterController.ForcePosition(newPosition);
+                    }
+                }
+            }
+        }
     }
 }
