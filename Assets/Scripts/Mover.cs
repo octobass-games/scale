@@ -14,10 +14,20 @@ public class Mover : MonoBehaviour
     private Vector3 TargetPositionVector;
     private bool IsMoving;
 
+    private FMOD.Studio.EventInstance instance;
+    public string fmodEvent;
+
+
+    private void Start()
+    {
+        instance = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
+    }
+
     public void Transport()
     {
         TargetPositionVector = TargetPositionVector == PositionAVector ? PositionBVector : PositionAVector;
         IsMoving = true;
+        instance.start();
     }
 
     public void StopTransport()
@@ -39,6 +49,7 @@ public class Mover : MonoBehaviour
             if (transform.position.Approximately(TargetPositionVector))
             {
                 IsMoving = false;
+                instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             }
             else
             {
