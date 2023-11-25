@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 7335249}
   - component: {fileID: 7335248}
   - component: {fileID: 7335247}
+  - component: {fileID: 7335252}
   m_Layer: 0
   m_Name: collectables
   m_TagString: Untagged
@@ -257,6 +258,18 @@ MonoBehaviour:
           m_StringArgument: Collectables
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7335252}
+        m_TargetAssemblyTypeName: AudioTrigger, Assembly-CSharp
+        m_MethodName: FmodOneShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Collectables
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!212 &7335250
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -325,6 +338,19 @@ Transform:
   - {fileID: 1177949432}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7335252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7335246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79d665ff4202c94e8fe65c88ab34bb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent: event:/SFX/interact sfx
 --- !u!1 &11898634
 GameObject:
   m_ObjectHideFlags: 0
@@ -1227,6 +1253,7 @@ GameObject:
   - component: {fileID: 976215670}
   - component: {fileID: 976215671}
   - component: {fileID: 976215672}
+  - component: {fileID: 976215673}
   m_Layer: 0
   m_Name: credits
   m_TagString: Untagged
@@ -1329,6 +1356,18 @@ MonoBehaviour:
           m_StringArgument: Credits
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 976215673}
+        m_TargetAssemblyTypeName: AudioTrigger, Assembly-CSharp
+        m_MethodName: FmodOneShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Credits
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!61 &976215671
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1416,6 +1455,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &976215673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976215667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79d665ff4202c94e8fe65c88ab34bb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent: event:/SFX/interact sfx
 --- !u!1 &987148628
 GameObject:
   m_ObjectHideFlags: 0
@@ -1429,6 +1481,7 @@ GameObject:
   - component: {fileID: 987148631}
   - component: {fileID: 987148632}
   - component: {fileID: 987148633}
+  - component: {fileID: 987148634}
   m_Layer: 0
   m_Name: continue
   m_TagString: Untagged
@@ -1531,6 +1584,18 @@ MonoBehaviour:
           m_StringArgument: LevelSelect
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 987148634}
+        m_TargetAssemblyTypeName: AudioTrigger, Assembly-CSharp
+        m_MethodName: FmodOneShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: LevelSelect
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!61 &987148632
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1618,6 +1683,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &987148634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987148628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79d665ff4202c94e8fe65c88ab34bb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent: event:/SFX/interact sfx
 --- !u!1 &1177949430
 GameObject:
   m_ObjectHideFlags: 0
@@ -1715,6 +1793,7 @@ GameObject:
   - component: {fileID: 1227942159}
   - component: {fileID: 1227942160}
   - component: {fileID: 1227942161}
+  - component: {fileID: 1227942162}
   m_Layer: 0
   m_Name: controls
   m_TagString: Untagged
@@ -1829,6 +1908,18 @@ MonoBehaviour:
           m_StringArgument: Controls
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1227942162}
+        m_TargetAssemblyTypeName: AudioTrigger, Assembly-CSharp
+        m_MethodName: FmodOneShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Controls
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!61 &1227942160
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1916,6 +2007,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1227942162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227942156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79d665ff4202c94e8fe65c88ab34bb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent: event:/SFX/interact sfx
 --- !u!1 &1401011349
 GameObject:
   m_ObjectHideFlags: 0
@@ -2507,6 +2611,7 @@ GameObject:
   - component: {fileID: 2127439035}
   - component: {fileID: 2127439036}
   - component: {fileID: 2127439037}
+  - component: {fileID: 2127439038}
   m_Layer: 0
   m_Name: new-game
   m_TagString: Untagged
@@ -2609,6 +2714,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2127439038}
+        m_TargetAssemblyTypeName: AudioTrigger, Assembly-CSharp
+        m_MethodName: FmodOneShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!61 &2127439036
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2696,6 +2813,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2127439038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127439032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79d665ff4202c94e8fe65c88ab34bb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent: event:/SFX/interact sfx
 --- !u!1001 &6519852429997947890
 PrefabInstance:
   m_ObjectHideFlags: 0
