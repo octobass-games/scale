@@ -15,62 +15,67 @@ public class Interactable : MonoBehaviour
     public UnityEvent<GameObject> OnInvalidInteraction;
     public List<Condition> Conditions;
 
-    private GameObject Interacter;
-    private CharacterController2D InteracterCharacterController;
+    private List<CharacterController2D> Interacters = new List<CharacterController2D>();
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && Interacter != null && Interacter.tag == GetCharacterSwitcher().ActiveCharacterTag && !InteracterCharacterController.IsFrozen())
+        if (Input.GetKeyDown(KeyCode.E) && Interacters.Count != 0)
         {
-            if (ValidInteracterTags.Count == 0 || ValidInteracterTags.Contains(Interacter.tag))
-            {
-                if (Conditions.All(condition => condition.Evaluate(Interacter)))
+            var interacter = Interacters.Find(interacter => interacter.tag == GetCharacterSwitcher().ActiveCharacterTag);
+
+            if (interacter != null && !interacter.IsFrozen())
+            {   
+                if (ValidInteracterTags.Count == 0 || ValidInteracterTags.Contains(interacter.tag))
                 {
-                    StartCoroutine(Interact());
+                    if (Conditions.All(condition => condition.Evaluate(interacter.gameObject)))
+                    {
+                        StartCoroutine(Interact(interacter));
+                    }
                 }
-            }
-            else
-            {
-                OnInvalidInteraction.Invoke(Interacter);
+                else
+                {
+                    OnInvalidInteraction.Invoke(interacter.gameObject);
+                }
             }
         }
     }
 
-    IEnumerator Interact()
+    IEnumerator Interact(CharacterController2D interacter)
     {
-        var characterController = Interacter.GetComponent<CharacterController2D>();
-
-        characterController.Freeze();
+        interacter.Freeze();
 
         if (InteractionAnimationTrigger != null && InteractionAnimationLength != 0)
         {
-            var animator = Interacter.GetComponentInChildren<Animator>();
+            var animator = interacter.GetComponentInChildren<Animator>();
 
             animator.SetTrigger(InteractionAnimationTrigger);
 
             yield return new WaitForSeconds(InteractionAnimationLength);
         }
 
-        OnValidInteraction.Invoke(Interacter);
+        OnValidInteraction.Invoke(interacter.gameObject);
 
-        characterController.Thaw();
+        interacter.Thaw();
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (TagComparer.IsPlayer(collision.tag))
         {
-            Interacter = collision.gameObject;
-            InteracterCharacterController = Interacter.GetComponent<CharacterController2D>();
+            Interacters.Add(collision.gameObject.GetComponent<CharacterController2D>());
         }
     }
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        if (TagComparer.IsPlayer(collision.tag) && collision.gameObject == Interacter)
+        if (TagComparer.IsPlayer(collision.tag))
         {
-            Interacter = null;
-            InteracterCharacterController = null;
+            var characterController = collision.gameObject.GetComponent<CharacterController2D>();
+
+            if (characterController != null)
+            {
+                Interacters.Remove(characterController);
+            }
         }
     }
 
