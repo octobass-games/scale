@@ -37,7 +37,7 @@ public class DialogueRenderer : MonoBehaviour
         Name.text = speaker;
         Coroutine = Write(text);
         StartCoroutine(Coroutine);
-        CharacterSwitcher.FreezeForDialogue();
+        CharacterSwitcher?.FreezeForDialogue();
         canvas.SetActive(true);
 
         SkipButton.onClick.RemoveAllListeners();
@@ -49,7 +49,7 @@ public class DialogueRenderer : MonoBehaviour
         CharacterSwitcher?.SetEnableSwithing(true);
         SetAnimation(false);
         canvas.SetActive(false);
-        CharacterSwitcher.ThawForDialogue();
+        CharacterSwitcher?.ThawForDialogue();
     }
 
     public bool IsOpen()

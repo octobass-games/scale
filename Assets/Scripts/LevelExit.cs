@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class LevelExit : MonoBehaviour
 {
-    public ChangeLevelSceneData NextLevel;
+    public SubLevel NextLevel;
     public bool CollectableFound;
 
     private SceneManager SceneManager;
