@@ -3247,6 +3247,67 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
+--- !u!1001 &491942572
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1733552586451269775, guid: 7dc274e3c1fc21641a3b4e2109d53e5e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 36.1425
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733552586451269775, guid: 7dc274e3c1fc21641a3b4e2109d53e5e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 78.67114
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733552586451269775, guid: 7dc274e3c1fc21641a3b4e2109d53e5e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.8755474
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733552586451269775, guid: 7dc274e3c1fc21641a3b4e2109d53e5e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733552586451269775, guid: 7dc274e3c1fc21641a3b4e2109d53e5e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733552586451269775, guid: 7dc274e3c1fc21641a3b4e2109d53e5e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733552586451269775, guid: 7dc274e3c1fc21641a3b4e2109d53e5e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733552586451269775, guid: 7dc274e3c1fc21641a3b4e2109d53e5e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733552586451269775, guid: 7dc274e3c1fc21641a3b4e2109d53e5e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733552586451269775, guid: 7dc274e3c1fc21641a3b4e2109d53e5e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2121265994758039702, guid: 7dc274e3c1fc21641a3b4e2109d53e5e, type: 3}
+      propertyPath: fmodEvent
+      value: event:/Music/lvl1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4088692100475647645, guid: 7dc274e3c1fc21641a3b4e2109d53e5e, type: 3}
+      propertyPath: m_Name
+      value: Music
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7dc274e3c1fc21641a3b4e2109d53e5e, type: 3}
 --- !u!1 &504528078
 GameObject:
   m_ObjectHideFlags: 0
@@ -6048,6 +6109,7 @@ GameObject:
   - component: {fileID: 985287205}
   - component: {fileID: 985287206}
   - component: {fileID: 985287207}
+  - component: {fileID: 985287208}
   m_Layer: 0
   m_Name: cat
   m_TagString: Untagged
@@ -6171,6 +6233,20 @@ MonoBehaviour:
           m_StringArgument: next
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &985287208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985287203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79d665ff4202c94e8fe65c88ab34bb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent: event:/SFX/cat meow
+  is3D: 0
 --- !u!1 &1041822633
 GameObject:
   m_ObjectHideFlags: 0
@@ -7797,6 +7873,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1330913075}
   - component: {fileID: 1330913076}
+  - component: {fileID: 1330913077}
   m_Layer: 0
   m_Name: cat_0
   m_TagString: Untagged
@@ -7871,6 +7948,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1330913077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330913074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79d665ff4202c94e8fe65c88ab34bb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent: event:/SFX/swish
+  is3D: 0
 --- !u!1 &1355629337
 GameObject:
   m_ObjectHideFlags: 0
@@ -12038,3 +12129,4 @@ SceneRoots:
   - {fileID: 286456375}
   - {fileID: 682693577}
   - {fileID: 1184782662}
+  - {fileID: 491942572}
