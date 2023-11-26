@@ -106,11 +106,24 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: gnome_0
+      name: gnome-sibling_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84988791cb1bd204d8c4af50a62fa360
-      internalID: -411266529
+      spriteID: 0c5ea98fff32a4847af5a355b7dd6f6e
+      internalID: 2097490303
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gnome_1
+      name: gnome-sibling_1
       rect:
         serializedVersion: 2
         x: 21
@@ -145,14 +158,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6db7370d9c7d4c944a8492580297e571
-      internalID: -1788353949
+      spriteID: 273d99519d2c2ca4f99aae6cc987c606
+      internalID: -828134828
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gnome_2
+      name: gnome-sibling_2
       rect:
         serializedVersion: 2
         x: 42
@@ -166,14 +179,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7aebf63b698d22f4786c9c4b054c75c0
-      internalID: -1694651546
+      spriteID: b1f76512e4450ad4792ab3ad8b8c4b12
+      internalID: -666280838
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gnome_3
+      name: gnome-sibling_3
       rect:
         serializedVersion: 2
         x: 63
@@ -187,14 +200,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d34654f6ba5974043b41f7c2feb28071
-      internalID: -299077750
+      spriteID: 7a0aafab07b725e42ab0e4adefa67b6a
+      internalID: -124921289
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gnome_4
+      name: gnome-sibling_4
       rect:
         serializedVersion: 2
         x: 84
@@ -208,14 +221,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54d9ffc0f87d4a04c87e5e1159104629
-      internalID: -1038604825
+      spriteID: ed5e1f42873ebb648adaa7a6188720e1
+      internalID: -218884169
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gnome_5
+      name: gnome-sibling_5
       rect:
         serializedVersion: 2
         x: 105
@@ -229,14 +242,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0146b2fb392e0cb4d9fc3577b119ad6a
-      internalID: 1373386281
+      spriteID: 396b2aa04822d7d46a457b7fbefb27f9
+      internalID: -973790890
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gnome_6
+      name: gnome-sibling_6
       rect:
         serializedVersion: 2
         x: 126
@@ -250,14 +263,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23ca8fc49beceb24ea6359c59332e571
-      internalID: 15755740
+      spriteID: b3609491b9ebb124f8768d8072e723fe
+      internalID: -866228488
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gnome_7
+      name: gnome-sibling_7
       rect:
         serializedVersion: 2
         x: 147
@@ -271,14 +284,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 220bbb66343d5cb45a1dcde3de126b58
-      internalID: 1577997165
+      spriteID: 878d6a74591df2d4bae710d11fe565b5
+      internalID: 1185368299
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gnome_8
+      name: gnome-sibling_8
       rect:
         serializedVersion: 2
         x: 168
@@ -292,14 +305,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b9f1c4be41e9e7429b1ed22888bd446
-      internalID: -324844494
+      spriteID: 87bd74c76b95d3f4c9c869d8b2bd5e2e
+      internalID: 1493476585
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gnome_9
+      name: gnome-sibling_9
       rect:
         serializedVersion: 2
         x: 189
@@ -313,14 +326,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8f2579313cf2f445995dd941b088764
-      internalID: 105593373
+      spriteID: 3c20dff4337d2bc4ba97aa035fead6c3
+      internalID: -847953834
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gnome_10
+      name: gnome-sibling_10
       rect:
         serializedVersion: 2
         x: 210
@@ -334,14 +347,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dce872794ec813a4cb0dfdfe7b05e513
-      internalID: -1796963674
+      spriteID: 4553ce1debd7d48428e7e5f061ca0423
+      internalID: -1795815066
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gnome_11
+      name: gnome-sibling_11
       rect:
         serializedVersion: 2
         x: 231
@@ -355,14 +368,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a75de54a4b78b7e4c905025787c4b353
-      internalID: 334614354
+      spriteID: 8ba8679d54230b84782e6997b4b75a10
+      internalID: -747563731
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gnome_12
+      name: gnome-sibling_12
       rect:
         serializedVersion: 2
         x: 252
@@ -376,14 +389,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e1c77c3402702d419b8c5da3ce42767
-      internalID: -873273970
+      spriteID: 9d399af12a7a4fb478b32367e74401ff
+      internalID: 2103166386
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gnome_13
+      name: gnome-sibling_13
       rect:
         serializedVersion: 2
         x: 273
@@ -397,14 +410,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68ad2a1dbe4be1748a5692ea6d7258a6
-      internalID: -372408989
+      spriteID: 69a8ece4cb884af4f8d8a90b32c67c6e
+      internalID: 2070443282
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gnome_14
+      name: gnome-sibling_14
       rect:
         serializedVersion: 2
         x: 294
@@ -418,14 +431,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf366fbf059036a408e69e27913faf07
-      internalID: -973208219
+      spriteID: bff97f43a305e5c48ac9ba6bc214a50c
+      internalID: 1521285369
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gnome_15
+      name: gnome-sibling_15
       rect:
         serializedVersion: 2
         x: 315
@@ -439,14 +452,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4b10804ed26050468bd232a1e60721f
-      internalID: -843084408
+      spriteID: 90f0871f058248e4eb1bc474a01d155d
+      internalID: 1109512281
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gnome_16
+      name: gnome-sibling_16
       rect:
         serializedVersion: 2
         x: 336
@@ -460,8 +473,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3cfb8f897fe29c142af6f831162854d3
-      internalID: -808181205
+      spriteID: 0e7665637b68efc4cb3bd4b1b2fdad75
+      internalID: -1607304128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gnome-sibling_17
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 0
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f06bbab03b77ef4a8069137becfc971
+      internalID: 1724252698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gnome-sibling_18
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 0
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fc9e9fd3a462534ca4a1aca05f555a8
+      internalID: -2111708991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gnome-sibling_19
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 0
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6adb442d44070de488f60f867e1007d4
+      internalID: -1079287227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gnome-sibling_20
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 0
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80228bce27d09184b8c8feea0ffa3cf0
+      internalID: -1579704203
       vertices: []
       indices: 
       edges: []
@@ -477,23 +574,27 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      gnome_0: -411266529
-      gnome_1: -1788353949
-      gnome_10: -1796963674
-      gnome_11: 334614354
-      gnome_12: -873273970
-      gnome_13: -372408989
-      gnome_14: -973208219
-      gnome_15: -843084408
-      gnome_16: -808181205
-      gnome_2: -1694651546
-      gnome_3: -299077750
-      gnome_4: -1038604825
-      gnome_5: 1373386281
-      gnome_6: 15755740
-      gnome_7: 1577997165
-      gnome_8: -324844494
-      gnome_9: 105593373
+      gnome-sibling_0: 2097490303
+      gnome-sibling_1: -828134828
+      gnome-sibling_10: -1795815066
+      gnome-sibling_11: -747563731
+      gnome-sibling_12: 2103166386
+      gnome-sibling_13: 2070443282
+      gnome-sibling_14: 1521285369
+      gnome-sibling_15: 1109512281
+      gnome-sibling_16: -1607304128
+      gnome-sibling_17: 1724252698
+      gnome-sibling_18: -2111708991
+      gnome-sibling_19: -1079287227
+      gnome-sibling_2: -666280838
+      gnome-sibling_20: -1579704203
+      gnome-sibling_3: -124921289
+      gnome-sibling_4: -218884169
+      gnome-sibling_5: -973790890
+      gnome-sibling_6: -866228488
+      gnome-sibling_7: 1185368299
+      gnome-sibling_8: 1493476585
+      gnome-sibling_9: -847953834
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
