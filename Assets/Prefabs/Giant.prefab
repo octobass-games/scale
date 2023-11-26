@@ -120,6 +120,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fmodEvent: event:/SFX/run/grass step giant
+--- !u!1 &1889478358655474679
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7226424121311787401}
+  - component: {fileID: 2521642484770466990}
+  m_Layer: 0
+  m_Name: GiantAudioListener
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &7226424121311787401
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889478358655474679}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7473694553729898965}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2521642484770466990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889478358655474679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!1 &3473252978965404822
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,7 +223,7 @@ MonoBehaviour:
   - {x: 5.0140724, y: -50.565147, z: 0}
   m_ShapePathHash: -1832293484
   m_Mesh: {fileID: 0}
-  m_InstanceId: 42636
+  m_InstanceId: 47384
   m_LocalBounds:
     m_Center: {x: -3.1803675, y: -48.013298, z: 0}
     m_Extent: {x: 8.19444, y: 2.5518494, z: 0}
@@ -217,6 +262,7 @@ Transform:
   - {fileID: 3585676499091900243}
   - {fileID: 6539042289249572312}
   - {fileID: 1184579063133723902}
+  - {fileID: 7226424121311787401}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4100021356148659527
