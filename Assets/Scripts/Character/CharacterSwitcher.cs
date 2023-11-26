@@ -30,6 +30,8 @@ public class CharacterSwitcher : MonoBehaviour
     {
         GiantCharacterController = Giant.GetComponent<CharacterController2D>();
         GnomeCharacterController = Gnome.GetComponent<CharacterController2D>();
+        giantAudio = GameObject.Find("GiantAudioListener");
+        gnomeAudio = GameObject.Find("GnomeAudioListener"); 
 
         if (FirstActiveCharacter == Giant)
         {
@@ -40,6 +42,7 @@ public class CharacterSwitcher : MonoBehaviour
             Gnome.GetComponentInChildren<SpriteRenderer>().material = LitMaterial;
             Giant.GetComponentInChildren<SpriteRenderer>().material = UnlitMaterial;
             giantAudio.SetActive(true);
+            gnomeAudio.SetActive(false);
 
         }
         else
@@ -51,6 +54,7 @@ public class CharacterSwitcher : MonoBehaviour
             Gnome.GetComponentInChildren<SpriteRenderer>().material = UnlitMaterial;
             Giant.GetComponentInChildren<SpriteRenderer>().material = LitMaterial;
             gnomeAudio.SetActive(true);
+            giantAudio.SetActive(false);
         }
     }
 
