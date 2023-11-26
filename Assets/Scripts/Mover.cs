@@ -21,6 +21,7 @@ public class Mover : MonoBehaviour
     private void Start()
     {
         instance = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(instance, GetComponent<Transform>(), GetComponent<BoxCollider2D>());
     }
 
     public void Transport()
