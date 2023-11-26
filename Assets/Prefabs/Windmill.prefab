@@ -95,7 +95,6 @@ GameObject:
   - component: {fileID: 3701796219542447723}
   - component: {fileID: 1124437548504078121}
   - component: {fileID: 5622563328628071297}
-  - component: {fileID: 110353041503185210}
   m_Layer: 0
   m_Name: Windmill
   m_TagString: Untagged
@@ -191,19 +190,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &110353041503185210
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1834430089422748514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a79d665ff4202c94e8fe65c88ab34bb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fmodEvent: event:/SFX/fan3d
 --- !u!1 &2681137894010042066
 GameObject:
   m_ObjectHideFlags: 0
@@ -899,6 +885,7 @@ MonoBehaviour:
   DefaultError:
   - Name: Narrator
     Text: It would be somewhat unadvised to touch a spinning windmill.
+    animatorTrigger: 
   OnDialogueEnd:
     m_PersistentCalls:
       m_Calls: []
@@ -932,6 +919,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fmodEvent: event:/SFX/fanrotate
+  is3D: 0
 --- !u!1 &7412639156237124021
 GameObject:
   m_ObjectHideFlags: 0
