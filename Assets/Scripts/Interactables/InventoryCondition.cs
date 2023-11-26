@@ -6,6 +6,6 @@ public class InventoryCondition : Condition
 
     public override bool Evaluate(GameObject interacter)
     {
-        return interacter.GetComponent<Inventory>()?.Items.Find(go => go == RequiredItem) != null;
+        return interacter.GetComponent<Inventory>()?.Contains(RequiredItem) == true;
     }
 }
