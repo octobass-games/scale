@@ -3155,7 +3155,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3163,6 +3163,27 @@ TextureImporter:
       bones: []
       spriteID: 67ba860e9bfcc074e9ba8baf4a7599c3
       internalID: 548346597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hot-springs-sign
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 72
+        width: 48
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c60149d359f2ee4c9316942c0184a58
+      internalID: -1038036302
       vertices: []
       indices: 
       edges: []
@@ -3181,6 +3202,7 @@ TextureImporter:
       name: _NormalMap
     nameFileIdTable:
       dragon-sign: 548346597
+      hot-springs-sign: -1038036302
       village-2_0: 1707395348
       village-2_1: 1499153260
       village-2_10: 509756709
