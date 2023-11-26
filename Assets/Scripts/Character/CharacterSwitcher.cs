@@ -19,6 +19,9 @@ public class CharacterSwitcher : MonoBehaviour
     private CharacterController2D GnomeCharacterController;
     private bool IsFrozenForDialogue;
 
+    public GameObject gnomeAudio;
+    public GameObject giantAudio;
+
     public void SetEnableSwithing(bool e)
     {
         EnableSwitching = e;
@@ -36,6 +39,8 @@ public class CharacterSwitcher : MonoBehaviour
             ActiveCharacterTag = TagComparer.GIANT;
             Gnome.GetComponentInChildren<SpriteRenderer>().material = LitMaterial;
             Giant.GetComponentInChildren<SpriteRenderer>().material = UnlitMaterial;
+            giantAudio.SetActive(true);
+
         }
         else
         {
@@ -45,6 +50,7 @@ public class CharacterSwitcher : MonoBehaviour
             ActiveCharacterTag = TagComparer.GNOME;
             Gnome.GetComponentInChildren<SpriteRenderer>().material = UnlitMaterial;
             Giant.GetComponentInChildren<SpriteRenderer>().material = LitMaterial;
+            gnomeAudio.SetActive(true);
         }
     }
 
@@ -79,6 +85,7 @@ public class CharacterSwitcher : MonoBehaviour
         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/gnome voices/gnome switch");
         Gnome.GetComponentInChildren<SpriteRenderer>().material = UnlitMaterial;
         Giant.GetComponentInChildren<SpriteRenderer>().material = LitMaterial;
+        ToggleAudio();
     }
 
     public void SelectGiant()
@@ -92,6 +99,7 @@ public class CharacterSwitcher : MonoBehaviour
         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/giant voice/giant switcher");
         Gnome.GetComponentInChildren<SpriteRenderer>().material = LitMaterial;
         Giant.GetComponentInChildren<SpriteRenderer>().material = UnlitMaterial;
+        ToggleAudio();
     }
 
     public void FreezeForDialogue()
@@ -123,6 +131,20 @@ public class CharacterSwitcher : MonoBehaviour
         else
         {
             return Gnome;
+        }
+    }
+
+    public void ToggleAudio()
+    {
+        if (giantAudio.activeSelf == true)
+        {
+            giantAudio.SetActive(false);
+            gnomeAudio.SetActive(true);
+        }
+        else if (gnomeAudio.activeSelf == true)
+        {
+            giantAudio.SetActive(true);
+            gnomeAudio.SetActive(false);
         }
     }
 }
