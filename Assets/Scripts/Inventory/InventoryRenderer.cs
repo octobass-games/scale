@@ -22,13 +22,14 @@ public class InventoryRenderer : MonoBehaviour
 
             if (inventory != null)
             {
-                for (int i = 0; i < inventory.Items.Count; i++)
+                var item = inventory.GetItem();
+
+                if (item != null)
                 {
                     InventorySlot.SetActive(true);
-                    InventorySlotImage.sprite = inventory.Items[i].GetComponent<SpriteRenderer>().sprite;
+                    InventorySlotImage.sprite = item.GetComponent<SpriteRenderer>().sprite;
                 }
-
-                if (inventory.Items.Count == 0)
+                else
                 {
                     InventorySlot.SetActive(false);
                     InventorySlotImage.sprite = null;
