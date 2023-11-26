@@ -9,7 +9,7 @@ public class DialogueController
     public UnityEvent OnEnd;
     public DialogueRenderer DialogueRenderer;
     private bool IsRendererNotRevealingPreviousLine;
-    private List<Animator> Animators;
+    private List<Animator> Animators = new List<Animator>();
 
     public DialogueController(List<DialogueItem> texts, UnityEvent onEnd, DialogueRenderer dialogueRenderer, List<Animator> animator = null)
     {
@@ -20,11 +20,13 @@ public class DialogueController
         Animators = animator;
     }
 
-    public void HandleProgressDialogue()
+    public bool HandleProgressDialogue()
     {
         if (DialogueRenderer.IsWriting)
         {
             DialogueRenderer.WriteFull();
+
+            return false;
         }
         else
         {
@@ -35,17 +37,23 @@ public class DialogueController
                 var dialogue = texts[pos];
 
                 DialogueRenderer.ShowDialogue(dialogue.Text, dialogue.Name, End);
-                if ( dialogue.animatorTrigger != null)
+                if ( dialogue.animatorTrigger != null && dialogue.animatorTrigger != "")
                 {
                     Animators.ForEach(a => a.SetTrigger(dialogue.animatorTrigger));
                 }
+
+                return false;
             }
             else
             {
                 if (DialogueRenderer.IsOpen())
                 {
                     End();
+
+                    return true;
                 }
+
+                return false;
             }
         }
     }

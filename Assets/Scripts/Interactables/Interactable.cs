@@ -14,9 +14,11 @@ public class Interactable : MonoBehaviour
     public UnityEvent<GameObject> OnValidInteraction;
     public UnityEvent<GameObject> OnInvalidInteraction;
     public List<Condition> Conditions;
+    public InteractableDialogue BeforeValidInteractionDialogue;
 
     private List<CharacterController2D> Interacters = new List<CharacterController2D>();
     private DisplayIconOnEnter Highlight;
+    private bool IsInInteractableDialogue;
 
     void Start()
     {
@@ -33,11 +35,27 @@ public class Interactable : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    if (!activeInteracter.IsFrozen() && ValidInteracterTags.Count == 0 || ValidInteracterTags.Contains(activeInteracter.tag))
+                    if ((!activeInteracter.IsFrozen() || IsInInteractableDialogue) && (ValidInteracterTags.Count == 0 || ValidInteracterTags.Contains(activeInteracter.tag)))
                     {
                         if (Conditions.All(condition => condition.Evaluate(activeInteracter.gameObject)))
                         {
-                            StartCoroutine(Interact(activeInteracter));
+                            if (BeforeValidInteractionDialogue != null)
+                            {
+                                IsInInteractableDialogue = true;
+
+                                var finished = BeforeValidInteractionDialogue.Speak();
+
+                                if (finished)
+                                {
+                                    IsInInteractableDialogue = false;
+                                    StartCoroutine(Interact(activeInteracter));
+                                }
+                            }
+                            else
+                            {
+                                IsInInteractableDialogue = false;
+                                StartCoroutine(Interact(activeInteracter));
+                            }
                         }
                     }
                     else
