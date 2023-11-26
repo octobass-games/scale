@@ -6,9 +6,14 @@ public class LevelBox : MonoBehaviour
     public SaveManager SaveManager;
     public GameObject LevelCompleteTick;
     public GameObject CollectableFoundTick;
+    public bool IsHoverable;
 
     void Start()
     {
+        if (!IsHoverable)
+        {
+            Destroy(this.GetComponent<Hoverable>());
+        }
         SaveManager = SaveManager != null ? SaveManager : FindObjectOfType<SaveManager>();
         var levelData = SaveManager.GetLevelData(LevelName);
 

@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneManager : MonoBehaviour
 {
-    private ChangeLevelSceneData ChangeLevelSceneData;
+    private SubLevel SubLevel;
 
     public void ReloadScene()
     {
@@ -20,11 +20,12 @@ public class SceneManager : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
     }
 
-    public void ChangeLevelScene(ChangeLevelSceneData changeLevelSceneData)
-    {
-        ChangeLevelSceneData = changeLevelSceneData;
 
-        ChangeScene(ChangeLevelSceneData.LevelName);
+    public void ChangeLevelScene(SubLevel subLevel)
+    {
+        SubLevel = subLevel;
+
+        ChangeScene(subLevel.Scene);
     }
 
     void Awake()
@@ -34,21 +35,21 @@ public class SceneManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
     {
-        if (ChangeLevelSceneData != null)
+        if (SubLevel != null)
         {
-            if (ChangeLevelSceneData.PositionGiant)
+            if (SubLevel.PositionGiant)
             {
                 var giant = GameObject.FindGameObjectWithTag("Giant");
-                giant.GetComponent<CharacterController2D>().ForcePosition(ChangeLevelSceneData.GiantPosition);
+                giant.GetComponent<CharacterController2D>().ForcePosition(SubLevel.GiantPosition);
             }
 
-            if (ChangeLevelSceneData.PositionGnome)
+            if (SubLevel.PositionGnome)
             {
                 var gnome = GameObject.FindGameObjectWithTag("Gnome");
-                gnome.GetComponent<CharacterController2D>().ForcePosition(ChangeLevelSceneData.GnomePosition);
+                gnome.GetComponent<CharacterController2D>().ForcePosition(SubLevel.GnomePosition);
             }
 
-            ChangeLevelSceneData = null;
+            SubLevel = null;
         }
     }
 }
