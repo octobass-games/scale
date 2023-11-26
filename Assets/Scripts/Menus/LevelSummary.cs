@@ -12,6 +12,7 @@ public class LevelSummary : MonoBehaviour
     public UnityEvent OnEndOfDialogue;
     private LevelBoxes breakdown;
     public GameObject boxesParent;
+    public SceneManager sceneManager;
 
     // Start is called before the first frame update
     void Start()
@@ -45,9 +46,10 @@ public class LevelSummary : MonoBehaviour
 
     private void OnDialogueDone()
     {
-        Debug.Log("Dialogue Donn!");
         DialogueDone = true;
         breakdown.gameObject.SetActive(true);
-        breakdown.LoadBoxes();
+
+        var lastSubLevel = level.SubLevels[level.SubLevels.Count - 1];  
+        breakdown.LoadBoxes(true, () => sceneManager.ChangeLevelScene(lastSubLevel.NextLevel));
     }
 }

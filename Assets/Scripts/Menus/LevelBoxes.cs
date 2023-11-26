@@ -1,12 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelBoxes : MonoBehaviour
 {
     public SaveManager SaveManager;
     public List<LevelBox> boxes = new List<LevelBox>();
     private int index = 0;
+    private bool ShowNext = false;
+    public Clickable NextButton;
+
 
     void Start()
     {
@@ -14,6 +19,14 @@ public class LevelBoxes : MonoBehaviour
 
     public void LoadBoxes()
     {
+        StartCoroutine(LoadBox());
+    }
+
+    public void LoadBoxes(bool showNext, Action OnNext)
+    {
+        this.ShowNext = showNext;
+        NextButton.Event.RemoveAllListeners();
+        NextButton.Event.AddListener(() => OnNext.Invoke());
         StartCoroutine(LoadBox());
     }
 
@@ -30,6 +43,7 @@ public class LevelBoxes : MonoBehaviour
 
         if (levelData.IsComplete || nextLevel.Name == boxes[index].LevelName)
         {
+            boxes[index].IsHoverable = !ShowNext;
             boxes[index].gameObject.SetActive(true);
 
             yield return new WaitForSeconds(0.25f);
@@ -41,6 +55,10 @@ public class LevelBoxes : MonoBehaviour
             }
             else
             {
+                if (ShowNext)
+                {
+                    NextButton.gameObject.SetActive(true);
+                }
                 index = 0;
             }
         }
