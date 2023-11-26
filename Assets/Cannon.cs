@@ -18,6 +18,10 @@ public class Cannon : MonoBehaviour
     private bool IsFiring;
     private bool IsFiringGnome;
 
+
+    public string fmodEvent;
+    
+
     public void Land()
     {
         if (IsFiringGnome)
@@ -51,6 +55,7 @@ public class Cannon : MonoBehaviour
         {
             if (TagComparer.IsGnome(Interacter.tag))
             {
+                FMODUnity.RuntimeManager.PlayOneShot(fmodEvent);
 
                 Interacter.GetComponent<CharacterController2D>().ForcePosition(EndPosition.position);
                 Interacter.GetComponent<CharacterController2D>().Freeze();
@@ -71,6 +76,8 @@ public class Cannon : MonoBehaviour
 
                 if (hasCannonball)
                 {
+                    FMODUnity.RuntimeManager.PlayOneShot(fmodEvent);
+
                     Interacter.GetComponent<Inventory>().RemoveItem(Cannonball);
 
                     ProjectileSpriteRenderer.sprite = CannonballProjectileSprite;
