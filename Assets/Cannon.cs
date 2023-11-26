@@ -12,8 +12,10 @@ public class Cannon : MonoBehaviour
     public GameObject Projectile;
     public GameObject Cannonball;
     public GameObject InteractableCannonball;
+    public CharacterSwitcher CharacterSwitcher;
 
     private GameObject Interacter;
+    private bool IsFiring;
     private bool IsFiringGnome;
 
     public void Land()
@@ -22,6 +24,7 @@ public class Cannon : MonoBehaviour
         {
             Interacter.GetComponent<CharacterController2D>().Thaw();
             Interacter.GetComponentInChildren<SpriteRenderer>().enabled = true;
+            CharacterSwitcher.SetEnableSwithing(true);
 
             ProjectileSpriteRenderer.sprite = null;
             ProjectileAnimator.enabled = false;
@@ -38,11 +41,13 @@ public class Cannon : MonoBehaviour
             ProjectileSpriteRenderer.sprite = null;
             ProjectileAnimator.enabled = false;
         }
+
+        IsFiring = false;
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && Interacter != null)
+        if (Input.GetKeyDown(KeyCode.E) && Interacter != null && Interacter.tag == CharacterSwitcher.ActiveCharacterTag && !IsFiring)
         {
             if (TagComparer.IsGnome(Interacter.tag))
             {
@@ -50,10 +55,12 @@ public class Cannon : MonoBehaviour
                 Interacter.GetComponent<CharacterController2D>().ForcePosition(EndPosition.position);
                 Interacter.GetComponent<CharacterController2D>().Freeze();
                 Interacter.GetComponentInChildren<SpriteRenderer>().enabled = false;
+                CharacterSwitcher.SetEnableSwithing(false);
 
                 ProjectileSpriteRenderer.sprite = GnomeProjectileSprite;
                 ProjectileAnimator.enabled = true;
 
+                IsFiring = true;
                 IsFiringGnome = true;
 
                 VirtualCamera.Follow = Projectile.transform;
@@ -69,6 +76,7 @@ public class Cannon : MonoBehaviour
                     ProjectileSpriteRenderer.sprite = CannonballProjectileSprite;
                     ProjectileAnimator.enabled = true;
 
+                    IsFiring = true;
                     IsFiringGnome = false;
                 }
                 else
