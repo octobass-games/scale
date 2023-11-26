@@ -31,6 +31,7 @@ public class CharacterController2D : MonoBehaviour
     private int Freezers;
     public List<Vector2> VelocityModifiers;
     private Vector2 ExternalDisplacement;
+    private const int StepHeight = 1;
 
     public void ApplyExternalDisplacement(Vector2 displacement)
     {
@@ -195,7 +196,7 @@ public class CharacterController2D : MonoBehaviour
             }
 
 
-            int RaycastResultCount = Rb2d.SafeMove(Vector2.up * displacement.y, displacement.y, RaycastResults, ContactFilter);
+            int RaycastResultCount = Rb2d.SafeMove(Vector2.up * displacement.y, displacement.y, RaycastResults, ContactFilter, 0);
 
             for (int i = 0; i < RaycastResultCount; i++)
             {
@@ -218,7 +219,7 @@ public class CharacterController2D : MonoBehaviour
                 IsGrounded = false;
             }
 
-            Rb2d.SafeMove(Vector2.right * displacement.x, displacement.x, RaycastResults, ContactFilter);
+            Rb2d.SafeMove(Vector2.right * displacement.x, displacement.x, RaycastResults, ContactFilter, 1);
 
             int a = Rb2d.OverlapCollider(ContactFilter, results);
 
