@@ -14,6 +14,11 @@ public class Inventory : MonoBehaviour
         Items.Add(item);
     }
 
+    public bool Contains(GameObject item)
+    {
+        return Items.Contains(item);
+    }
+
     public GameObject RemoveItem(GameObject itemToRemove)
     {
         GameObject item = Items.Find(item => item == itemToRemove);
