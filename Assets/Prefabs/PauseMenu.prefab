@@ -445,6 +445,7 @@ GameObject:
   - component: {fileID: 4954418034250172047}
   - component: {fileID: 7682712027180149550}
   - component: {fileID: 821301002983380513}
+  - component: {fileID: 2350599954438655642}
   m_Layer: 5
   m_Name: Close
   m_TagString: Untagged
@@ -535,6 +536,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2350599954438655642}
+        m_TargetAssemblyTypeName: AudioTrigger, Assembly-CSharp
+        m_MethodName: FmodOneShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4954418034250172047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -603,6 +616,20 @@ MonoBehaviour:
   OnExit:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2350599954438655642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2815500687471033693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79d665ff4202c94e8fe65c88ab34bb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent: event:/SFX/interact end sfx
+  is3D: 0
 --- !u!1 &3433374698803146219
 GameObject:
   m_ObjectHideFlags: 0
@@ -1048,6 +1075,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseMenu: {fileID: 4025339804052610754}
+  ControlsMenu: {fileID: 0}
 --- !u!1 &4025339804052610754
 GameObject:
   m_ObjectHideFlags: 0
@@ -1323,7 +1351,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8350586527610902028}
         m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1390,6 +1418,7 @@ GameObject:
   - component: {fileID: 4562185359404663242}
   - component: {fileID: 217755866182550214}
   - component: {fileID: 5000312483944703745}
+  - component: {fileID: 1367365178901719583}
   m_Layer: 5
   m_Name: controls
   m_TagString: Untagged
@@ -1500,7 +1529,19 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8350586527610902028}
         m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: Controls
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1367365178901719583}
+        m_TargetAssemblyTypeName: AudioTrigger, Assembly-CSharp
+        m_MethodName: FmodOneShot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1528,3 +1569,17 @@ MonoBehaviour:
   OnExit:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1367365178901719583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8949711581456457405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79d665ff4202c94e8fe65c88ab34bb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent: event:/SFX/interact end sfx
+  is3D: 0

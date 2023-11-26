@@ -3,6 +3,7 @@ using UnityEngine;
 public class PauseManager : MonoBehaviour
 {
     public GameObject PauseMenu;
+    public GameObject ControlsMenu;
 
     private SceneManager SceneManager;
     private bool IsPaused;
@@ -24,10 +25,20 @@ public class PauseManager : MonoBehaviour
         FindObjectOfType<LevelExit>().MoveToNextLevel();
     }
 
-    public void Quit()
+    public void Controls()
+    {
+        ControlsMenu.SetActive(true);
+    }
+
+    public void MainMenu()
     {
         Time.timeScale = 1.0f;
         SceneManager.ChangeScene("MainMenu");
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 
     void Awake()
