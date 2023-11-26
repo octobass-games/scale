@@ -51,7 +51,7 @@ public class Cannon : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && Interacter != null && Interacter.tag == CharacterSwitcher.ActiveCharacterTag && !IsFiring)
+        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.E)) && Interacter != null && Interacter.tag == CharacterSwitcher.ActiveCharacterTag && !IsFiring)
         {
             if (TagComparer.IsGnome(Interacter.tag))
             {

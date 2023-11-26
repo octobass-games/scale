@@ -33,7 +33,7 @@ public class Interactable : MonoBehaviour
 
             if (activeInteracter != null)
             {
-                if (Input.GetKeyDown(KeyCode.E))
+                if (Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0))
                 {
                     if ((!activeInteracter.IsFrozen() || IsInInteractableDialogue) && (ValidInteracterTags.Count == 0 || ValidInteracterTags.Contains(activeInteracter.tag)))
                     {

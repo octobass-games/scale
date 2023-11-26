@@ -27,7 +27,7 @@ public class LevelSummary : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return)) && !DialogueDone)
+        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return)) && !DialogueDone)
         {
             DialogueController.HandleProgressDialogue();
         }
