@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class LevelExit : MonoBehaviour
 {
-    public SubLevel NextLevel;
+    public SubLevel CurrentLevel;
     public bool CollectableFound;
 
     private SceneManager SceneManager;
@@ -21,7 +21,7 @@ public class LevelExit : MonoBehaviour
     public void MoveToNextLevel()
     {
         SaveManager.SaveLevelProgress(SceneName, CollectableFound);
-        SceneManager.ChangeLevelScene(NextLevel);
+        SceneManager.ChangeLevelScene(CurrentLevel.NextLevel);
     }
 
     void Awake()
