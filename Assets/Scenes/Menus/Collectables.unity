@@ -2763,6 +2763,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1219990320}
     m_Modifications:
+    - target: {fileID: 4108129401148152575, guid: 1ecfc9129fd63b149b3e9a1b06e44379, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4166652151326392965, guid: 1ecfc9129fd63b149b3e9a1b06e44379, type: 3}
       propertyPath: m_Name
       value: CollectableBGItemApple

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 98b510834ff442949985da60d973fbbc
+guid: 54921902b85f5e0488372bd8555ae074
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,190 +123,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: vertical-dash
+      name: mirros_0
       rect:
         serializedVersion: 2
-        x: 30
-        y: 138
-        width: 4
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e845135edd50bc740ad9ee5ce80979ce
-      internalID: -1146109555
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tick
-      rect:
-        serializedVersion: 2
-        x: 7
-        y: 96
-        width: 17
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b6123466d6e073e40ba4116059afe75c
-      internalID: -1206546761
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: circle
-      rect:
-        serializedVersion: 2
-        x: 34
-        y: 92
+        x: 0
+        y: 24
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8cbe49ba87878aa4fba1f2efc0584388
-      internalID: -627804305
+      spriteID: fd5be63332e62a54abbe7add5877ffd6
+      internalID: -1204278649
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: level-select-box
+      name: mirros_1
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca4dc8d89cb032e43945b54f00c63659
+      internalID: -1080347526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mirros_2
       rect:
         serializedVersion: 2
         x: 48
-        y: 54
-        width: 48
+        y: 24
+        width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36aced477fda9d14682b61a6739df7d5
-      internalID: -138373918
+      spriteID: e825238839036c041aad534ef887232c
+      internalID: -690788657
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: left-dash
+      name: mirros_3
       rect:
         serializedVersion: 2
-        x: 30
-        y: 145
-        width: 5
-        height: 4
+        x: 72
+        y: 24
+        width: 24
+        height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fca229fc323f38a458b17eb60513034c
-      internalID: 291519025
+      spriteID: fd9dea4a12e86584ca92150dbffa7eef
+      internalID: 1570346325
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: level-select-outline
+      name: mirros_4
       rect:
         serializedVersion: 2
-        x: 95
-        y: 83
-        width: 50
-        height: 26
+        x: 0
+        y: 0
+        width: 24
+        height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 643e7c0f33659b94390885b02c8e54d8
-      internalID: -601633600
+      spriteID: a836d66854dae234ab1260b33c9d8d58
+      internalID: -1345260178
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: level-select_0
+      name: mirros_5
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1
-        width: 46
-        height: 46
+        x: 24
+        y: 0
+        width: 24
+        height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b614e166b775504fa7c5bbcb503cf27
-      internalID: -1419034250
+      spriteID: 97db1f6c2b866cd408f2bf35eefc2d92
+      internalID: -1867510463
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clues
+      name: mirros_6
       rect:
         serializedVersion: 2
-        x: 102
-        y: 47
-        width: 16
-        height: 5
+        x: 48
+        y: 0
+        width: 24
+        height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e4dacd78c54dfe4fa6e1cb12229bb96
-      internalID: 1868928764
+      spriteID: 42a1ea866c84f3542beb1e1079277745
+      internalID: 333845743
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: checkbox
+      name: mirros_7
       rect:
         serializedVersion: 2
-        x: 102
-        y: 35
-        width: 8
-        height: 9
+        x: 72
+        y: 0
+        width: 24
+        height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b35206a056614e4a9d08693dc103297
-      internalID: 1426216839
+      spriteID: 99c7ea4a7b320744d8b0dd53b54181da
+      internalID: 537598656
       vertices: []
       indices: 
       edges: []
@@ -322,15 +301,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      checkbox: 1426216839
-      circle: -627804305
-      clues: 1868928764
-      left-dash: 291519025
-      level-select-box: -138373918
-      level-select-outline: -601633600
-      level-select_0: -1419034250
-      tick: -1206546761
-      vertical-dash: -1146109555
+      mirros_0: -1204278649
+      mirros_1: -1080347526
+      mirros_2: -690788657
+      mirros_3: 1570346325
+      mirros_4: -1345260178
+      mirros_5: -1867510463
+      mirros_6: 333845743
+      mirros_7: 537598656
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
