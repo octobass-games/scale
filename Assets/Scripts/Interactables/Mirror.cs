@@ -70,7 +70,7 @@ public class Mirror : MonoBehaviour
             }
         }
 
-        if (foundMirror == false) {
+        if (foundMirror == false && Lights.Length > 0) {
             Lights[Lights.Length - 1].gameObject.SetActive(SendLightToOtherMirrors);
             Lights[Lights.Length - 1].FiredTo?.SetRecievingLight(SendLightToOtherMirrors);
         }
