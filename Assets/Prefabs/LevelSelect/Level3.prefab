@@ -53,9 +53,13 @@ MonoBehaviour:
   - {fileID: 3764422489292720887}
   - {fileID: 8616361022586785969}
   NextButton: {fileID: 0}
-  CluesHeading: {fileID: 0}
-  Clues: []
-  ClueTicks: []
+  CluesHeading: {fileID: 6757589384245988231}
+  Clues:
+  - {fileID: 1381570699729717557}
+  - {fileID: 6720222505801807734}
+  ClueTicks:
+  - {fileID: 2438845208089893458}
+  - {fileID: 8050132877309912081}
 --- !u!1 &1958259514100716047
 GameObject:
   m_ObjectHideFlags: 0
@@ -602,6 +606,16 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2397772476222429820, guid: 88765ad848ba64e4591659d8bef5f979, type: 3}
   m_PrefabInstance: {fileID: 2806144775751503103}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6720222505801807734 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8913304319707216777, guid: 88765ad848ba64e4591659d8bef5f979, type: 3}
+  m_PrefabInstance: {fileID: 2806144775751503103}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8050132877309912081 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5280115407955208430, guid: 88765ad848ba64e4591659d8bef5f979, type: 3}
+  m_PrefabInstance: {fileID: 2806144775751503103}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6282187535354474742
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -796,6 +810,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88765ad848ba64e4591659d8bef5f979, type: 3}
+--- !u!1 &1381570699729717557 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8913304319707216777, guid: 88765ad848ba64e4591659d8bef5f979, type: 3}
+  m_PrefabInstance: {fileID: 7538524633299956412}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2438845208089893458 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5280115407955208430, guid: 88765ad848ba64e4591659d8bef5f979, type: 3}
+  m_PrefabInstance: {fileID: 7538524633299956412}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5321180438173214912 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2397772476222429820, guid: 88765ad848ba64e4591659d8bef5f979, type: 3}

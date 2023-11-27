@@ -207,9 +207,13 @@ MonoBehaviour:
   - {fileID: 4446837417358726542}
   - {fileID: 8188963865696006014}
   NextButton: {fileID: 0}
-  CluesHeading: {fileID: 0}
-  Clues: []
-  ClueTicks: []
+  CluesHeading: {fileID: 2558154058097954436}
+  Clues:
+  - {fileID: 630687441633178293}
+  - {fileID: 7691348203178344956}
+  ClueTicks:
+  - {fileID: 4194101475883786706}
+  - {fileID: 6361896875493036699}
 --- !u!1 &5938202532626138633
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,6 +366,16 @@ PrefabInstance:
 --- !u!4 &3479552024941486089 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2397772476222429820, guid: 88765ad848ba64e4591659d8bef5f979, type: 3}
+  m_PrefabInstance: {fileID: 1229275429078219381}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6361896875493036699 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5280115407955208430, guid: 88765ad848ba64e4591659d8bef5f979, type: 3}
+  m_PrefabInstance: {fileID: 1229275429078219381}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7691348203178344956 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8913304319707216777, guid: 88765ad848ba64e4591659d8bef5f979, type: 3}
   m_PrefabInstance: {fileID: 1229275429078219381}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1348319254875313535
@@ -921,6 +935,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88765ad848ba64e4591659d8bef5f979, type: 3}
+--- !u!1 &630687441633178293 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8913304319707216777, guid: 88765ad848ba64e4591659d8bef5f979, type: 3}
+  m_PrefabInstance: {fileID: 8318937888855296316}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4194101475883786706 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5280115407955208430, guid: 88765ad848ba64e4591659d8bef5f979, type: 3}
+  m_PrefabInstance: {fileID: 8318937888855296316}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5923452541243249472 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2397772476222429820, guid: 88765ad848ba64e4591659d8bef5f979, type: 3}

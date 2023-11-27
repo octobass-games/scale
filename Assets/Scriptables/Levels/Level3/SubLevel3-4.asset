@@ -12,5 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db897bb17c947c84e84d757ac30d6279, type: 3}
   m_Name: SubLevel3-4
   m_EditorClassIdentifier: 
-  Scene: 
+  Scene: Level3-4
   Name: 
+  GnomePosition: {x: 0, y: 0}
+  GiantPosition: {x: 0, y: 0}
+  PositionGnome: 0
+  PositionGiant: 0
+  NextLevel: {fileID: 11400000, guid: e5e3794f516f92944a21eaeda47f9c30, type: 2}
