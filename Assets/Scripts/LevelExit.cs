@@ -1,9 +1,11 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelExit : MonoBehaviour
 {
     public SubLevel CurrentLevel;
     public bool CollectableFound;
+    public bool ClueFound;
 
     private SceneManager SceneManager;
     private SaveManager SaveManager;
@@ -18,9 +20,14 @@ public class LevelExit : MonoBehaviour
         CollectableFound = true;
     }
 
+    public void CollectClue()
+    {
+        ClueFound = true;
+    }
+
     public void MoveToNextLevel()
     {
-        SaveManager.SaveLevelProgress(SceneName, CollectableFound);
+        SaveManager.SaveLevelProgress(SceneName, CollectableFound, ClueFound);
         SceneManager.ChangeLevelScene(CurrentLevel.NextLevel);
     }
 
@@ -35,6 +42,7 @@ public class LevelExit : MonoBehaviour
         if (levelData != null )
         {
             CollectableFound = levelData.CollectableFound;
+            ClueFound = levelData.ClueFound;
         }
 
     }

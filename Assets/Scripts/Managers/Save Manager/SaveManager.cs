@@ -18,12 +18,13 @@ public class SaveManager : MonoBehaviour
         return SaveData.LevelData.Find(level => level.Name == levelName);
     }
 
-    public void SaveLevelProgress(string levelName, bool levelCollectableFound)
+    public void SaveLevelProgress(string levelName, bool levelCollectableFound, bool levelClueFound)
     {
         var level = SaveData.LevelData.Find(level => level.Name == levelName);
         
         level.IsComplete = true;
         level.CollectableFound = levelCollectableFound;
+        level.ClueFound = levelClueFound;
         
         var json = JsonUtility.ToJson(SaveData);
 
@@ -97,23 +98,23 @@ public class SaveManager : MonoBehaviour
         return new SaveData(
             new List<LevelData>()
                 {
-                    new LevelData("Level1Village", false, "", false),
-                    new LevelData("Level2-1", false, "pineapple", false),
-                    new LevelData("Level2-2", false, "", false),
-                    new LevelData("Level2-3", false, "", false),
-                    new LevelData("Level2-4", false, "", false),
-                    new LevelData("Level3-1", false, "", false),
-                    new LevelData("Level3-2", false, "", false),
-                    new LevelData("Level3-3", false, "", false),
-                    new LevelData("Level3-4", false, "", false),
-                    new LevelData("Level4-1", false, "", false),
-                    new LevelData("Level4-2", false, "", false),
-                    new LevelData("Level4-3", false, "", false),
-                    new LevelData("Level4-4", false, "", false),
-                    new LevelData("Level5-1", false, "", false),
-                    new LevelData("Level5-2", false, "", false),
-                    new LevelData("Level5-3", false, "", false),
-                    new LevelData("Level5-4", false, "", false),
+                    new LevelData("Level1Village", false, "", false, "Clue-1", false),
+                    new LevelData("Level2-1", false, "pineapple", false, null, false),
+                    new LevelData("Level2-2", false, "", false, "Clue-2", false),
+                    new LevelData("Level2-3", false, "", false, null, false),
+                    new LevelData("Level2-4", false, "", false, "Clue-3", false),
+                    new LevelData("Level3-1", false, "", false, "Clue-4", false),
+                    new LevelData("Level3-2", false, "", false, "Clue-5", false),
+                    new LevelData("Level3-3", false, "", false, null, false),
+                    new LevelData("Level3-4", false, "", false, null, false),
+                    new LevelData("Level4-1", false, "", false, "Clue-6", false),
+                    new LevelData("Level4-2", false, "", false, null, false),
+                    new LevelData("Level4-3", false, "", false, "Clue-7", false),
+                    new LevelData("Level4-4", false, "", false, "Clue-8", false),
+                    new LevelData("Level5-1", false, "", false, null, false),
+                    new LevelData("Level5-2", false, "", false, null, false),
+                    new LevelData("Level5-3", false, "", false, "Clue-9", false),
+                    new LevelData("Level5-4", false, "", false, "Clue-10", false),
                 }
             );
     }
