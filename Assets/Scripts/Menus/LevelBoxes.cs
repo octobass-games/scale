@@ -11,11 +11,9 @@ public class LevelBoxes : MonoBehaviour
     private int index = 0;
     private bool ShowNext = false;
     public Clickable NextButton;
-
-
-    void Start()
-    {
-    }
+    public GameObject CluesHeading;
+    public List<GameObject> Clues;
+    public List<GameObject> ClueTicks;
 
     public void LoadBoxes()
     {
@@ -70,5 +68,35 @@ public class LevelBoxes : MonoBehaviour
         boxes.ForEach(box  => box.gameObject.SetActive(false));
         index = 0;
         gameObject.SetActive(false);
+    }
+
+    void Start()
+    {
+        for (int i = 0; i < boxes.Count; i++)
+        {
+            var levelName = boxes[i].LevelName;
+            var levelData = SaveManager.GetLevelData(levelName);
+
+            if (levelData.Clue != "")
+            {
+                var clue = Clues.Find(clue => !clue.activeSelf);
+
+                if (clue != null)
+                {
+                    CluesHeading.SetActive(true);
+                    clue.gameObject.SetActive(true);
+                }
+
+                if (levelData.ClueFound)
+                {
+                    var clueTick = ClueTicks.Find(clueTick => !clueTick.activeSelf);
+
+                    if (clueTick != null)
+                    {
+                        clueTick.gameObject.SetActive(true);
+                    }
+                }
+            }
+        }
     }
 }
