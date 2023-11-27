@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class LevelBoxes : MonoBehaviour
 {
@@ -36,6 +35,7 @@ public class LevelBoxes : MonoBehaviour
         List<LevelData> levelsData = saveData.LevelData;
 
         LevelData nextLevel = levelsData.Find(level => !level.IsComplete);
+
 
         var levelData = SaveManager.GetLevelData(boxes[index].LevelName);
 
@@ -72,9 +72,12 @@ public class LevelBoxes : MonoBehaviour
 
     void Start()
     {
+        SaveManager = SaveManager != null ? SaveManager : FindObjectOfType<SaveManager>();
+
         for (int i = 0; i < boxes.Count; i++)
         {
             var levelName = boxes[i].LevelName;
+            Debug.Log($"{boxes[i].LevelName}");
             var levelData = SaveManager.GetLevelData(levelName);
 
             if (levelData.Clue != "")
