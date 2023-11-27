@@ -57,6 +57,10 @@ public class Interactable : MonoBehaviour
                                 StartCoroutine(Interact(activeInteracter));
                             }
                         }
+                        else
+                        {
+                            OnInvalidInteraction.Invoke(activeInteracter.gameObject);
+                        }
                     }
                     else
                     {

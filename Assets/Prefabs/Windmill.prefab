@@ -724,6 +724,7 @@ GameObject:
   - component: {fileID: 3065525457585782162}
   - component: {fileID: 204175703814964995}
   - component: {fileID: 9049406544768611038}
+  - component: {fileID: 1336877227732240742}
   m_Layer: 0
   m_Name: Windmill
   m_TagString: Untagged
@@ -821,8 +822,22 @@ MonoBehaviour:
         m_CallState: 2
   OnInvalidInteraction:
     m_PersistentCalls:
-      m_Calls: []
-  Conditions: []
+      m_Calls:
+      - m_Target: {fileID: 3065525457585782162}
+        m_TargetAssemblyTypeName: ErrorDialogue, Assembly-CSharp
+        m_MethodName: ShowNoUseDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  Conditions:
+  - {fileID: 0}
+  BeforeValidInteractionDialogue: {fileID: 0}
 --- !u!61 &6981768940585018429
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -920,6 +935,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent: event:/SFX/fanrotate
   is3D: 0
+--- !u!114 &1336877227732240742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7138958112772590305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e2afde8f3bdc043b9329761ab07907, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Windmill: {fileID: 2305585565667105944}
 --- !u!1 &7412639156237124021
 GameObject:
   m_ObjectHideFlags: 0
