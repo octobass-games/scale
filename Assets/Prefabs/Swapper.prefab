@@ -265,6 +265,7 @@ GameObject:
   - component: {fileID: 8748941543626332936}
   - component: {fileID: 2830399308951281277}
   - component: {fileID: 7723307972804296498}
+  - component: {fileID: 207693852913030741}
   m_Layer: 0
   m_Name: Swapper
   m_TagString: Untagged
@@ -412,8 +413,22 @@ MonoBehaviour:
         m_CallState: 2
   OnInvalidInteraction:
     m_PersistentCalls:
-      m_Calls: []
-  Conditions: []
+      m_Calls:
+      - m_Target: {fileID: 3624099808179256818}
+        m_TargetAssemblyTypeName: ErrorDialogue, Assembly-CSharp
+        m_MethodName: ShowNoUseDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  Conditions:
+  - {fileID: 207693852913030741}
+  BeforeValidInteractionDialogue: {fileID: 0}
 --- !u!114 &2830399308951281277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -430,6 +445,7 @@ MonoBehaviour:
   InteractingSprite: {fileID: 4985497087708528370}
   Lit: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   Unlit: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  IsProximityBased: 1
 --- !u!114 &7723307972804296498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -443,6 +459,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fmodEvent: event:/SFX/teleport sfx
+  is3D: 0
+--- !u!114 &207693852913030741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4102315630050365001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d62af57de50ad1740a079ba044ddd794, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PositionSwapper: {fileID: 3775862403409295542}
 --- !u!1 &5386674251385768671
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,12 +604,15 @@ MonoBehaviour:
   GnomeError:
   - Name: Gnome
     Text: Why wont it work!
+    animatorTrigger: 
   GiantError:
   - Name: Giant
     Text: It doesn't seem to do anything
+    animatorTrigger: 
   DefaultError:
   - Name: Narrator
     Text: Looks like theres no one at the other end to swap with.
+    animatorTrigger: 
   OnDialogueEnd:
     m_PersistentCalls:
       m_Calls: []

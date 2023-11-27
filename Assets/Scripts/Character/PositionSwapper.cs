@@ -19,14 +19,13 @@ public class PositionSwapper : MonoBehaviour
         ContactFilter.useLayerMask = true;
     }
 
+    public bool IsReadyToSwap()
+    {
+        return Interacter != null && otherSwapper.Interacter != null;
+    }
+
     public void TrySwapPeople()
     {
-        if (otherSwapper.Interacter == null)
-        {
-            ErrorDialogue.ShowNoUseDialogue();
-            return;
-        }
-
         Animator.SetTrigger("swap");
     }
 
