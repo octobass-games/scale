@@ -3,6 +3,7 @@ using UnityEngine;
 public class Dynamite : MonoBehaviour
 {
     public float SecondsUntilExplosion;
+    public string fmodEvent;
 
     private float Timer;
     private bool IsTimerPaused = true;
@@ -20,6 +21,7 @@ public class Dynamite : MonoBehaviour
     public void Explode()
     {
         GameObject.FindGameObjectWithTag(TagComparer.GNOME).GetComponent<Inventory>().RemoveItem(this.gameObject);
+        FMODUnity.RuntimeManager.PlayOneShot(fmodEvent);
 
         GetComponent<SpriteRenderer>().enabled = true;
         GetComponent<Pickupable>().enabled = true;
