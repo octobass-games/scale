@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 322662390498670967}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 128.9258, y: 29.75961, z: -48.717808}
+  m_LocalPosition: {x: 128.9258, y: 29.75961, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -214,9 +214,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bef313eb4a65384d9df5826b71ef47d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speaker: Gnome
-  Dialogue: Cat!
   DialogueRenderer: {fileID: 0}
+  GnomeDialogue: 
+  GiantDialogue: 
 --- !u!1 &8192106346160055697
 GameObject:
   m_ObjectHideFlags: 0
