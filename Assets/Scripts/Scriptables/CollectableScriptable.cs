@@ -7,4 +7,5 @@ public class CollectableScriptable : ScriptableObject
     public Sprite ItemInGame;
     public Sprite ItemInGameWithOutline;
     public Sprite ItemBig;
+    public Sprite ItemBigOutline;
 }
