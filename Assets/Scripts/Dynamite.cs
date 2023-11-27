@@ -30,6 +30,7 @@ public class Dynamite : MonoBehaviour
     public void Explode()
     {
         GameObject.FindGameObjectWithTag(TagComparer.GNOME).GetComponent<Inventory>().RemoveItem(this.gameObject);
+        instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         FMODUnity.RuntimeManager.PlayOneShot(explosionFmodEvent);
 
         GetComponent<SpriteRenderer>().enabled = true;
@@ -46,7 +47,7 @@ public class Dynamite : MonoBehaviour
         {
             Timer += Time.deltaTime;
 
-            if(isTimerSoundPlaying == false)
+            if (isTimerSoundPlaying == false)
             {
                 instance.start();
                 isTimerSoundPlaying = true;
