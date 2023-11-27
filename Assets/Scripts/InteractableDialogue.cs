@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class InteractableDialogue : MonoBehaviour
 {
-    public string Speaker;
-    public string Dialogue;
     public DialogueRenderer DialogueRenderer;
+    public string GnomeDialogue;
+    public string GiantDialogue;
 
-    private DialogueController DialogueController;
+    private DialogueController GnomeDialogueController;
+    private DialogueController GiantDialogueController;
     private bool IsDialogueFinished;
 
     void Awake()
     {
-        DialogueController = new DialogueController(new List<DialogueItem> { new DialogueItem(Speaker, Dialogue) }, null, DialogueRenderer);
+        GnomeDialogueController = new DialogueController(new List<DialogueItem> { new DialogueItem("Gnome", GnomeDialogue) }, null, DialogueRenderer);
+        GiantDialogueController = new DialogueController(new List<DialogueItem> { new DialogueItem("Giant", GiantDialogue) }, null, DialogueRenderer);
     }
 
     public bool IsNotComplete()
@@ -23,6 +25,13 @@ public class InteractableDialogue : MonoBehaviour
 
     public bool Speak()
     {
-        return DialogueController.HandleProgressDialogue();
+        if (TagComparer.IsGnome(FindObjectOfType<CharacterSwitcher>().ActiveCharacterTag))
+        {
+            return GnomeDialogueController.HandleProgressDialogue();
+        }
+        else
+        {
+            return GiantDialogueController.HandleProgressDialogue();
+        }
     }
 }
