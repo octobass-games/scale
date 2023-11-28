@@ -7,15 +7,20 @@ public class InteractableDialogue : MonoBehaviour
     public DialogueRenderer DialogueRenderer;
     public string GnomeDialogue;
     public string GiantDialogue;
+    public string ActorName;
+    public string ActorDialogue;
+    public bool IsActorDialogue;
 
     private DialogueController GnomeDialogueController;
     private DialogueController GiantDialogueController;
+    private DialogueController ActorDialogueController;
     private bool IsDialogueFinished;
 
     void Awake()
     {
         GnomeDialogueController = new DialogueController(new List<DialogueItem> { new DialogueItem("Gnome", GnomeDialogue) }, null, DialogueRenderer);
         GiantDialogueController = new DialogueController(new List<DialogueItem> { new DialogueItem("Giant", GiantDialogue) }, null, DialogueRenderer);
+        ActorDialogueController = new DialogueController(new List<DialogueItem> { new DialogueItem(ActorName, ActorDialogue) }, null, DialogueRenderer);
     }
 
     public bool IsNotComplete()
@@ -25,7 +30,11 @@ public class InteractableDialogue : MonoBehaviour
 
     public bool Speak()
     {
-        if (TagComparer.IsGnome(FindObjectOfType<CharacterSwitcher>().ActiveCharacterTag))
+        if (IsActorDialogue)
+        {
+            return ActorDialogueController.HandleProgressDialogue();
+        }
+        else if (TagComparer.IsGnome(FindObjectOfType<CharacterSwitcher>().ActiveCharacterTag))
         {
             return GnomeDialogueController.HandleProgressDialogue();
         }
