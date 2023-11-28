@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fmodEvent: event:/SFX/run/grass step giant
+  is3D: 0
 --- !u!1 &1889478358655474679
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,7 +279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Rb2d: {fileID: 8911376220178110698}
-  HorizontalSpeed: 100
+  HorizontalSpeed: 125
   LayerMask:
     serializedVersion: 2
     m_Bits: 72
