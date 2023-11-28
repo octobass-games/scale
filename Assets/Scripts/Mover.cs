@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Mover : MonoBehaviour
@@ -98,5 +99,11 @@ public class Mover : MonoBehaviour
         {
             Passenger = null;
         }
+    }
+
+    void OnDestroy()
+    {
+        instance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        instance.release();    
     }
 }
