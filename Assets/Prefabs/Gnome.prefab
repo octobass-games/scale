@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Rb2d: {fileID: 6939635167091054494}
-  HorizontalSpeed: 100
+  HorizontalSpeed: 150
   LayerMask:
     serializedVersion: 2
     m_Bits: 72
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d29be39c950dd2b4784573b4edfc43c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Items: []
+  Item: {fileID: 0}
 --- !u!1 &2135049305025453516
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,6 +313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fmodEvent: event:/SFX/run/grass step gnome
+  is3D: 0
 --- !u!1 &6556584526686923259
 GameObject:
   m_ObjectHideFlags: 0
