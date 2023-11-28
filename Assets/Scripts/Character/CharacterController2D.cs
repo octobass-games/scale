@@ -32,6 +32,7 @@ public class CharacterController2D : MonoBehaviour
     public List<Vector2> VelocityModifiers;
     private Vector2 ExternalDisplacement;
     private const int StepHeight = 1;
+    private bool FacingRight;
 
     public void ApplyExternalDisplacement(Vector2 displacement)
     {
@@ -67,9 +68,9 @@ public class CharacterController2D : MonoBehaviour
         return !ProcessInputs;
     }
 
-    public bool IsTravellingRight()
+    public bool IsFacingRight()
     {
-        return PreviousVelocity.x >= 0;
+        return FacingRight;
     }
 
     void Awake()
@@ -88,6 +89,15 @@ public class CharacterController2D : MonoBehaviour
         {
             HorizontalMovement = Input.GetAxisRaw("Horizontal");
             Jumping = CanJump && (Input.GetAxisRaw("Vertical") > 0 || Input.GetAxisRaw("Jump") > 0);
+
+            if (HorizontalMovement > 0)
+            {
+                FacingRight = true;
+            }
+            else if (HorizontalMovement < 0)
+            {
+                FacingRight = false;
+            }
         }
     }
 
@@ -150,7 +160,6 @@ public class CharacterController2D : MonoBehaviour
 
 
         Velocity -= new Vector2(0, GravityModifier) * new Vector2(0, Gravity) * Time.fixedDeltaTime;
-
     }
 
     private void UpdateAnimations()

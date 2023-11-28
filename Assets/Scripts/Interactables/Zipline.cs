@@ -20,7 +20,7 @@ public class Zipline : MonoBehaviour
         RiderCharacterController = rider.GetComponent<CharacterController2D>();
         RiderAnimator = rider.GetComponentInChildren<Animator>();
 
-        TargetEnd = RiderCharacterController.IsTravellingRight() ? ZiplineRightEnd : ZiplineLeftEnd;
+        TargetEnd = RiderCharacterController.IsFacingRight() ? ZiplineRightEnd : ZiplineLeftEnd;
     }
 
     void FixedUpdate()
