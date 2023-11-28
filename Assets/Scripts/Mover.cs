@@ -10,12 +10,12 @@ public class Mover : MonoBehaviour
     public float Speed;
     public Collider2D SafetyChecker;
     public StudioEventEmitter SoundEmitter;
+    public bool IsMoving;
 
     public GameObject Passenger;
     private Vector3 PositionAVector;
     private Vector3 PositionBVector;
     private Vector3 TargetPositionVector;
-    private bool IsMoving;
 
     public void Transport()
     {

@@ -6,8 +6,7 @@ public static class Rigidbody2DExtension
     {
         float displacement = Mathf.Abs(distance);
         int count = source.Cast(direction.normalized, filter, RaycastResults, displacement + 0.01f);
-
-        bool test = false;
+        bool stepping = false;
 
         for (int i = 0; i < count; i++)
         {
@@ -16,12 +15,16 @@ public static class Rigidbody2DExtension
 
             if (hit.normal.x != 0 && hit.collider.bounds.size.y <= stepHeight)
             {
-                Vector3 closestPosition = hit.collider.bounds.ClosestPoint(hit.point + Vector2.up);
+                var mover = hit.collider.gameObject.GetComponentInParent<Mover>();
 
-                Debug.Log(closestPosition);
+                if (mover == null || !mover.IsMoving)
+                {
+                    Vector3 closestPosition = hit.collider.bounds.ClosestPoint(hit.point + Vector2.up);
 
-                source.position = closestPosition + new Vector3(0, source.GetComponent<Collider2D>().bounds.size.y / 2, 0);
-                test = true;
+                    source.position = closestPosition + new Vector3(0, source.GetComponent<Collider2D>().bounds.size.y / 2, 0);
+        
+                    stepping = true;
+                }
             }
             else
             {
@@ -29,7 +32,7 @@ public static class Rigidbody2DExtension
             }
         }
 
-        if (!test)
+        if (!stepping)
         {
             source.position += displacement * direction.normalized;
         }
