@@ -15,6 +15,7 @@ public class CharacterController2D : MonoBehaviour
     public SpriteRenderer SpriteRenderer;
     public bool CanJump;
     public float GravityModifier = 1.0f;
+    public Collider2D Collider;
 
     private float HorizontalMovement;
     private bool ProcessInputs = true;
@@ -205,7 +206,7 @@ public class CharacterController2D : MonoBehaviour
             }
 
 
-            int RaycastResultCount = Rb2d.SafeMove(Vector2.up * displacement.y, displacement.y, RaycastResults, ContactFilter, 0);
+            int RaycastResultCount = Rb2d.SafeMove(Vector2.up * displacement.y, displacement.y, RaycastResults, ContactFilter, Collider, 0);
 
             for (int i = 0; i < RaycastResultCount; i++)
             {
@@ -228,7 +229,7 @@ public class CharacterController2D : MonoBehaviour
                 IsGrounded = false;
             }
 
-            Rb2d.SafeMove(Vector2.right * displacement.x, displacement.x, RaycastResults, ContactFilter, 1);
+            Rb2d.SafeMove(Vector2.right * displacement.x, displacement.x, RaycastResults, ContactFilter, Collider, 1);
 
             int a = Rb2d.OverlapCollider(ContactFilter, results);
 

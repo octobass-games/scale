@@ -2,7 +2,7 @@ using UnityEngine;
 
 public static class Rigidbody2DExtension
 {
-    public static int SafeMove(this Rigidbody2D source, Vector2 direction, float distance, RaycastHit2D[] RaycastResults, ContactFilter2D filter, float stepHeight)
+    public static int SafeMove(this Rigidbody2D source, Vector2 direction, float distance, RaycastHit2D[] RaycastResults, ContactFilter2D filter, Collider2D collider, float stepHeight)
     {
         float displacement = Mathf.Abs(distance);
         int count = source.Cast(direction.normalized, filter, RaycastResults, displacement + 0.01f);
@@ -15,9 +15,12 @@ public static class Rigidbody2DExtension
 
             if (hit.normal.x != 0 && hit.collider.bounds.size.y <= stepHeight)
             {
-                var mover = hit.collider.gameObject.GetComponentInParent<Mover>();
+                var colliderBottom = hit.collider.bounds.center.y - hit.collider.bounds.extents.y;
+                var bounds = collider.bounds;
 
-                if (mover == null || !mover.IsMoving)
+                var diff = Mathf.Abs(colliderBottom - (bounds.center.y - bounds.extents.y));
+
+                if (diff <= stepHeight)
                 {
                     Vector3 closestPosition = hit.collider.bounds.ClosestPoint(hit.point + Vector2.up);
 

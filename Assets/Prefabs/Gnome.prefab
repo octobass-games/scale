@@ -62,6 +62,7 @@ MonoBehaviour:
   SpriteRenderer: {fileID: 4917509284343875798}
   CanJump: 1
   GravityModifier: 1
+  Collider: {fileID: 2300249598417442213}
   VelocityModifiers: []
 --- !u!61 &2300249598417442213
 BoxCollider2D:
