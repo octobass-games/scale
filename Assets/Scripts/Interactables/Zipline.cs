@@ -1,3 +1,4 @@
+using FMODUnity;
 using UnityEngine;
 
 public class Zipline : MonoBehaviour
@@ -7,18 +8,12 @@ public class Zipline : MonoBehaviour
     public Transform ZiplineLine;
     public float ZiplineSpeed = 5f;
     public bool IsHorizontal = true;
-    public string fmodEvent;
+    public StudioEventEmitter SoundEmitter;
 
     private Transform TargetEnd;
     private CharacterController2D RiderCharacterController;
     private Animator RiderAnimator;
     private bool Riding;
-    private FMOD.Studio.EventInstance instance;
-
-    private void Start()
-    {
-        instance = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
-    }
 
     public void Ride(GameObject rider)
     {
@@ -54,7 +49,7 @@ public class Zipline : MonoBehaviour
         RiderCharacterController.Freeze();
         RiderCharacterController.GravityModifier = 0f;
         SetYAttachmentPoint();
-        instance.start();
+        SoundEmitter.Play();
     }
 
     private void UnlockRiderFromZipline()
@@ -64,7 +59,7 @@ public class Zipline : MonoBehaviour
         RiderCharacterController.GravityModifier = 1f;
         RiderAnimator.SetBool("isZipping", false);
         RiderCharacterController = null;
-        instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        SoundEmitter.Stop();
     }
 
     private void MoveRider()

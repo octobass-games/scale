@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4975366610703047552}
   - component: {fileID: 8142983983138096947}
   - component: {fileID: 9211649263206521844}
+  - component: {fileID: 1256968066815241330}
   m_Layer: 0
   m_Name: Zipline
   m_TagString: Untagged
@@ -99,7 +100,7 @@ MonoBehaviour:
   ZiplineLine: {fileID: 471482919022585435}
   ZiplineSpeed: 5
   IsHorizontal: 1
-  fmodEvent: event:/SFX/zipline
+  SoundEmitter: {fileID: 1256968066815241330}
 --- !u!114 &9211649263206521844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,6 +137,38 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   Conditions: []
+  BeforeValidInteractionDialogue: {fileID: 0}
+--- !u!114 &1256968066815241330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4724163672554399869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1777825182
+      Data2: 1149501694
+      Data3: -1231846724
+      Data4: 215372186
+    Path: event:/SFX/zipline
+  Event: 
+  PlayEvent: 0
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &5907572609323871821
 GameObject:
   m_ObjectHideFlags: 0
