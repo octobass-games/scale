@@ -1,3 +1,4 @@
+using FMODUnity;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -8,6 +9,7 @@ public class Mover : MonoBehaviour
     public Rigidbody2D Rb2d;
     public float Speed;
     public Collider2D SafetyChecker;
+    public StudioEventEmitter SoundEmitter;
 
     public GameObject Passenger;
     private Vector3 PositionAVector;
@@ -15,21 +17,11 @@ public class Mover : MonoBehaviour
     private Vector3 TargetPositionVector;
     private bool IsMoving;
 
-    private FMOD.Studio.EventInstance instance;
-    public string fmodEvent;
-
-
-    private void Start()
-    {
-        instance = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
-        FMODUnity.RuntimeManager.AttachInstanceToGameObject(instance, GetComponent<Transform>(), GetComponent<Rigidbody2D>());
-    }
-
     public void Transport()
     {
         TargetPositionVector = TargetPositionVector == PositionAVector ? PositionBVector : PositionAVector;
         IsMoving = true;
-        instance.start();
+        SoundEmitter.Play();
     }
 
     public void StopTransport()
@@ -51,7 +43,7 @@ public class Mover : MonoBehaviour
             if (transform.position.Approximately(TargetPositionVector))
             {
                 IsMoving = false;
-                instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                SoundEmitter.Stop();
             }
             else
             {
@@ -99,11 +91,5 @@ public class Mover : MonoBehaviour
         {
             Passenger = null;
         }
-    }
-
-    void OnDestroy()
-    {
-        instance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-        instance.release();    
     }
 }

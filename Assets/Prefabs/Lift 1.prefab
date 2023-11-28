@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 3142191563862785077}
   - component: {fileID: 910993750041876241}
   - component: {fileID: 1355916522948597440}
+  - component: {fileID: 1975814802798485910}
   m_Layer: 6
   m_Name: Lift 1
   m_TagString: Untagged
@@ -214,8 +215,8 @@ MonoBehaviour:
   Rb2d: {fileID: 3142191563862785077}
   Speed: 100
   SafetyChecker: {fileID: 7444606668891242786}
+  SoundEmitter: {fileID: 1975814802798485910}
   Passenger: {fileID: 0}
-  fmodEvent: event:/SFX/elevator
 --- !u!61 &1355916522948597440
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -261,6 +262,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 48, y: 120}
   m_EdgeRadius: 0
+--- !u!114 &1975814802798485910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2525232373466248899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1256018547
+      Data2: 1085273614
+      Data3: 934880640
+      Data4: 310537879
+    Path: event:/SFX/elevator
+  Event: 
+  PlayEvent: 0
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 900
 --- !u!1 &3271178975297079398
 GameObject:
   m_ObjectHideFlags: 0
@@ -478,7 +510,7 @@ Transform:
   m_GameObject: {fileID: 7857900335765767164}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 222.72855, z: 0}
+  m_LocalPosition: {x: 0, y: 672.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
