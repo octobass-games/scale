@@ -14,6 +14,7 @@ public class CharacterSwitcher : MonoBehaviour
     public Material UnlitMaterial;
     public string ActiveCharacterTag = TagComparer.GNOME;
     public bool EnableSwitching = true;
+    public CameraDirector CameraDirector;
 
     private CharacterController2D GiantCharacterController;
     private CharacterController2D GnomeCharacterController;
@@ -83,7 +84,16 @@ public class CharacterSwitcher : MonoBehaviour
     {
         GnomeCharacterController.Thaw();
         GiantCharacterController.Freeze();
-        CinemachineVirtualCamera.Follow = Gnome.transform;
+
+        if (CameraDirector != null)
+        {
+            CameraDirector.Watch(Gnome);
+        }
+        else
+        {
+            CinemachineVirtualCamera.Follow = Gnome.transform;
+        }
+
         GnomeImage.color = new Color(Color.white.r, Color.white.g, Color.white.b, 1.0f);
         GiantImage.color = new Color(Color.white.r, Color.white.g, Color.white.b, 0.5f);
         ActiveCharacterTag = TagComparer.GNOME;
@@ -97,7 +107,16 @@ public class CharacterSwitcher : MonoBehaviour
     {
         GnomeCharacterController.Freeze();
         GiantCharacterController.Thaw();
-        CinemachineVirtualCamera.Follow = Giant.transform;
+
+        if (CameraDirector != null)
+        {
+            CameraDirector.Watch(Giant);
+        }
+        else
+        {
+            CinemachineVirtualCamera.Follow = Giant.transform;
+        }
+
         GnomeImage.color = new Color(Color.white.r, Color.white.g, Color.white.b, 0.5f);
         GiantImage.color = new Color(Color.white.r, Color.white.g, Color.white.b, 1.0f);
         ActiveCharacterTag = TagComparer.GIANT;
