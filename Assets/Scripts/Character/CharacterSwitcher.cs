@@ -26,12 +26,13 @@ public class CharacterSwitcher : MonoBehaviour
     {
         EnableSwitching = e;
     }
+
     void Start()
     {
         GiantCharacterController = Giant.GetComponent<CharacterController2D>();
         GnomeCharacterController = Gnome.GetComponent<CharacterController2D>();
-        giantAudio = GameObject.Find("GiantAudioListener");
-        gnomeAudio = GameObject.Find("GnomeAudioListener"); 
+        giantAudio = giantAudio ?? GameObject.Find("GiantAudioListener");
+        gnomeAudio = gnomeAudio ?? GameObject.Find("GnomeAudioListener");
 
         if (FirstActiveCharacter == Giant)
         {
