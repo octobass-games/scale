@@ -50,6 +50,12 @@ public class Windmill : MonoBehaviour
         instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
+    void OnDestroy()
+    {
+        instance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        instance.release();    
+    }
+
     public void Toggle()
     {
         On = !On;
