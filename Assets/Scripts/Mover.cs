@@ -17,6 +17,18 @@ public class Mover : MonoBehaviour
     private Vector3 PositionBVector;
     private Vector3 TargetPositionVector;
 
+    public void UpdatePositionA(Transform transform)
+    {
+        var previousPositionAVector = PositionAVector;
+        
+        PositionAVector = transform.position;
+
+        if (TargetPositionVector.Approximately(previousPositionAVector))
+        {
+            TargetPositionVector = PositionAVector;    
+        }   
+    }
+
     public void Transport()
     {
         TargetPositionVector = TargetPositionVector == PositionAVector ? PositionBVector : PositionAVector;
