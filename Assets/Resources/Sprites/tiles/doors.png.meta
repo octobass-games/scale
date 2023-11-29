@@ -236,7 +236,7 @@ TextureImporter:
         width: 48
         height: 120
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -244,6 +244,27 @@ TextureImporter:
       bones: []
       spriteID: 26627e85a1108c846a08f0598498b344
       internalID: -1952022714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mine-gate
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 0
+        width: 11
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a86662f09175adf45bc56bfe96362116
+      internalID: 667898635
       vertices: []
       indices: 
       edges: []
@@ -267,6 +288,7 @@ TextureImporter:
       gate: -502675980
       gate-1: 816388292
       mine-door: -1952022714
+      mine-gate: 667898635
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
