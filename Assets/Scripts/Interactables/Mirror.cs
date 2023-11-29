@@ -11,6 +11,7 @@ public class Mirror : MonoBehaviour
     public bool On = true;
     public bool RecievingLight = true;
 
+
     private MirrorManager manager;
     void Start()
     {
@@ -28,7 +29,7 @@ public class Mirror : MonoBehaviour
     {
         On = true;
         manager.ApplyLights();
-
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/reflector enable");
     }
     public void DisableMirror()
     {
