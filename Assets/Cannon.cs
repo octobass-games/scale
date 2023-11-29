@@ -24,7 +24,6 @@ public class Cannon : MonoBehaviour
 
     public void Land()
     {
-            Debug.Log("Hello");
         if (IsFiringGnome)
         {
 
@@ -70,8 +69,6 @@ public class Cannon : MonoBehaviour
                 IsFiring = true;
                 IsFiringGnome = true;
 
-                Debug.Log($"Is firing gnome: {IsFiringGnome}");
-
                 VirtualCamera.Follow = Projectile.transform;
             }
             else
@@ -89,12 +86,6 @@ public class Cannon : MonoBehaviour
 
                     IsFiring = true;
                     IsFiringGnome = false;
-
-                    Debug.Log(IsFiringGnome);
-                }
-                else
-                {
-                    Debug.Log("No cannonball");
                 }
             }
         }
