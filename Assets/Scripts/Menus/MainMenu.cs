@@ -6,6 +6,7 @@ public class MainMenu : MonoBehaviour
     public SaveManager SaveManager;
     public SceneManager SceneManager;
     public GameObject ContinueButton;
+    public GameObject QuitButton;
     public Animator BackgroundAnimator;
 
     public void NewGame()
@@ -39,6 +40,11 @@ public class MainMenu : MonoBehaviour
         else
         {
             ContinueButton.SetActive(false);
+        }
+
+        if (Application.platform == RuntimePlatform.WebGLPlayer)
+        {
+            QuitButton.SetActive(false);
         }
     }
 }

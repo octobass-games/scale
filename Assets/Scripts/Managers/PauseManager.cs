@@ -4,6 +4,7 @@ public class PauseManager : MonoBehaviour
 {
     public GameObject PauseMenu;
     public GameObject ControlsMenu;
+    public GameObject QuitButton;
 
     private SceneManager SceneManager;
     private bool IsPaused;
@@ -43,7 +44,12 @@ public class PauseManager : MonoBehaviour
 
     void Awake()
     {
-        SceneManager = FindObjectOfType<SceneManager>();    
+        SceneManager = FindObjectOfType<SceneManager>();
+
+        if (Application.platform == RuntimePlatform.WebGLPlayer)
+        {
+            QuitButton.SetActive(false);
+        }
     }
 
     void Update()
