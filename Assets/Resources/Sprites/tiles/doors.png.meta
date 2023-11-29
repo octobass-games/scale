@@ -278,7 +278,7 @@ TextureImporter:
         width: 120
         height: 62
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -286,6 +286,27 @@ TextureImporter:
       bones: []
       spriteID: 5e9521e8ea48d8a4ea84163473a24146
       internalID: -1584878530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: breakable-wall
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 24
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c075607103f3fda4fb2fc5f47b812c15
+      internalID: 834681360
       vertices: []
       indices: 
       edges: []
@@ -303,6 +324,7 @@ TextureImporter:
     - texture: {fileID: 2800000, guid: d6368a06baaa99941bf6c65c85f5cd48, type: 3}
       name: _NormalMap
     nameFileIdTable:
+      breakable-wall: 834681360
       bridge: -1584878530
       doors_0: 1383833198
       doors_1: 1552562355
