@@ -11,11 +11,13 @@ public class Mover : MonoBehaviour
     public Collider2D SafetyChecker;
     public StudioEventEmitter SoundEmitter;
     public bool IsMoving;
+    public Collider2D Base;
 
     public GameObject Passenger;
     private Vector3 PositionAVector;
     private Vector3 PositionBVector;
     private Vector3 TargetPositionVector;
+    private Collider2D[] BaseCollisions = new Collider2D[5];
 
     public void UpdatePositionA(Transform transform)
     {
@@ -83,6 +85,18 @@ public class Mover : MonoBehaviour
                     if (Passenger != null && displacement.y < 0 || (displacement.y == 0 && displacement.x != 0))
                     {
                         Passenger.GetComponent<CharacterController2D>().ApplyExternalDisplacement(displacement);
+                    }
+                }
+                else
+                {
+                    var baseCollisionCount = Base.OverlapCollider(new ContactFilter2D(), BaseCollisions);
+
+                    for (int i = 0; i < baseCollisionCount; i++)
+                    {
+                        if (TagComparer.IsPlayer(BaseCollisions[i].tag))
+                        {
+                            BaseCollisions[i].GetComponent<CharacterController2D>().ForcePosition(transform.position);
+                        }
                     }
                 }
             }
