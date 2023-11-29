@@ -24,8 +24,10 @@ public class Cannon : MonoBehaviour
 
     public void Land()
     {
+            Debug.Log("Hello");
         if (IsFiringGnome)
         {
+
             Interacter.GetComponent<CharacterController2D>().Thaw();
             Interacter.GetComponentInChildren<SpriteRenderer>().enabled = true;
             CharacterSwitcher.SetEnableSwithing(true);
@@ -68,6 +70,8 @@ public class Cannon : MonoBehaviour
                 IsFiring = true;
                 IsFiringGnome = true;
 
+                Debug.Log($"Is firing gnome: {IsFiringGnome}");
+
                 VirtualCamera.Follow = Projectile.transform;
             }
             else
@@ -85,6 +89,8 @@ public class Cannon : MonoBehaviour
 
                     IsFiring = true;
                     IsFiringGnome = false;
+
+                    Debug.Log(IsFiringGnome);
                 }
                 else
                 {
