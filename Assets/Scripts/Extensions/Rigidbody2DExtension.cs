@@ -15,10 +15,10 @@ public static class Rigidbody2DExtension
 
             if (hit.normal.x != 0 && hit.collider.bounds.size.y <= stepHeight)
             {
-                var colliderBottom = hit.collider.bounds.center.y - hit.collider.bounds.extents.y;
+                var colliderTop = hit.collider.bounds.center.y + hit.collider.bounds.extents.y;
                 var bounds = collider.bounds;
 
-                var diff = Mathf.Abs(colliderBottom - (bounds.center.y - bounds.extents.y));
+                var diff = Mathf.Abs(colliderTop - (bounds.center.y - bounds.extents.y));
 
                 if (diff <= stepHeight)
                 {
