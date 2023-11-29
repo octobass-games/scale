@@ -20,6 +20,7 @@ public class LevelBox : MonoBehaviour
         if (levelData.IsComplete)
         {
             LevelCompleteTick.SetActive(true);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/summarypopup");
         }
 
         if (levelData.CollectableFound)

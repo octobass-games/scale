@@ -5,7 +5,7 @@
 			<value>reflector disable</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{6a56706e-c540-430e-a854-98fd87c1ee79}</destination>
@@ -141,7 +141,6 @@
 		<relationship name="effects">
 			<destination>{214c56e7-ae3b-4eb0-aa9e-9ef10d2cdf2e}</destination>
 			<destination>{75e578fb-e52f-4733-8322-e402cf0926af}</destination>
-			<destination>{44d7592b-3760-44b6-a19f-806aa0daa38c}</destination>
 			<destination>{780c3ea3-7112-489d-a68a-9262f2ece77f}</destination>
 			<destination>{2e67d6c8-e458-412f-be35-6a58e84203eb}</destination>
 		</relationship>
@@ -175,17 +174,6 @@
 	<object class="HighpassEffect" id="{75e578fb-e52f-4733-8322-e402cf0926af}">
 		<property name="cutoff">
 			<value>900</value>
-		</property>
-	</object>
-	<object class="SpatialiserEffect" id="{44d7592b-3760-44b6-a19f-806aa0daa38c}">
-		<property name="maximumDistance">
-			<value>10000</value>
-		</property>
-		<property name="soundSize">
-			<value>19.5</value>
-		</property>
-		<property name="minimumExtent">
-			<value>234</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{780c3ea3-7112-489d-a68a-9262f2ece77f}" />
