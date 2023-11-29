@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 263592732, guid: cafa8b77b6c19ae4ea06605ffae37957, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5754717, g: 0.44137284, b: 0.33388218, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -231,6 +231,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   Conditions: []
+  BeforeValidInteractionDialogue: {fileID: 0}
 --- !u!114 &7300132952912308139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,6 +262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fmodEvent: event:/SFX/lever
+  is3D: 0
 --- !u!1 &7320330833984968715
 GameObject:
   m_ObjectHideFlags: 0

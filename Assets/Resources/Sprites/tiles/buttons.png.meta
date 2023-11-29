@@ -669,90 +669,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: buttons_26
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 48
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3dc0430595b412b42afaafc8fc0b13de
-      internalID: 1674148203
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: buttons_27
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 48
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ccb1457928e7a514c978a94bd3d5fdc2
-      internalID: 433579311
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: buttons_28
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 48
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 04cb8048915d7ec48ba8d61ded84b472
-      internalID: 389475271
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: buttons_29
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 48
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6fafc14cff546424b907acd5d4ac136e
-      internalID: -1982877485
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: buttons_30
       rect:
         serializedVersion: 2
@@ -946,7 +862,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 0
+        y: 48
         width: 48
         height: 24
       alignment: 0
@@ -967,7 +883,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 0
+        y: 48
         width: 48
         height: 24
       alignment: 0
@@ -1021,6 +937,27 @@ TextureImporter:
       bones: []
       spriteID: 705c55ea39db6ad4180a628051289f12
       internalID: -1058444672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pressure-plate-base
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 48
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43a7483199d637f4bb61ff51f927bfa6
+      internalID: -1810453211
       vertices: []
       indices: 
       edges: []
@@ -1086,6 +1023,7 @@ TextureImporter:
       isolated-lever: -1631727069
       lever-left: 251451741
       lever-right: 299086662
+      pressure-plate-base: -1810453211
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
