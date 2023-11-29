@@ -12,7 +12,7 @@ public class PadlockedGate : MonoBehaviour
     {
         if (InventoryInProximity != null && Input.GetKeyDown(KeyCode.E))
         {
-            var key = InventoryInProximity.RemoveItem(PadlockKey);
+            var key = InventoryInProximity.TakeItem(PadlockKey);
 
             if (key != null)
             {

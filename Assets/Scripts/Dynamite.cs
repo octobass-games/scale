@@ -24,7 +24,7 @@ public class Dynamite : MonoBehaviour
 
     public void Explode()
     {
-        GameObject.FindGameObjectWithTag(TagComparer.GNOME).GetComponent<Inventory>().RemoveItem(this.gameObject);
+        GameObject.FindGameObjectWithTag(TagComparer.GNOME).GetComponent<Inventory>().TakeItem(this.gameObject);
         SoundEmitter.Stop();
         FMODUnity.RuntimeManager.PlayOneShot(explosionFmodEvent);
 

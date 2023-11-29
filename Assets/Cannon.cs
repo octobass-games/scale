@@ -79,7 +79,7 @@ public class Cannon : MonoBehaviour
                 {
                     FMODUnity.RuntimeManager.PlayOneShot(fmodEvent);
 
-                    Interacter.GetComponent<Inventory>().RemoveItem(Cannonball);
+                    Interacter.GetComponent<Inventory>().TakeItem(Cannonball);
 
                     ProjectileSpriteRenderer.sprite = CannonballProjectileSprite;
                     ProjectileAnimator.enabled = true;
