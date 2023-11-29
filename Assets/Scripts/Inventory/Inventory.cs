@@ -23,7 +23,12 @@ public class Inventory : MonoBehaviour
         return Item == item;
     }
 
-    public GameObject RemoveItem(GameObject itemToRemove)
+    public void RemoveItem(GameObject itemToRemove)
+    {
+        TakeItem(itemToRemove);
+    }
+
+    public GameObject TakeItem(GameObject itemToRemove)
     {
         if (Item == itemToRemove)
         {
