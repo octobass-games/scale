@@ -11,7 +11,7 @@ public class MainMenu : MonoBehaviour
     public void NewGame()
     {
         SaveManager.DeleteSaveData();
-        SceneManager.ChangeScene("Level1Village");
+        SceneManager.ChangeScene("GnomeHouse");
     }
 
     public void Quit()
