@@ -35,6 +35,7 @@ public class Mirror : MonoBehaviour
     {
         On = false;
         manager.ApplyLights();
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/reflector disable");
     }
 
     private void UpdateMirrorSprite()

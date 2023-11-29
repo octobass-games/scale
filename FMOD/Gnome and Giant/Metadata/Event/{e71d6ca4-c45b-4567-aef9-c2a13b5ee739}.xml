@@ -31,6 +31,9 @@
 		<relationship name="timeline">
 			<destination>{3a944047-5695-4116-ba79-e84b4a3bee16}</destination>
 		</relationship>
+		<relationship name="banks">
+			<destination>{48047a91-a63c-4c6e-84f1-693e66882c14}</destination>
+		</relationship>
 	</object>
 	<object class="EventMixer" id="{c1ff5b00-19ec-4738-b9e1-80bf3c25508e}">
 		<relationship name="masterBus">
@@ -90,7 +93,7 @@
 			<value>1.1350113378684807</value>
 		</property>
 		<property name="pitch">
-			<value>7</value>
+			<value>16</value>
 		</property>
 		<relationship name="modulators">
 			<destination>{c1ef9c52-d5ef-4ef8-9a99-47b97d593c7a}</destination>
@@ -100,9 +103,6 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{6a3fec11-f2e8-4419-ad46-e7e5f4903571}">
-		<property name="volume">
-			<value>-1</value>
-		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
@@ -128,7 +128,7 @@
 			<value>pitch</value>
 		</property>
 		<property name="amount">
-			<value>4</value>
+			<value>5</value>
 		</property>
 	</object>
 	<object class="MixerBusEffectChain" id="{cd5a78fc-948e-46e1-93b1-e7048a6ffa6b}">
@@ -141,7 +141,7 @@
 	<object class="MixerBusFader" id="{b5ca3f22-9473-4c5a-81e5-1642c119e71a}" />
 	<object class="HighpassSimpleEffect" id="{137407f8-701e-4e77-ba3e-f11ef8a44148}">
 		<property name="cutoff">
-			<value>2500</value>
+			<value>12500</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{981fc7e8-6c1b-42a1-8a11-72b48f6cd966}" />
