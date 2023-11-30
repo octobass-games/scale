@@ -27,12 +27,17 @@ public class InventoryRenderer : MonoBehaviour
                 if (item != null)
                 {
                     InventorySlot.SetActive(true);
-                    InventorySlotImage.sprite = item.GetComponent<SpriteRenderer>().sprite;
+
+                    var spriteRenderer = item.GetComponent<SpriteRenderer>();
+
+                    InventorySlotImage.sprite = spriteRenderer.sprite;
+                    InventorySlotImage.color = spriteRenderer.color;
                 }
                 else
                 {
                     InventorySlot.SetActive(false);
                     InventorySlotImage.sprite = null;
+                    InventorySlotImage.color = Color.white;
                 }
             }
         }
