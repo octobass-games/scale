@@ -23,6 +23,11 @@ public class ErrorDialogue : MonoBehaviour
         DefaultDialogueController = new DialogueController(DefaultError, OnDialogueEnd, DialogueRenderer);
     }
 
+    public void ShowNoUseDialogue(GameObject go)
+    {
+        ShowNoUseDialogue(go.tag);
+    }
+
     public void ShowNoUseDialogue(string tag)
     {
         if (TagComparer.IsGnome(tag))
