@@ -317,6 +317,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: push
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: InDialogue
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6976474514200467780}
   m_Solo: 0
