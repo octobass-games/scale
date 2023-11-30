@@ -13,6 +13,7 @@ public class Cannon : MonoBehaviour
     public GameObject Cannonball;
     public GameObject InteractableCannonball;
     public CharacterSwitcher CharacterSwitcher;
+    public ErrorDialogue ErrorDialogue;
 
     private GameObject Interacter;
     private bool IsFiring;
@@ -86,6 +87,10 @@ public class Cannon : MonoBehaviour
 
                     IsFiring = true;
                     IsFiringGnome = false;
+                }
+                else
+                {
+                    ErrorDialogue.ShowNoUseDialogue(TagComparer.GIANT);
                 }
             }
         }
