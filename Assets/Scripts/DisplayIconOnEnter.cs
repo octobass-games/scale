@@ -8,6 +8,8 @@ public class DisplayIconOnEnter : MonoBehaviour
     public Material Unlit;
     public bool IsProximityBased = true;
 
+    private CharacterSwitcher characterSwitcher;
+
     public void Show()
     {
         if (Icon != null)
@@ -34,12 +36,23 @@ public class DisplayIconOnEnter : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        characterSwitcher = FindObjectOfType<CharacterSwitcher>();
+    }
 
     void OnTriggerStay2D(Collider2D collision)
     {
         if (IsProximityBased && TagComparer.IsPlayer(collision.tag))
         {
-            Show();
+            if (characterSwitcher.ActiveCharacterTag == collision.tag)
+            {
+                Show();
+            }
+            else
+            {
+                Hide();
+            }
         }
     }
 
