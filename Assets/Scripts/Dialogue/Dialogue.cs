@@ -13,6 +13,8 @@ public class Dialogue : MonoBehaviour
     private DialogueRenderer dialogueRenderer;
     private CharacterSwitcher CharacterSwitcher;
     public List<Animator> Animators;
+    public bool forceInteract = false;
+
 
     void Awake()
     {
@@ -22,7 +24,7 @@ public class Dialogue : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (TagComparer.IsPlayer(col) && col.CompareTag(CharacterSwitcher.ActiveCharacterTag))
+        if (TagComparer.IsPlayer(col) && col.CompareTag(CharacterSwitcher.ActiveCharacterTag) )
         {
             interactable = true;
         }
@@ -36,7 +38,9 @@ public class Dialogue : MonoBehaviour
 
     void Update()
     {
-        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return)) && interactable && CharacterSwitcher?.ActiveCharacterTag != null) {
+        bool playerHasPressed = (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return));
+        bool interactingWIthChar = interactable && CharacterSwitcher?.ActiveCharacterTag != null;
+        if (playerHasPressed && (interactingWIthChar || forceInteract) ) {
            DialogueController.HandleProgressDialogue();
         }
     }
