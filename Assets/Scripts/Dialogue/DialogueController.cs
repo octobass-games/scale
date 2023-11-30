@@ -71,7 +71,7 @@ public class DialogueController
         if (OnEnd != null)
         {
             OnEnd.Invoke();
-
+            
         }
     }
 }
