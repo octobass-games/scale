@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 5125735800766989120}
   - component: {fileID: 6289849564688688899}
   - component: {fileID: 1944494947598796694}
+  - component: {fileID: 1803145782685146851}
   m_Layer: 0
   m_Name: Collectable
   m_TagString: Untagged
@@ -295,3 +296,17 @@ MonoBehaviour:
   Lit: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   Unlit: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   IsProximityBased: 1
+--- !u!114 &1803145782685146851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7495576945748994154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79d665ff4202c94e8fe65c88ab34bb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent: event:/SFX/interact sfx
+  is3D: 0
