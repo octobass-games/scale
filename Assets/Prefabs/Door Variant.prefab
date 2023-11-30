@@ -274,11 +274,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5744585170598550823, guid: c60af5b93221e644e82084bdbc4936ae, type: 3}
       propertyPath: m_Size.x
-      value: 45
+      value: 43
       objectReference: {fileID: 0}
     - target: {fileID: 5744585170598550823, guid: c60af5b93221e644e82084bdbc4936ae, type: 3}
       propertyPath: m_Size.y
-      value: 100
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 5744585170598550823, guid: c60af5b93221e644e82084bdbc4936ae, type: 3}
       propertyPath: m_Offset.x
@@ -412,6 +412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fmodEvent: event:/SFX/door
+  is3D: 0
 --- !u!1 &8408991228157418527 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2503654861643721605, guid: c60af5b93221e644e82084bdbc4936ae, type: 3}
@@ -430,3 +431,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fmodEvent: event:/SFX/door
+  is3D: 0
