@@ -217,6 +217,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3246396388623881054, guid: c60af5b93221e644e82084bdbc4936ae, type: 3}
+      propertyPath: InteractionAnimationLength
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3246396388623881054, guid: c60af5b93221e644e82084bdbc4936ae, type: 3}
+      propertyPath: InteractionAnimationTrigger
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3246396388623881054, guid: c60af5b93221e644e82084bdbc4936ae, type: 3}
       propertyPath: OnValidInteraction.m_PersistentCalls.m_Calls.Array.size
       value: 2
       objectReference: {fileID: 0}
