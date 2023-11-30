@@ -10,8 +10,8 @@ public class LeverErrorMessage : MonoBehaviour
     void Awake()
     {
         DialogueRenderer = FindObjectOfType<DialogueRenderer>();
-        DialogueItem gnome = new DialogueItem("Gnome", "Too Heavy");
-        DialogueItem giant = new DialogueItem("Giant", "Too Small");
+        DialogueItem gnome = new DialogueItem("Gnome", "I can't move this, I'll do my back in!");
+        DialogueItem giant = new DialogueItem("Giant", "I better not touch this... I wouldn't want to break it");
 
         GnomeDialogueController = new DialogueController(new List<DialogueItem> { { gnome } }, null, DialogueRenderer);
         GiantDialogueController = new DialogueController(new List<DialogueItem> { { giant } }, null, DialogueRenderer);

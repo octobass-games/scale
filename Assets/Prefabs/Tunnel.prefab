@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4617525759823333039}
   - component: {fileID: 6409489000474531146}
   - component: {fileID: 7398025532331534983}
+  - component: {fileID: 2368531039703544406}
   m_Layer: 0
   m_Name: First Tunnel Entrance
   m_TagString: Untagged
@@ -141,7 +142,19 @@ MonoBehaviour:
         m_CallState: 2
   OnInvalidInteraction:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2368531039703544406}
+        m_TargetAssemblyTypeName: ErrorDialogue, Assembly-CSharp
+        m_MethodName: ShowNoUseDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   Conditions: []
   BeforeValidInteractionDialogue: {fileID: 0}
 --- !u!114 &6409489000474531146
@@ -175,6 +188,27 @@ MonoBehaviour:
   Lit: {fileID: 0}
   Unlit: {fileID: 0}
   IsProximityBased: 1
+--- !u!114 &2368531039703544406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318676723284363206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81245f68179cd4043bb1d0f42da63e3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GnomeError: []
+  GiantError: []
+  DefaultError:
+  - Name: Giant
+    Text: I couldn't possibly fit in there
+    animatorTrigger: 
+  OnDialogueEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2503654861643721605
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,6 +223,7 @@ GameObject:
   - component: {fileID: 3246396388623881054}
   - component: {fileID: 3095227198438412090}
   - component: {fileID: 7236532566954193793}
+  - component: {fileID: 4415510356453605946}
   m_Layer: 0
   m_Name: Second Tunnel Entrance
   m_TagString: Untagged
@@ -316,7 +351,19 @@ MonoBehaviour:
         m_CallState: 2
   OnInvalidInteraction:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4415510356453605946}
+        m_TargetAssemblyTypeName: ErrorDialogue, Assembly-CSharp
+        m_MethodName: ShowNoUseDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   Conditions: []
   BeforeValidInteractionDialogue: {fileID: 0}
 --- !u!114 &3095227198438412090
@@ -350,6 +397,27 @@ MonoBehaviour:
   Lit: {fileID: 0}
   Unlit: {fileID: 0}
   IsProximityBased: 1
+--- !u!114 &4415510356453605946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2503654861643721605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81245f68179cd4043bb1d0f42da63e3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GnomeError: []
+  GiantError: []
+  DefaultError:
+  - Name: Giant
+    Text: I couldn't possible fit in there
+    animatorTrigger: 
+  OnDialogueEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6562003649545797060
 GameObject:
   m_ObjectHideFlags: 0
