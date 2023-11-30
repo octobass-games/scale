@@ -34,7 +34,5 @@ public class Collectable : MonoBehaviour
 
         Button.onClick.RemoveAllListeners();
         Button.onClick.AddListener(() => gameObject.SetActive(false));
-        GetComponent<Interactable>().OnValidInteraction.RemoveAllListeners();
-        GetComponent<Interactable>().OnValidInteraction.AddListener((GameObject g) => gameObject.SetActive(false));
     }
 }
