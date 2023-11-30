@@ -186,8 +186,8 @@ MonoBehaviour:
   ValidInteracterTags:
   - Giant
   CharacterSwitcher: {fileID: 0}
-  InteractionAnimationTrigger: 
-  InteractionAnimationLength: 0
+  InteractionAnimationTrigger: push
+  InteractionAnimationLength: 0.1
   OnValidInteraction:
     m_PersistentCalls:
       m_Calls:
