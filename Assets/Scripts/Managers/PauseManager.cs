@@ -31,6 +31,11 @@ public class PauseManager : MonoBehaviour
         ControlsMenu.SetActive(true);
     }
 
+    public void CloseControls()
+    {
+        ControlsMenu.SetActive(false);
+    }
+
     public void MainMenu()
     {
         Time.timeScale = 1.0f;
@@ -85,6 +90,7 @@ public class PauseManager : MonoBehaviour
     private void Unpause()
     {
         IsPaused = false;
+        CloseControls();
         PauseMenu.SetActive(false);
         Time.timeScale = 1.0f;
 

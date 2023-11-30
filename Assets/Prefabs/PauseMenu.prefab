@@ -1075,7 +1075,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseMenu: {fileID: 4025339804052610754}
-  ControlsMenu: {fileID: 0}
+  ControlsMenu: {fileID: 7713942305903372527}
   QuitButton: {fileID: 3773183749503187253}
 --- !u!1 &4025339804052610754
 GameObject:
@@ -1605,6 +1605,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 8350586527610902028}
+    - target: {fileID: 5543552670775868638, guid: e8696976a17e9254796b1b02b4e91f6f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ControlsQuit
+      objectReference: {fileID: 0}
     - target: {fileID: 9151620530453513546, guid: e8696976a17e9254796b1b02b4e91f6f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1693,5 +1697,10 @@ PrefabInstance:
 --- !u!224 &3116436753662070445 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 9151620530453513546, guid: e8696976a17e9254796b1b02b4e91f6f, type: 3}
+  m_PrefabInstance: {fileID: 6070527760674409447}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7713942305903372527 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4554183200554820360, guid: e8696976a17e9254796b1b02b4e91f6f, type: 3}
   m_PrefabInstance: {fileID: 6070527760674409447}
   m_PrefabAsset: {fileID: 0}
