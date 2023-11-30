@@ -10,6 +10,8 @@ public class Collectable : MonoBehaviour
     public Image CollectableImage;
     public Image CollectableOutline;
     public Button Button;
+    public SpriteRenderer CollectableRenderer;
+    public SpriteRenderer IconRenderer;
 
     void Start()
     {
@@ -27,6 +29,8 @@ public class Collectable : MonoBehaviour
 
     public void Collect()
     {
+        CollectableRenderer.enabled = false;
+        IconRenderer.enabled = false;
         CollectableImage.sprite = Scriptable.ItemBig;
         CollectableOutline.sprite = Scriptable.ItemBigOutline;
         Canvas.SetActive(true);
