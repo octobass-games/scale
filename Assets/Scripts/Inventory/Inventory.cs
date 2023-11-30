@@ -20,7 +20,7 @@ public class Inventory : MonoBehaviour
 
     public bool Contains(GameObject item)
     {
-        return Item == item;
+        return Item != null && Item == item;
     }
 
     public void RemoveItem(GameObject itemToRemove)
