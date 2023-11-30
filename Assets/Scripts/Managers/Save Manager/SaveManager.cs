@@ -104,7 +104,7 @@ public class SaveManager : MonoBehaviour
                     new LevelData("Level2-3", false, "carrot", false, null, false),
                     new LevelData("Level2-4", false, "watermelon", false, "Clue-3", false),
                     new LevelData("Level3-1", false, "brocolli", false, "Clue-4", false),
-                    new LevelData("Level3-2", false, "", false, null, false),
+                    new LevelData("Level3-2", false, "strawberry", false, null, false),
                     new LevelData("Level3-3", false, "", false, null, false),
                     new LevelData("Level3-4", false, "", false, "Clue-5", false),
                     new LevelData("Level4-1", false, "", false, "Clue-6", false),
