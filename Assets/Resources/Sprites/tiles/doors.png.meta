@@ -320,7 +320,7 @@ TextureImporter:
         width: 48
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -328,6 +328,27 @@ TextureImporter:
       bones: []
       spriteID: 6aedf1371c427d8408da08efe082415f
       internalID: 1714812681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: key
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 134
+        width: 16
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e6f48d306f7e4243a9265d4a23b4d2e
+      internalID: -1529572229
       vertices: []
       indices: 
       edges: []
@@ -353,6 +374,7 @@ TextureImporter:
       doors_2: -1950336468
       gate: -502675980
       gate-1: 816388292
+      key: -1529572229
       mine-door: -1952022714
       mine-gate: 667898635
   mipmapLimitGroupName: 
