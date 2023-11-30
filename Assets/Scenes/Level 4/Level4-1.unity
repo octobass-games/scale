@@ -25085,11 +25085,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 332063906344861515, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 120.11293
+      value: -145.40373
       objectReference: {fileID: 0}
     - target: {fileID: 332063906344861515, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 148.18643
+      value: 148.04037
       objectReference: {fileID: 0}
     - target: {fileID: 332063906344861515, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -25202,7 +25202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcdea29c71349b841b9c94c81d5426b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!43 &747842954
+--- !u!43 &828948478
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -29040,7 +29040,7 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!43 &1097027686
+--- !u!43 &1065899895
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -29657,6 +29657,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3885827775883194768, guid: 7da31ab733c4d6f4fb56b4c5be442ea6, type: 3}
       propertyPath: fmodEvent
+      value: event:/SFX/run/cavestep
+      objectReference: {fileID: 0}
+    - target: {fileID: 7247004948739742953, guid: 7da31ab733c4d6f4fb56b4c5be442ea6, type: 3}
+      propertyPath: landSound
       value: event:/SFX/run/cavestep
       objectReference: {fileID: 0}
     m_RemovedComponents: []

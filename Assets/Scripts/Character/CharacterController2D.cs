@@ -16,6 +16,7 @@ public class CharacterController2D : MonoBehaviour
     public bool CanJump;
     public float GravityModifier = 1.0f;
     public Collider2D Collider;
+    public string landSound;
 
     private float HorizontalMovement;
     private bool ProcessInputs = true;
@@ -34,6 +35,7 @@ public class CharacterController2D : MonoBehaviour
     private Vector2 ExternalDisplacement;
     private const int StepHeight = 1;
     private bool FacingRight;
+    private bool playedJumpSound;
 
     public void ApplyExternalDisplacement(Vector2 displacement)
     {
@@ -152,6 +154,7 @@ public class CharacterController2D : MonoBehaviour
         {
             if (IsGrounded || CoyoteTimer >= 0)
             {
+                playedJumpSound = false;
                 Jumping = false;
                 IsGrounded = false;
                 Velocity.y = JumpSpeed;
@@ -217,6 +220,13 @@ public class CharacterController2D : MonoBehaviour
                     IsGrounded = true;
                     CoyoteTimer = CoyoteTime;
                     Velocity.y = 0;
+
+                    if(playedJumpSound == false)
+                    {
+                        FMODUnity.RuntimeManager.PlayOneShot(landSound);
+                        playedJumpSound = true;
+                    }
+
                 }
                 else if (Mathf.Approximately(yNormal, -1))
                 {

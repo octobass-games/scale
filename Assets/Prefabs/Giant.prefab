@@ -224,7 +224,7 @@ MonoBehaviour:
   - {x: 5.0140724, y: -50.565147, z: 0}
   m_ShapePathHash: -1832293484
   m_Mesh: {fileID: 0}
-  m_InstanceId: 61818
+  m_InstanceId: 106328
   m_LocalBounds:
     m_Center: {x: -3.1803675, y: -48.013298, z: 0}
     m_Extent: {x: 8.19444, y: 2.5518494, z: 0}
@@ -291,6 +291,7 @@ MonoBehaviour:
   CanJump: 0
   GravityModifier: 1
   Collider: {fileID: 1896796446197894966}
+  landSound: event:/SFX/run/grass step giant
   VelocityModifiers: []
 --- !u!61 &1896796446197894966
 BoxCollider2D:
