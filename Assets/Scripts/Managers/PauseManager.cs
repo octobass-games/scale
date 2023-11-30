@@ -72,7 +72,14 @@ public class PauseManager : MonoBehaviour
         IsPaused = true;
         PauseMenu.SetActive(true);
         Time.timeScale = 0.0f;
-        FindObjectOfType<CharacterSwitcher>()?.SetEnableSwithing(false);
+
+        var characterSwitcher = FindObjectOfType<CharacterSwitcher>();
+
+        if (characterSwitcher != null)
+        {
+            characterSwitcher.SetEnableSwithing(false);
+            characterSwitcher.Pause();
+        }
     }
 
     private void Unpause()
@@ -80,6 +87,13 @@ public class PauseManager : MonoBehaviour
         IsPaused = false;
         PauseMenu.SetActive(false);
         Time.timeScale = 1.0f;
-        FindObjectOfType<CharacterSwitcher>()?.SetEnableSwithing(true);
+
+        var characterSwitcher = FindObjectOfType<CharacterSwitcher>();
+        
+        if (characterSwitcher != null)
+        {
+            characterSwitcher.SetEnableSwithing(true);
+            characterSwitcher.Unpause();
+        }
     }
 }

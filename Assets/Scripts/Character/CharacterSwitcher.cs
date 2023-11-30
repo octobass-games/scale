@@ -19,9 +19,21 @@ public class CharacterSwitcher : MonoBehaviour
     private CharacterController2D GiantCharacterController;
     private CharacterController2D GnomeCharacterController;
     private bool IsFrozenForDialogue;
+    private string ActiveCharacterTagBeforePause;
 
     public GameObject gnomeAudio;
     public GameObject giantAudio;
+
+    public void Pause()
+    {
+        ActiveCharacterTagBeforePause = ActiveCharacterTag;
+        ActiveCharacterTag = null;
+    }
+
+    public void Unpause()
+    {
+        ActiveCharacterTag = ActiveCharacterTagBeforePause;
+    }
 
     public void SetEnableSwithing(bool e)
     {

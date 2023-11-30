@@ -36,7 +36,7 @@ public class Dialogue : MonoBehaviour
 
     void Update()
     {
-        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return)) && interactable) {
+        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return)) && interactable && CharacterSwitcher?.ActiveCharacterTag != null) {
            DialogueController.HandleProgressDialogue();
         }
     }
