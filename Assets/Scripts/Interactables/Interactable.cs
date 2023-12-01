@@ -19,6 +19,7 @@ public class Interactable : MonoBehaviour
     private List<CharacterController2D> Interacters = new List<CharacterController2D>();
     private DisplayIconOnEnter Highlight;
     private bool IsInInteractableDialogue;
+    private bool IsInteracting;
 
     void Start()
     {
@@ -39,6 +40,8 @@ public class Interactable : MonoBehaviour
                     {
                         if (Conditions.All(condition => condition.Evaluate(activeInteracter.gameObject)))
                         {
+                            IsInteracting = true;
+
                             if (BeforeValidInteractionDialogue != null)
                             {
                                 IsInInteractableDialogue = true;
@@ -59,12 +62,18 @@ public class Interactable : MonoBehaviour
                         }
                         else
                         {
-                            OnInvalidInteraction.Invoke(activeInteracter.gameObject);
+                            if (!IsInteracting)
+                            {
+                                OnInvalidInteraction.Invoke(activeInteracter.gameObject);
+                            }
                         }
                     }
                     else
                     {
-                        OnInvalidInteraction.Invoke(activeInteracter.gameObject);
+                        if (!IsInteracting)
+                        {
+                            OnInvalidInteraction.Invoke(activeInteracter.gameObject);
+                        }
                     }
                 }
                 else
@@ -99,6 +108,8 @@ public class Interactable : MonoBehaviour
         OnValidInteraction.Invoke(interacter.gameObject);
 
         interacter.Thaw();
+
+        IsInteracting = false;
     }
 
     void OnTriggerEnter2D(Collider2D collision)
