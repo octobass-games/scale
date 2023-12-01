@@ -4,7 +4,12 @@ public class PauseManager : MonoBehaviour
 {
     public GameObject PauseMenu;
     public GameObject ControlsMenu;
+    public GameObject ResetButton;
+    public GameObject SkipButton;
     public GameObject QuitButton;
+
+    public bool AllowSkip = true;
+    public bool AllowReset = true;
 
     private SceneManager SceneManager;
     private bool IsPaused;
@@ -54,6 +59,16 @@ public class PauseManager : MonoBehaviour
         if (Application.platform == RuntimePlatform.WebGLPlayer)
         {
             QuitButton.SetActive(false);
+        }
+
+        if (!AllowReset)
+        {
+            ResetButton.SetActive(false);
+        }
+
+        if (!AllowSkip)
+        {
+            SkipButton.SetActive(false);
         }
     }
 

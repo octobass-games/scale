@@ -1076,7 +1076,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseMenu: {fileID: 4025339804052610754}
   ControlsMenu: {fileID: 7713942305903372527}
+  ResetButton: {fileID: 581912148529404004}
+  SkipButton: {fileID: 1566712643154009393}
   QuitButton: {fileID: 3773183749503187253}
+  AllowSkip: 1
+  AllowReset: 1
 --- !u!1 &4025339804052610754
 GameObject:
   m_ObjectHideFlags: 0
