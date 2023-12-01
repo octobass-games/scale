@@ -21,9 +21,21 @@ public class Collectables : MonoBehaviour
         {
             var collectable = CollectableList[i];
 
-            var level = SaveData.LevelData.Find(levelData => levelData.Collectable == collectable.Name);
+            if (SaveData != null)
+            {
+                var level = SaveData.LevelData.Find(levelData => levelData.Collectable == collectable.Name);
 
-            if (level != null && !level.CollectableFound)
+                if (level != null && !level.CollectableFound)
+                {
+                    var backgroundItem = CollectableBackgroundItems.Find(backgroundItem => backgroundItem.collectable == collectable);
+
+                    if (backgroundItem != null)
+                    {
+                        backgroundItem.EmptyMain();
+                    }
+                }
+            }
+            else
             {
                 var backgroundItem = CollectableBackgroundItems.Find(backgroundItem => backgroundItem.collectable == collectable);
 
@@ -40,30 +52,34 @@ public class Collectables : MonoBehaviour
 
     private IEnumerator LoadCollectable()
     {
-        var collectable = CollectableList[index];
-
-        var level = SaveData.LevelData.Find(level => level.Collectable == collectable.Name);
-
-        if (level != null && level.CollectableFound)
+        if (SaveData != null)
         {
-            var item = Instantiate(CollectableItemPrefab);
+            var collectable = CollectableList[index];
 
-            item.InitCollectable(collectable);
-            item.transform.SetParent(this.transform);
-            item.transform.localPosition = new Vector2(0, 0);
-            item.gameObject.AddComponent<BoxCollider2D>();
+            var level = SaveData.LevelData.Find(level => level.Collectable == collectable.Name);
+
+            if (level != null && level.CollectableFound)
+            {
+                var item = Instantiate(CollectableItemPrefab);
+
+                item.InitCollectable(collectable);
+                item.transform.SetParent(this.transform);
+                item.transform.localPosition = new Vector2(0, 0);
+                item.gameObject.AddComponent<BoxCollider2D>();
         
-            yield return new WaitForSeconds(0.5f);
-        }
+                yield return new WaitForSeconds(0.5f);
+            }
 
-        index += 1;
-        if (index < CollectableList.Count)
-        {
-            StartCoroutine(LoadCollectable());
+            index += 1;
+            if (index < CollectableList.Count)
+            {
+                StartCoroutine(LoadCollectable());
+            }
+            else
+            {
+                index = 0;
+            }
         }
-        else
-        {
-            index = 0;
-        }
+        
     }
 }
