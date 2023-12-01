@@ -179,6 +179,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6044039224666605849, guid: 0b2ed8080a22d364daee41c932c626e6, type: 3}
+      propertyPath: Fade
+      value: 
+      objectReference: {fileID: 870972665}
     - target: {fileID: 7867393574189132095, guid: 0b2ed8080a22d364daee41c932c626e6, type: 3}
       propertyPath: level
       value: 
@@ -197,23 +201,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8940044934258060026, guid: 0b2ed8080a22d364daee41c932c626e6, type: 3}
       propertyPath: orthographic size
-      value: 90
+      value: 67.5
       objectReference: {fileID: 0}
     - target: {fileID: 8940044934258060026, guid: 0b2ed8080a22d364daee41c932c626e6, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0
+      value: 0.38958335
       objectReference: {fileID: 0}
     - target: {fileID: 8940044934258060026, guid: 0b2ed8080a22d364daee41c932c626e6, type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0
+      value: 0.027777778
       objectReference: {fileID: 0}
     - target: {fileID: 8940044934258060026, guid: 0b2ed8080a22d364daee41c932c626e6, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 1
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 8940044934258060026, guid: 0b2ed8080a22d364daee41c932c626e6, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 1
+      value: 0.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -265,6 +269,11 @@ MonoBehaviour:
 --- !u!4 &870972664 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5988213435732445124, guid: 0b2ed8080a22d364daee41c932c626e6, type: 3}
+  m_PrefabInstance: {fileID: 870972661}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &870972665 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5635223166226053393, guid: 0b2ed8080a22d364daee41c932c626e6, type: 3}
   m_PrefabInstance: {fileID: 870972661}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1633581399
