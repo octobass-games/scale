@@ -179,6 +179,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6044039224666605849, guid: 0b2ed8080a22d364daee41c932c626e6, type: 3}
+      propertyPath: Fade
+      value: 
+      objectReference: {fileID: 5351896}
     - target: {fileID: 7867393574189132095, guid: 0b2ed8080a22d364daee41c932c626e6, type: 3}
       propertyPath: level
       value: 
@@ -249,6 +253,11 @@ MonoBehaviour:
 --- !u!4 &5351895 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5988213435732445124, guid: 0b2ed8080a22d364daee41c932c626e6, type: 3}
+  m_PrefabInstance: {fileID: 5351892}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &5351896 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5635223166226053393, guid: 0b2ed8080a22d364daee41c932c626e6, type: 3}
   m_PrefabInstance: {fileID: 5351892}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &920313003
