@@ -3,5 +3,13 @@ using Cinemachine;
 
 public class ResetConfiner : MonoBehaviour
 {
-    void Start() => GetComponent<CinemachineConfiner2D>().InvalidateCache();
+    void Start()
+    {
+        var confiner = GetComponent<CinemachineConfiner2D>();
+
+        if (confiner != null )
+        {
+            confiner.InvalidateCache();
+        }
+    }
 }
