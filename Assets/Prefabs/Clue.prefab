@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Icon: {fileID: 6737269695152310852}
-  InteractingSprite: {fileID: 6737269695152310852}
+  InteractingSprite: {fileID: 3144524942352207394}
   Lit: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   Unlit: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   IsProximityBased: 0
@@ -217,6 +217,9 @@ MonoBehaviour:
   DialogueRenderer: {fileID: 0}
   GnomeDialogue: 
   GiantDialogue: 
+  ActorName: 
+  ActorDialogue: 
+  IsActorDialogue: 0
 --- !u!1 &8192106346160055697
 GameObject:
   m_ObjectHideFlags: 0
