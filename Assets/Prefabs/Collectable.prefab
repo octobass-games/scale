@@ -279,7 +279,6 @@ GameObject:
   - component: {fileID: 5125735800766989120}
   - component: {fileID: 6289849564688688899}
   - component: {fileID: 1944494947598796694}
-  - component: {fileID: 1803145782685146851}
   m_Layer: 0
   m_Name: Collectable
   m_TagString: Untagged
@@ -432,18 +431,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1803145782685146851}
-        m_TargetAssemblyTypeName: AudioTrigger, Assembly-CSharp
-        m_MethodName: FmodOneShot
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   OnInvalidInteraction:
     m_PersistentCalls:
       m_Calls: []
@@ -485,20 +472,6 @@ MonoBehaviour:
   Lit: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   Unlit: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   IsProximityBased: 1
---- !u!114 &1803145782685146851
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7495576945748994154}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a79d665ff4202c94e8fe65c88ab34bb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fmodEvent: event:/SFX/interact sfx
-  is3D: 0
 --- !u!1 &9084681985413755201
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,6 +486,7 @@ GameObject:
   - component: {fileID: 3760296535742538437}
   - component: {fileID: 4318706717446020221}
   - component: {fileID: 4803069907526397806}
+  - component: {fileID: 2218377842266207030}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -651,6 +625,37 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2218377842266207030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9084681985413755201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1153461640
+      Data2: 1293999776
+      Data3: 643685766
+      Data4: 362906969
+    Path: event:/SFX/loot sound
+  Event: 
+  PlayEvent: 11
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &9124701554320076554
 GameObject:
   m_ObjectHideFlags: 0
