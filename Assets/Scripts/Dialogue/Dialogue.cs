@@ -33,7 +33,6 @@ public class Dialogue : MonoBehaviour
     void OnTriggerExit2D(Collider2D other)
     {
         interactable = false;
-        DialogueController.Reset();
     }
 
     void Update()
