@@ -172,15 +172,18 @@
 	</object>
 	<object class="ThreeEQEffect" id="{30b52ab6-25b0-4165-87ad-99c666dabf0b}">
 		<property name="lowGain">
-			<value>-9</value>
+			<value>-42</value>
+		</property>
+		<property name="midGain">
+			<value>-5.5</value>
 		</property>
 		<property name="highGain">
-			<value>-10</value>
+			<value>-11</value>
 		</property>
 	</object>
 	<object class="SFXReverbEffect" id="{0178b8b6-470f-4c95-aee9-39fd8730ff1d}">
 		<property name="decayTime">
-			<value>3500</value>
+			<value>1400</value>
 		</property>
 		<property name="earlyDelay">
 			<value>20.5</value>
@@ -195,16 +198,16 @@
 			<value>720</value>
 		</property>
 		<property name="lowShelfGain">
-			<value>-7.5</value>
+			<value>-3</value>
 		</property>
 		<property name="highCut">
-			<value>1900</value>
+			<value>7000</value>
 		</property>
 		<property name="wetLevel">
-			<value>-10.5</value>
+			<value>-21</value>
 		</property>
 		<property name="dryLevel">
-			<value>0.5</value>
+			<value>1.5</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{916833fb-6c60-4375-b334-4a21ea549b2a}" />
