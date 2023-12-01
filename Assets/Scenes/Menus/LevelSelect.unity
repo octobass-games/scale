@@ -692,6 +692,7 @@ GameObject:
   - component: {fileID: 414047899}
   - component: {fileID: 414047898}
   - component: {fileID: 414047902}
+  - component: {fileID: 414047903}
   m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
@@ -787,6 +788,18 @@ MonoBehaviour:
       - m_Target: {fileID: 414047902}
         m_TargetAssemblyTypeName: LevelSignpost, Assembly-CSharp
         m_MethodName: Pick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: pick
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 414047903}
+        m_TargetAssemblyTypeName: AudioTrigger, Assembly-CSharp
+        m_MethodName: FmodOneShot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -907,6 +920,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelNamePrefix: Level2
   LevelBoxes: {fileID: 1761462501}
+--- !u!114 &414047903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414047896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79d665ff4202c94e8fe65c88ab34bb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent: event:/SFX/interact end sfx
+  is3D: 0
 --- !u!1 &493899815
 GameObject:
   m_ObjectHideFlags: 0
@@ -1206,6 +1233,7 @@ GameObject:
   - component: {fileID: 1006374916}
   - component: {fileID: 1006374917}
   - component: {fileID: 1006374918}
+  - component: {fileID: 1006374919}
   m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
@@ -1365,6 +1393,18 @@ MonoBehaviour:
           m_StringArgument: pick
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1006374919}
+        m_TargetAssemblyTypeName: AudioTrigger, Assembly-CSharp
+        m_MethodName: FmodOneShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: pick
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1006374917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1421,6 +1461,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelNamePrefix: Level1
   LevelBoxes: {fileID: 1156542537}
+--- !u!114 &1006374919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1006374911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79d665ff4202c94e8fe65c88ab34bb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent: event:/SFX/interact end sfx
+  is3D: 0
 --- !u!1 &1092097668
 GameObject:
   m_ObjectHideFlags: 0
@@ -1435,6 +1489,7 @@ GameObject:
   - component: {fileID: 1092097671}
   - component: {fileID: 1092097670}
   - component: {fileID: 1092097674}
+  - component: {fileID: 1092097675}
   m_Layer: 0
   m_Name: 3
   m_TagString: Untagged
@@ -1530,6 +1585,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1092097674}
         m_TargetAssemblyTypeName: LevelSignpost, Assembly-CSharp
         m_MethodName: Pick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: pick
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1092097675}
+        m_TargetAssemblyTypeName: AudioTrigger, Assembly-CSharp
+        m_MethodName: FmodOneShot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1650,6 +1717,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelNamePrefix: Level3
   LevelBoxes: {fileID: 540205868}
+--- !u!114 &1092097675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092097668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79d665ff4202c94e8fe65c88ab34bb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent: event:/SFX/interact end sfx
+  is3D: 0
 --- !u!1 &1103565887
 GameObject:
   m_ObjectHideFlags: 0
@@ -1815,6 +1896,7 @@ GameObject:
   - component: {fileID: 1337325373}
   - component: {fileID: 1337325372}
   - component: {fileID: 1337325376}
+  - component: {fileID: 1337325377}
   m_Layer: 0
   m_Name: 5
   m_TagString: Untagged
@@ -1910,6 +1992,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1337325376}
         m_TargetAssemblyTypeName: LevelSignpost, Assembly-CSharp
         m_MethodName: Pick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: pick
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1337325377}
+        m_TargetAssemblyTypeName: AudioTrigger, Assembly-CSharp
+        m_MethodName: FmodOneShot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2030,6 +2124,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelNamePrefix: Level5
   LevelBoxes: {fileID: 818954807}
+--- !u!114 &1337325377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337325370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79d665ff4202c94e8fe65c88ab34bb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent: event:/SFX/interact end sfx
+  is3D: 0
 --- !u!1 &1366979861
 GameObject:
   m_ObjectHideFlags: 0
@@ -2343,6 +2451,7 @@ GameObject:
   - component: {fileID: 1739818445}
   - component: {fileID: 1739818444}
   - component: {fileID: 1739818448}
+  - component: {fileID: 1739818449}
   m_Layer: 0
   m_Name: 4
   m_TagString: Untagged
@@ -2438,6 +2547,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1739818448}
         m_TargetAssemblyTypeName: LevelSignpost, Assembly-CSharp
         m_MethodName: Pick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: pick
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1739818449}
+        m_TargetAssemblyTypeName: AudioTrigger, Assembly-CSharp
+        m_MethodName: FmodOneShot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2558,6 +2679,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelNamePrefix: Level4
   LevelBoxes: {fileID: 803860672}
+--- !u!114 &1739818449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739818442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79d665ff4202c94e8fe65c88ab34bb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent: event:/SFX/interact end sfx
+  is3D: 0
 --- !u!4 &1761462500 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3440965131924097860, guid: 15a02e77249e511419ca3726bed28da1, type: 3}
@@ -2671,6 +2806,7 @@ GameObject:
   - component: {fileID: 1911449570}
   - component: {fileID: 1911449569}
   - component: {fileID: 1911449571}
+  - component: {fileID: 1911449572}
   m_Layer: 0
   m_Name: main-menu
   m_TagString: Untagged
@@ -2815,6 +2951,18 @@ MonoBehaviour:
           m_StringArgument: MainMenu
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1911449572}
+        m_TargetAssemblyTypeName: AudioTrigger, Assembly-CSharp
+        m_MethodName: FmodOneShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MainMenu
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!61 &1911449571
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2860,6 +3008,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 64.42517, y: 38.548508}
   m_EdgeRadius: 0
+--- !u!114 &1911449572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1911449566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79d665ff4202c94e8fe65c88ab34bb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent: event:/SFX/interact end sfx
+  is3D: 0
 --- !u!1 &1943630382
 GameObject:
   m_ObjectHideFlags: 0
