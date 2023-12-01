@@ -175,29 +175,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6044039224666605849, guid: 0b2ed8080a22d364daee41c932c626e6, type: 3}
+      propertyPath: Fade
+      value: 
+      objectReference: {fileID: 1809876233}
     - target: {fileID: 6368327609644416504, guid: 0b2ed8080a22d364daee41c932c626e6, type: 3}
       propertyPath: m_SortingOrder
       value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 8940044934258060026, guid: 0b2ed8080a22d364daee41c932c626e6, type: 3}
       propertyPath: orthographic size
-      value: 90
+      value: 67.5
       objectReference: {fileID: 0}
     - target: {fileID: 8940044934258060026, guid: 0b2ed8080a22d364daee41c932c626e6, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0
+      value: 0.38958335
       objectReference: {fileID: 0}
     - target: {fileID: 8940044934258060026, guid: 0b2ed8080a22d364daee41c932c626e6, type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0
+      value: 0.027777778
       objectReference: {fileID: 0}
     - target: {fileID: 8940044934258060026, guid: 0b2ed8080a22d364daee41c932c626e6, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 1
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 8940044934258060026, guid: 0b2ed8080a22d364daee41c932c626e6, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 1
+      value: 0.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -205,6 +209,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b2ed8080a22d364daee41c932c626e6, type: 3}
+--- !u!95 &1809876233 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5635223166226053393, guid: 0b2ed8080a22d364daee41c932c626e6, type: 3}
+  m_PrefabInstance: {fileID: 1809876232}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
