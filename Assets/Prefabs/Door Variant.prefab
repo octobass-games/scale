@@ -168,6 +168,68 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &8639339809913446194
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7927530477379988619}
+  m_Layer: 0
+  m_Name: GnomeExit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7927530477379988619
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8639339809913446194}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -47, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6440136575897197535}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &9200404149407368379
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2922316496077460991}
+  m_Layer: 0
+  m_Name: GnomeExit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2922316496077460991
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9200404149407368379}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -47, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3970918096219696364}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &6200462920808593306
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -176,6 +238,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 112194486551017837, guid: c60af5b93221e644e82084bdbc4936ae, type: 3}
+      propertyPath: IsDoor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 112194486551017837, guid: c60af5b93221e644e82084bdbc4936ae, type: 3}
+      propertyPath: GnomeDoorExit
+      value: 
+      objectReference: {fileID: 7927530477379988619}
+    - target: {fileID: 590062755366741035, guid: c60af5b93221e644e82084bdbc4936ae, type: 3}
+      propertyPath: IsDoor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 590062755366741035, guid: c60af5b93221e644e82084bdbc4936ae, type: 3}
+      propertyPath: GnomeDoorExit
+      value: 
+      objectReference: {fileID: 2922316496077460991}
     - target: {fileID: 1104382691427265605, guid: c60af5b93221e644e82084bdbc4936ae, type: 3}
       propertyPath: m_LocalPosition.x
       value: -48.1
@@ -421,6 +499,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7284678090027503891, guid: c60af5b93221e644e82084bdbc4936ae, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6964166138913712078}
+    - targetCorrespondingSourceObject: {fileID: 1104382691427265605, guid: c60af5b93221e644e82084bdbc4936ae, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7927530477379988619}
+    - targetCorrespondingSourceObject: {fileID: 6996325343504014198, guid: c60af5b93221e644e82084bdbc4936ae, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2922316496077460991}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1318676723284363206, guid: c60af5b93221e644e82084bdbc4936ae, type: 3}
       insertIndex: -1
@@ -432,6 +516,11 @@ PrefabInstance:
 --- !u!4 &3680593236611557001 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7284678090027503891, guid: c60af5b93221e644e82084bdbc4936ae, type: 3}
+  m_PrefabInstance: {fileID: 6200462920808593306}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3970918096219696364 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6996325343504014198, guid: c60af5b93221e644e82084bdbc4936ae, type: 3}
   m_PrefabInstance: {fileID: 6200462920808593306}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &4918099372924088412 stripped
@@ -453,6 +542,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent: event:/SFX/door
   is3D: 0
+--- !u!4 &6440136575897197535 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1104382691427265605, guid: c60af5b93221e644e82084bdbc4936ae, type: 3}
+  m_PrefabInstance: {fileID: 6200462920808593306}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8408991228157418527 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2503654861643721605, guid: c60af5b93221e644e82084bdbc4936ae, type: 3}
