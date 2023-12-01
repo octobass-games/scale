@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 97185330}
   - component: {fileID: 97185331}
   - component: {fileID: 97185332}
+  - component: {fileID: 97185333}
   m_Layer: 0
   m_Name: Interactable
   m_TagString: Untagged
@@ -247,6 +248,32 @@ MonoBehaviour:
           m_StringArgument: MainMenu
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 97185333}
+        m_TargetAssemblyTypeName: AudioTrigger, Assembly-CSharp
+        m_MethodName: FmodOneShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MainMenu
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &97185333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97185327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79d665ff4202c94e8fe65c88ab34bb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent: event:/SFX/interact end sfx
+  is3D: 0
 --- !u!1 &184750402
 GameObject:
   m_ObjectHideFlags: 0
@@ -569,6 +596,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -57.3
       objectReference: {fileID: 0}
+    - target: {fileID: 332063906344861515, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10
+      objectReference: {fileID: 0}
     - target: {fileID: 3635362812217682771, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16.3
@@ -583,7 +614,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4827923677449453362, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
       propertyPath: orthographic size
-      value: 90
+      value: 77.14286
       objectReference: {fileID: 0}
     - target: {fileID: 4827923677449453362, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
       propertyPath: m_BackGroundColor.b
