@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 512
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -593,7 +593,7 @@ TextureImporter:
         width: 64
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -601,6 +601,69 @@ TextureImporter:
       bones: []
       spriteID: 7274c4c7d3081af42afdd2ab6a7ac7e8
       internalID: 311757722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main-menu-2-lines
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 161
+        width: 47
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 170b97fec3721d849932688914fefb9a
+      internalID: 1614593605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main-menu-sign
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 120
+        width: 56
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c95cbe9645ff38f4596edc76ecaf5490
+      internalID: -454088921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main-menu-sign-outline
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 80
+        width: 55
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74eb0e6b276d92b4289eea543c845cdf
+      internalID: 536207144
       vertices: []
       indices: 
       edges: []
@@ -623,6 +686,9 @@ TextureImporter:
       halden: 452348023
       loading: 311757722
       main-menu: -1018520021
+      main-menu-2-lines: 1614593605
+      main-menu-sign: -454088921
+      main-menu-sign-outline: 536207144
       main-menu-with-outline: -2141634295
       megan: -1245840719
       music: -663940838
