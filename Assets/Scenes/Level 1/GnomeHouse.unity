@@ -1561,8 +1561,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   texts: []
-  text: "Gnome: Higgle??\r\nNarrator: Groggy and hungry, the gnome looks around the
-    room for his sister.\r\nGnome: HIGGLE!!!\r\nNarrator: No response, an eerie silence
+  text: "Gnome: Higgle?\r\nNarrator: Groggy and hungry, the gnome looks around the
+    room for his sister.\r\nGnome: HIGGLE!?!\r\nNarrator: No response, an eerie silence
     fills the house.\r\nGnome: This is unlike her, she would definitely be eating
     tea by now.\r\nGnome: (...and making mine!)\r\nNarrator: The gnome resolves to
     venture out to look for some breakfast, and also, reluctantly, his missing sister.:stand\r\nGnome:
@@ -1655,7 +1655,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4827923677449453362, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
       propertyPath: orthographic size
-      value: 135
+      value: 108
       objectReference: {fileID: 0}
     - target: {fileID: 4827923677449453362, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
       propertyPath: m_BackGroundColor.b
@@ -1671,19 +1671,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4827923677449453362, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.015104167
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4827923677449453362, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0.30555555
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4827923677449453362, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.25
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4827923677449453362, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 0.25
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7228991048986225550, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
       propertyPath: m_LocalPosition.x
