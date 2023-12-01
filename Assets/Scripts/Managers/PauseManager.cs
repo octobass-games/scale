@@ -7,12 +7,11 @@ public class PauseManager : MonoBehaviour
     public GameObject ResetButton;
     public GameObject SkipButton;
     public GameObject QuitButton;
-
     public bool AllowSkip = true;
     public bool AllowReset = true;
+    public bool IsPaused;
 
     private SceneManager SceneManager;
-    private bool IsPaused;
 
     public void Close()
     {
