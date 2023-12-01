@@ -1,5 +1,6 @@
 using UnityEngine;
 
+// DEPRECATED
 public class SceneChanger : MonoBehaviour
 {
     public ChangeLevelSceneData ChangeLevelInfo;

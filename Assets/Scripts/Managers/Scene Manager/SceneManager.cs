@@ -1,9 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneManager : MonoBehaviour
 {
     private SubLevel SubLevel;
+    public Animator Fade;
 
     public void ReloadScene()
     {
@@ -17,6 +20,20 @@ public class SceneManager : MonoBehaviour
 
     public void ChangeScene(string sceneName)
     {
+        if (Fade != null)
+        {
+            Fade.SetTrigger("fade-out");
+            StartCoroutine(ChangeSceneAfterNTime(sceneName));
+        }else
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
+
+        }
+    }
+
+    IEnumerator ChangeSceneAfterNTime(string sceneName)
+    {
+        yield return new WaitForSeconds(0.5f);
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
     }
 
