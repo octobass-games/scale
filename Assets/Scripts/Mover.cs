@@ -101,6 +101,13 @@ public class Mover : MonoBehaviour
                 }
             }
         }
+        else
+        {
+            if (SoundEmitter.IsPlaying())
+            {
+                SoundEmitter.Stop();
+            }
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
