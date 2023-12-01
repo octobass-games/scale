@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// DEPRECATED
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;

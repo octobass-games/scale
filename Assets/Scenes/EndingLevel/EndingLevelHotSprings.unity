@@ -3184,11 +3184,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4827923677449453362, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.38958335
+      value: 0.015104167
       objectReference: {fileID: 0}
     - target: {fileID: 4827923677449453362, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0.027777778
+      value: 0.30555555
       objectReference: {fileID: 0}
     - target: {fileID: 4827923677449453362, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
@@ -5165,6 +5165,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d05f7167a35ccaf40a294304727e59a7, type: 3}
+--- !u!114 &833611518 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2024996537751383603, guid: d05f7167a35ccaf40a294304727e59a7, type: 3}
+  m_PrefabInstance: {fileID: 833611517}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19e6ed11b3233af4b821edb895148c0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &884899003
 GameObject:
   m_ObjectHideFlags: 0
@@ -7938,6 +7949,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1184782662}
   - component: {fileID: 1184782663}
+  - component: {fileID: 1184782664}
   m_Layer: 0
   m_Name: Dragon
   m_TagString: Untagged
@@ -7982,6 +7994,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1184782664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184782661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79d665ff4202c94e8fe65c88ab34bb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent: event:/SFX/door
+  is3D: 0
 --- !u!1 &1313344856
 GameObject:
   m_ObjectHideFlags: 0
@@ -10325,7 +10351,6 @@ GameObject:
   - component: {fileID: 1920501352}
   - component: {fileID: 1920501353}
   - component: {fileID: 1920501354}
-  - component: {fileID: 1920501355}
   m_Layer: 0
   m_Name: Gnome
   m_TagString: Untagged
@@ -10411,16 +10436,16 @@ MonoBehaviour:
   OnEnd:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1920501355}
-        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+      - m_Target: {fileID: 833611518}
+        m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
         m_MethodName: ChangeScene
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Ending
           m_BoolArgument: 0
         m_CallState: 2
   Animators:
@@ -10429,24 +10454,6 @@ MonoBehaviour:
   - {fileID: 183391668}
   - {fileID: 1184782663}
   forceInteract: 1
---- !u!114 &1920501355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1920501351}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50ad6534af424e44082f8328f6e697d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ChangeLevelInfo:
-    LevelName: Ending
-    GnomePosition: {x: 0, y: 0}
-    GiantPosition: {x: 0, y: 0}
-    PositionGnome: 0
-    PositionGiant: 0
 --- !u!1001 &1960899858
 PrefabInstance:
   m_ObjectHideFlags: 0
