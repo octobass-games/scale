@@ -16,4 +16,9 @@ public class CollectableBackgroundItem : MonoBehaviour
     {
         
     }
+
+    public void EmptyMain()
+    {
+        Main.sprite = null;
+    }
 }
