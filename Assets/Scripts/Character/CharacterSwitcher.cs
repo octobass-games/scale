@@ -15,6 +15,7 @@ public class CharacterSwitcher : MonoBehaviour
     public string ActiveCharacterTag = TagComparer.GNOME;
     public bool EnableSwitching = true;
     public CameraDirector CameraDirector;
+    public bool NeverAllowEnablingOfSwitching = false;
 
     private CharacterController2D GiantCharacterController;
     private CharacterController2D GnomeCharacterController;
@@ -37,7 +38,10 @@ public class CharacterSwitcher : MonoBehaviour
 
     public void SetEnableSwithing(bool e)
     {
-        EnableSwitching = e;
+        if (!NeverAllowEnablingOfSwitching)
+        {
+            EnableSwitching = e;
+        }
     }
 
     void Start()

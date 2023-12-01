@@ -11,6 +11,7 @@ public class ForceCharacterSwitch : MonoBehaviour
     {
         if (Input.anyKeyDown && !PauseManager.IsPaused)
         {
+            CharacterSwitcher.NeverAllowEnablingOfSwitching = false;
             CharacterSwitcher.SetEnableSwithing(true);
             CharacterSwitcherPanel.SetActive(true);
             CharacterSwitcherInstruction.SetActive(false);

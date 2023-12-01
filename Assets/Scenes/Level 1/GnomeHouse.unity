@@ -1246,6 +1246,10 @@ PrefabInstance:
       propertyPath: CinemachineVirtualCamera
       value: 
       objectReference: {fileID: 1424004540}
+    - target: {fileID: 969214582788175230, guid: 36793998d57a8c0499569770184f75b3, type: 3}
+      propertyPath: NeverAllowEnablingOfSwitching
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2647124479561840809, guid: 36793998d57a8c0499569770184f75b3, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
