@@ -5156,6 +5156,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2024996537751383603, guid: d05f7167a35ccaf40a294304727e59a7, type: 3}
+      propertyPath: Fade
+      value: 
+      objectReference: {fileID: 1960899859}
     - target: {fileID: 7322093150660508435, guid: d05f7167a35ccaf40a294304727e59a7, type: 3}
       propertyPath: m_Name
       value: Managers
@@ -10511,6 +10515,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83ad40a6947b2944ea8224342523cb4b, type: 3}
+--- !u!95 &1960899859 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2527253618689638938, guid: 83ad40a6947b2944ea8224342523cb4b, type: 3}
+  m_PrefabInstance: {fileID: 1960899858}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1970448808
 GameObject:
   m_ObjectHideFlags: 0
