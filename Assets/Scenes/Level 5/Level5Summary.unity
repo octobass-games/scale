@@ -179,6 +179,14 @@ PrefabInstance:
       propertyPath: level
       value: 
       objectReference: {fileID: 11400000, guid: 2997aefa9a02c8f40941b768ed244f8a, type: 2}
+    - target: {fileID: 7867393574189132095, guid: 0b2ed8080a22d364daee41c932c626e6, type: 3}
+      propertyPath: Friends
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867393574189132095, guid: 0b2ed8080a22d364daee41c932c626e6, type: 3}
+      propertyPath: Everyone
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8940044934258060026, guid: 0b2ed8080a22d364daee41c932c626e6, type: 3}
       propertyPath: orthographic size
       value: 90

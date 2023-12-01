@@ -243,6 +243,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 865884e4c9f4b3643988a425b3557870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Animator: {fileID: 2370853891758697091}
+  FriendsAnimation: 0
+  EveryoneAnimation: 0
   level: {fileID: 11400000, guid: 951b80ca56b78cc46899ac01665cc492, type: 2}
   OnEndOfDialogue:
     m_PersistentCalls:

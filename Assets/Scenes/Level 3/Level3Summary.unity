@@ -183,17 +183,37 @@ PrefabInstance:
       propertyPath: level
       value: 
       objectReference: {fileID: 11400000, guid: 90c8fca3736817148a804ab68550633e, type: 2}
+    - target: {fileID: 7867393574189132095, guid: 0b2ed8080a22d364daee41c932c626e6, type: 3}
+      propertyPath: Friends
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867393574189132095, guid: 0b2ed8080a22d364daee41c932c626e6, type: 3}
+      propertyPath: FriendsAnimation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867393574189132095, guid: 0b2ed8080a22d364daee41c932c626e6, type: 3}
+      propertyPath: EveryoneAnimation
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8940044934258060026, guid: 0b2ed8080a22d364daee41c932c626e6, type: 3}
       propertyPath: orthographic size
-      value: 67.5
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 8940044934258060026, guid: 0b2ed8080a22d364daee41c932c626e6, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: -0.048958335
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8940044934258060026, guid: 0b2ed8080a22d364daee41c932c626e6, type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0.11203703
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8940044934258060026, guid: 0b2ed8080a22d364daee41c932c626e6, type: 3}
+      propertyPath: m_NormalizedViewPortRect.width
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8940044934258060026, guid: 0b2ed8080a22d364daee41c932c626e6, type: 3}
+      propertyPath: m_NormalizedViewPortRect.height
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

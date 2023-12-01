@@ -5,6 +5,9 @@ using UnityEngine.Events;
 
 public class LevelSummary : MonoBehaviour
 {
+    public Animator Animator;
+    public bool Friends;
+    public bool Everyone;
     public Level level;
     private DialogueController DialogueController;
     private DialogueRenderer DialogueRenderer;
@@ -22,6 +25,12 @@ public class LevelSummary : MonoBehaviour
         breakdown = LoadLevelBreakdown();
         OnEndOfDialogue.AddListener(OnDialogueDone);
         DialogueController.HandleProgressDialogue();
+
+        if (Animator != null)
+        {
+            Animator.SetBool("friends", Friends);
+            Animator.SetBool("everyone", Everyone);
+        }
     }
 
     // Update is called once per frame
