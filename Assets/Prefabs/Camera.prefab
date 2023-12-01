@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4348075526452845086}
   - component: {fileID: 6864704798775657967}
   - component: {fileID: 6227613139437283881}
+  - component: {fileID: 9070876147280236370}
   m_Layer: 0
   m_Name: Virtual Camera
   m_TagString: Untagged
@@ -114,6 +115,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e04eff59f21e4443a97ef33e39656ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &9070876147280236370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700910244590737668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!1 &2968930558265304277
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,15 +191,15 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: -0.02417795
-    y: 0.3267776
-    width: 0.46421665
-    height: 0.408472
+    x: 0
+    y: 0
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 135
+  orthographic size: 108
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
