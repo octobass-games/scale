@@ -18,7 +18,7 @@ public class LevelSelect : MonoBehaviour
             LevelSignpost signpost = Signposts[i];
 
             bool isSublevelComplete = levelsData.Find(ld => ld.Name.StartsWith(signpost.LevelNamePrefix) && ld.IsComplete) != null;
-            bool isNextLevel = nextLevel.Name.StartsWith(signpost.LevelNamePrefix);
+            bool isNextLevel = nextLevel?.Name?.StartsWith(signpost.LevelNamePrefix) == true;
             
             if (isSublevelComplete || isNextLevel)
             {
