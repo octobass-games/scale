@@ -144,13 +144,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: reset
+      name: reset-sign
       rect:
         serializedVersion: 2
-        x: 0
-        y: 178
-        width: 47
-        height: 10
+        x: 507
+        y: 37
+        width: 112
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,13 +165,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skip
+      name: skip-sign
       rect:
         serializedVersion: 2
-        x: 0
-        y: 166
-        width: 33
-        height: 10
+        x: 519
+        y: 169
+        width: 99
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -186,13 +186,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: reset-sign
+      name: reset-sign-outline
       rect:
         serializedVersion: 2
-        x: 0
-        y: 148
-        width: 62
-        height: 16
+        x: 508
+        y: 16
+        width: 112
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,12 +207,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skip-sign
+      name: skip-sign-outline
       rect:
         serializedVersion: 2
-        x: 0
-        y: 129
-        width: 48
+        x: 518
+        y: 148
+        width: 99
         height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -228,7 +228,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: reset-sign-outline
+      name: reset-sign-outline-old
       rect:
         serializedVersion: 2
         x: 2
@@ -249,7 +249,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skip-sign-outline
+      name: skip-sign-outline-old
       rect:
         serializedVersion: 2
         x: 2
@@ -656,7 +656,7 @@ TextureImporter:
         width: 55
         height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -697,14 +697,14 @@ TextureImporter:
       programming: -2058805695
       quit-sign: 2040872783
       quit-with-outline: 804729347
-      reset: -736702313
-      reset-sign: 1955282874
-      reset-sign-outline: 274063594
-      skip: -7626741
-      skip-sign: -955979490
-      skip-sign-outline: -1763915609
-      sound: -1848909601
-      thanks-for-playing: 1403268175
+      reset-sign: -736702313
+      reset-sign-outline: 1955282874
+      reset-sign-outline-old: 274063594
+      skip-sign: -7626741
+      skip-sign-outline: -955979490
+      skip-sign-outline-old: -1763915609
+      sound: 1403268175
+      thanks-for-playing: 274063594
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
