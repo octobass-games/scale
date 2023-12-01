@@ -3168,7 +3168,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4827923677449453362, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
       propertyPath: orthographic size
-      value: 135
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 4827923677449453362, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
       propertyPath: m_BackGroundColor.b
@@ -3184,19 +3184,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4827923677449453362, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.015104167
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4827923677449453362, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0.30555555
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4827923677449453362, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.25
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4827923677449453362, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 0.25
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7228991048986225550, guid: 1770bd6fe35baf949bf9589dabfd798f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10414,29 +10414,29 @@ MonoBehaviour:
   texts: []
   text: "Gnome: Higgle!\r\nHiggle: Ah Bildor! How have you been?\r\nHiggle: I see
     you got my letter about my impromptu trip.\r\nNarrator: The gnome stood there
-    confused. \r\nGnome: Letter? \r\nHiggle: Yes? The letter I sent you telling you
-    that I met this friendly dragon in the forest offering a very discounted, exclusive
-    get-a-way! They even gave me a lift all the way up the mountain. \r\nHiggle:
+    confused. \r\nGnome: Letter? \r\nHiggle: The letter I sent you telling you that
+    I met this friendly dragon in the forest offering a very discounted, exclusive
+    get-a-way!\r\nHiggle: They even gave me a lift all the way up the mountain.\r\nHiggle:
     I never thought I\u2019d get to ride a dragon, but let me tell you, it was exhilarating!\r\nGnome:
-    Hold on..\r\nHiggle: Oh, and we met this cute cat on the way. I think their name
-    is Ondra, at least that's what their name tag says.\r\nHiggle: I see you have
-    brought a friend too! Hi I\u2019m Higgle and you are?\r\nGnome: HOLD ON!!!\r\nNarrator:
+    Hold on..\r\nHiggle: Oh, and we met this cute cat on the way up. I think their
+    name is Ondra, at least that's what their collar says.\r\nHiggle: I see you have
+    brought a friend too! Hi I\u2019m Higgle, and you are?\r\nGnome: HOLD ON!!!\r\nNarrator:
     The room went quiet, as everyone stared at the gnome.\r\nGnome: I thought you
     went missing. \r\nGnome: I searched all the way up the mountain for you!\r\nGnome:
     I was so worried!\r\nHiggle: \u2026 ah. I should have thought you might not check
     the mail.\r\nHiggle: Sorry Bildor, I really didn\u2019t mean to make you worry.\r\nHiggle:
-    I just really need a break you know?\r\nGnome: The gnome composed himself, and
-    paused for a second.\r\nGnome: Yes\u2026 I understand. It is very nice here.\r\nHiggle:
-    Isn\u2019t it! \r\nGiant: I\u2019m sorry to interrupt but you mentioned Ondra\u2026\r\nGiant:
-    She is my cat. I would like to see her if I can\u2026\r\nHiggle: Of course! She's
-    probably just sat lazing around somewhere.:revealcat\r\nNarrator: As if she heard
-    her name being mentioned, Ondra appeared from behind a cloud of steam.\r\nGiant:
-    Ondra! \r\nCat: Meoow\r\nNarrator: The cat leapt into the giants arms.:jump \r\nGiant:
-    I\u2019m glad you are okay! You got lost again didn\u2019t you!\r\nCat: Meowww!!!!:dragon-arrive\r\nNarrator:
-    As the cat and giant reunited, another presence entered the room.\r\nDragon:
-    It seems very lively here!\r\nDragon: I come baring news of dinner! Please head
-    to the dining area for a delicious meal.\r\nHiggle: Lets go everyone!\r\nGnome:
-    Well I am very hungry!\r"
+    I just couldn\u2019t turn down such a spectacular deal!\r\nGnome: The gnome composed
+    himself, and paused for a second.\r\nGnome: Yes\u2026 I understand. It is very
+    nice here.\r\nHiggle: Isn\u2019t it! \r\nGiant: I\u2019m sorry to interrupt but
+    you mentioned Ondra\u2026\r\nGiant: She is my cat. I would like to see her if
+    I can\u2026\r\nHiggle: Of course! She's probably just sat lazing around somewhere.:revealcat\r\nNarrator:
+    As if she heard her name being mentioned, Ondra appeared from behind a cloud
+    of steam.\r\nGiant: Ondra! \r\nCat: Meoow.\r\nNarrator: The cat leapt into the
+    giants arms.:jump \r\nGiant: I\u2019m glad you are okay! You got lost again didn\u2019t
+    you!\r\nCat: Meowww!!!!:dragon-arrive\r\nNarrator: As the cat and giant reunited,
+    another presence entered the room.\r\nDragon: It seems very lively here!\r\nDragon:
+    I come bearing news of dinner! Please head to the dining area for a delicious
+    meal.\r\nHiggle: Let's go everyone!\r\nGnome: Well I am very hungry!\r"
   OnEnd:
     m_PersistentCalls:
       m_Calls:
