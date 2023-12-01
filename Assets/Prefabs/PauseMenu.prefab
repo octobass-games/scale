@@ -649,7 +649,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8126101357560593239
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1081,6 +1081,7 @@ MonoBehaviour:
   QuitButton: {fileID: 3773183749503187253}
   AllowSkip: 1
   AllowReset: 1
+  IsPaused: 0
 --- !u!1 &4025339804052610754
 GameObject:
   m_ObjectHideFlags: 0
